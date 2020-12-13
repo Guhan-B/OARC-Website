@@ -2,13 +2,13 @@
   <div class="navbar">
     <div class="nav-container">
       <div class="title">
-        <h1>Title</h1>
+        <div>Title</div>
       </div>
       <div class="nav">
         <ul class="nav-links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Submission</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><nuxt-link exact to="/">Home</nuxt-link></li>
+          <li><nuxt-link exact to="/submission">Submit OER</nuxt-link></li>
+          <li><nuxt-link exact to="/review">Review</nuxt-link></li>
         </ul>
       </div>
     </div>
@@ -27,6 +27,8 @@
 
 .title{
     color: white;
+    font-weight: bold;
+    font-size: 2rem;
 }
 
 .nav-container {
