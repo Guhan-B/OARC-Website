@@ -1,14 +1,17 @@
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: 'comptition-data-collection',
+    title: 'We Collect',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: 'https://upload.wikimedia.org/wikipedia/en/0/0c/TUemblem.png' }
+    ],
+    script: [
+      { src: 'https://cdn.jsdelivr.net/npm/sweetalert2@10' }
     ]
   },
 

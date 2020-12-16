@@ -39,8 +39,108 @@
     ],
     "2": [
         {
-            "id": "",
-            "value": ""
+            "id": "1",
+            "value": "summarize the moral principle of the research"
+        },
+        {
+            "id": "2",
+            "value": "Outline the role of academic honesty and integrity in reseach ethics"
+        },
+        {
+            "id": "3",
+            "value": "Show ethics in research plan"
+        },
+        {
+            "id": "4",
+            "value": "Examplify the conflict of interest"
+        },
+        {
+            "id": "5",
+            "value": "Intrepret data analysis methods"
+        },
+        {
+            "id": "6",
+            "value": "Assess the important of ethics for conducting the research"
+        },
+        {
+            "id": "7",
+            "value": "Find ethical misconduct in research"
+        },
+        {
+            "id": "8",
+            "value": "Distinguish between supervision and consultantion"
+        },
+        {
+            "id": "9",
+            "value": "Estimate the role of ethics in research findings"
+        },
+        {
+            "id": "10",
+            "value": "Summarize the ethics in data sharing"
+        }
+    ],
+    "3": [
+        {
+            "id": "1",
+            "value": "Record the structured research problem and its solution"
+        },
+        {
+            "id": "2",
+            "value": "Predict the unstructured inquiry mode of research"
+        },
+        {
+            "id": "3",
+            "value": "Summarize the combination different approaches in research"
+        },
+        {
+            "id": "4",
+            "value": "Exemplify the bioinformatics concept in research"
+        },
+        {
+            "id": "5",
+            "value": "Illustrate the data bases to generate the new information of research"
+        },
+        {
+            "id": "6",
+            "value": "Design on the network mapping to create impact for the humanity on the research problem"
+        },
+        {
+            "id": "7",
+            "value": "Generate statistical importance on proving hypothesis"
+        }
+    ],
+    "5": [
+        {
+            "id":"1",
+            "value":"Explain the contants of the report"
+        },
+        {
+            "id":"2",
+            "value":"Articulate the Significance report writing"
+        },
+        {
+            "id":"3",
+            "value":"Explain the difficult of  writing"
+        },
+        {
+            "id":"4",
+            "value":"Articulate the Significance , Inthaprasction and presentationof Research data"
+        },
+        {
+            "id":"5",
+            "value":"Explain various standad formats of Thesis and Papers"
+        },
+        {
+            "id":"6",
+            "value":"Demonstrate the ways of presemting Tables and Figures "
+        },
+        {
+            "id":"7",
+            "value":"Explain the collection and arranging  Tables , Figures…… Etc."
+        },
+        {
+            "id":"8",
+            "value":"Explain the teqniques of effective and Communication"
         }
     ]
 }

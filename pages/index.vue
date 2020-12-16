@@ -2,7 +2,7 @@
   <main>
     <div class="showcase">
       <div class="container">
-        <h1>Lorem Ipsum Dolor</h1>
+        <h1>We Collect</h1>
         <p>Collecting useful and awesome open educational resources</p>
         <div class="links">
           <nuxt-link class="btn btn-solid" exact to="/submission"
@@ -12,7 +12,7 @@
             class="btn btn-outline"
             exact
             to="/"
-            v-scroll-to="{element:'#learn-more',offset:-80}"
+            v-scroll-to="{ element: '#learn-more', offset: -80 }"
             >Learn More</nuxt-link
           >
         </div>
@@ -43,14 +43,23 @@
       <h2>Important Dates</h2>
       <div class="container">
         <div>
+          <div class="image">
+            <img src="@/assets/submit.svg" alt="" />
+          </div>
           <h3>Submisson</h3>
           <p>20th Dec to 20th Jan</p>
         </div>
         <div>
+          <div class="image">
+            <img src="@/assets/vote.svg" alt="" />
+          </div>
           <h3>Review and Vote</h3>
           <p>20th Jan to 10th Feb</p>
         </div>
         <div>
+          <div class="image">
+            <img src="@/assets/success.svg" alt="" />
+          </div>
           <h3>Results</h3>
           <p>27th Feb</p>
         </div>
@@ -60,22 +69,29 @@
     <div class="evaluation">
       <h2>Rubrics For Winning</h2>
       <div class="container">
-        <ul>
-          <li>
-            Number of OERs submitted by the student that meet the OER criteria
-          </li>
-          <li>Complexity of the topic covered by the OER</li>
-          <li>Uniqueness of the OER</li>
-          <li>Depth of knowledge expressed in the topic</li>
-          <li>Votes received by the OER by peers</li>
-          <li>Expert review rating</li>
-          <li>Number of fair reviews provided by the student</li>
-        </ul>
+        <div class="criteria">
+          <div>
+            <p>Number of OER submitted</p>
+          </div>
+          <div>
+            <p>Complexity of the topic</p>
+          </div>
+          <div>
+            <p>Uniqueness of the OER</p>
+          </div>
+          <div>
+            <p>Depth of knowledge expressed</p>
+          </div>
+          <div>
+            <p>Votes and reviews recieved</p>
+          </div>
+
+          <nuxt-link class="btn btn-solid" exact to="/rules"
+            >View More</nuxt-link
+          >
+        </div>
         <div class="evaluation-image">
-          <img
-            src="https://images.pexels.com/photos/4792498/pexels-photo-4792498.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-            alt=""
-          />
+          <img src="@/assets/winning.jpg" alt="" />
         </div>
       </div>
     </div>
@@ -83,17 +99,95 @@
     <div class="prize">
       <h2>Winners Get</h2>
       <div class="container">
-        <div>
-          <h3>Certificate from TVU</h3>
+        <div class="prize-card">
+          <div class="prize-card-top">
+            <img src="@/assets/cetf.jpg" alt="" />
+          </div>
+          <div class="prize-card-bottom">
+            <h3>Certificate from TVU</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad,
+              iusto!
+            </p>
+          </div>
         </div>
-        <div>
-          <h3>Mentorship expert researchers</h3>
+        <div class="prize-card">
+          <div class="prize-card-top">
+            <img src="@/assets/mentor.jpg" alt="" />
+          </div>
+          <div class="prize-card-bottom">
+            <h3>Mentorship with expert researchers</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad,
+              iusto!
+            </p>
+          </div>
         </div>
-        <div>
-          <h3>Monetary reward</h3>
+        <div class="prize-card">
+          <div class="prize-card-top">
+            <img src="@/assets/sponser.jpg" alt="" />
+          </div>
+          <div class="prize-card-bottom">
+            <h3>Sponsorship from corporates</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad,
+              iusto!
+            </p>
+          </div>
         </div>
-        <div>
-          <h3>Sponsorship from corporates</h3>
+        <div class="prize-card">
+          <div class="prize-card-top">
+            <img src="@/assets/reward.jpg" alt="" />
+          </div>
+          <div class="prize-card-bottom">
+            <h3>Monetary reward</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad,
+              iusto!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="talk">
+      <h2>Talk With Mentors</h2>
+      <div class="container">
+        <div class="mentor">
+          <div class="top">
+            <img src="@/assets/mentor 1.jpg" alt="" />
+          </div>
+          <div class="bottom">
+            <h3>Dr. Lorem, ipsum.</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Recusandae, impedit?
+            </p>
+          </div>
+        </div>
+        <div class="mentor">
+          <div class="top">
+            <img src="@/assets/mentor 1.jpg" alt="" />
+          </div>
+          <div class="bottom">
+            <h3>Dr. Lorem, ipsum.</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Recusandae, impedit?
+            </p>
+          </div>
+        </div>
+        <div class="mentor">
+          <div class="top">
+            <img src="@/assets/mentor 1.jpg" alt="" />
+          </div>
+          <div class="bottom">
+            <h3>Dr. Lorem, ipsum.</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Recusandae, impedit?
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -142,7 +236,7 @@ p {
 }
 
 .btn-outline {
-  border: 2px white solid;
+  border: 2px #508787 solid;
   color: #508787;
   background: white;
 }
@@ -222,6 +316,7 @@ p {
 }
 
 .date .container div {
+  position: relative;
   text-align: center;
   padding: 3rem 0rem;
   font-size: 1.5rem;
@@ -229,6 +324,21 @@ p {
   background: #ffffff;
   color: #508787;
   border-radius: 5px;
+  margin-top: 40px;
+}
+
+.date .container div .image {
+  width: 80px;
+  height: 80px;
+  background: #f4f4f4;
+  border-radius: 50px;
+  overflow: hidden;
+  padding: 1rem;
+  margin: 0 1rem;
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-70%);
 }
 
 .evaluation {
@@ -247,17 +357,31 @@ p {
   color: #333;
 }
 
-.evaluation .container ul {
-  flex: 2;
+.evaluation .container .criteria {
+  flex: 1;
   line-height: 1.2;
-  list-style: inside;
-  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
-.evaluation .container ul li {
-  list-style: inherit;
+.evaluation .container .criteria div:nth-child(even) {
+  color: #508787;
+  background: #fff;
+}
+
+.evaluation .container .criteria div {
+  background: #71bdbd;
+  color: #fff;
+  padding: 0.75rem;
+  width: 100%;
+  border-radius: 3px;
+}
+
+.evaluation .container .criteria a {
   margin: 1rem 0;
-  font-size: 1.1rem;
+  align-self: center;
 }
 
 .evaluation .container .evaluation-image {
@@ -285,18 +409,90 @@ p {
   gap: 1rem;
 }
 
-.prize .container div {
+.prize .container .prize-card {
   text-align: center;
-  padding: 3rem 1rem;
   font-size: 1.2rem;
-  background: #508787;
-  color: #ffffff;
   border-radius: 5px;
+  color: #333;
+  overflow: hidden;
+  border: 1px solid #ddd;
+}
+
+.prize-card .prize-card-top {
+  height: 180px;
+}
+
+.prize-card .prize-card-bottom {
+  text-align: center;
+  padding: 1.15rem 1.15rem;
+  background: #ffffff;
+}
+
+.prize-card-bottom h3 {
+  font-size: 1.25rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.prize-card-bottom p {
+  font-size: 1rem;
+  color: #999;
+}
+
+.talk {
+  padding: 2rem 0;
+}
+
+.talk .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.talk h2 {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.mentor {
+  padding: 1.5rem;
+  background: #fff;
+  border: #ddd solid 1px;
+  border-radius: 5px;
+}
+
+.mentor .top img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.mentor .top {
+  text-align: center;
+}
+
+.mentor .bottom {
+  text-align: center;
+}
+
+.mentor .bottom h3 {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+}
+
+.mentor .bottom p {
+  font-size: 1rem;
+  color: #999;
 }
 
 @media only screen and (max-width: 1000px) {
   .prize .container,
-  .date .container {
+  .date .container,
+  .talk .container {
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -321,12 +517,20 @@ p {
   .card .image {
     margin-bottom: 1rem;
   }
+
+  .evaluation .container .criteria{
+    padding: 0;
+  }
 }
 
 @media only screen and (max-width: 650px) {
   .prize .container,
-  .date .container {
+  .date .container,
+  .talk .container {
     grid-template-columns: 1fr;
+  }
+  .container {
+    width: 90%;
   }
 }
 

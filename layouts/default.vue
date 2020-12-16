@@ -1,7 +1,10 @@
 <template>
   <div>
-    <Navbar/>
+    <Navbar />
     <Nuxt />
+    <footer>
+      <p>Copyrights &copy; 2020 , Lorem ipsum dolor.</p>
+    </footer>
   </div>
 </template>
 
@@ -15,7 +18,18 @@
   font-family: "Lato";
 }
 
-body{
+footer p {
+  font-size: 1.05rem;
+}
+
+footer {
+  text-align: center;
+  color: white;
+  padding: 1.5rem 0;
+  background: #508787;
+}
+
+body {
   background: #f7f7f7;
 }
 </style>

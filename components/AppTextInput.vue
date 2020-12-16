@@ -1,8 +1,8 @@
 <template>
   <div class="input-group">
     <label :for="name">{{ label }}</label>
-    <textarea v-if="type == 'textarea'"  :id="name" @input="emitEvent" :value="value" ></textarea>
-    <input v-else type="text" :id="name" @input="emitEvent" :value="value" />
+    <textarea required v-if="type == 'textarea'"  :id="name" @input="emitEvent" :value="value" ></textarea>
+    <input required v-else :type="type" :id="name" @input="emitEvent" :value="value" />
     <p class="subtitle">{{ subtitle }}</p>
   </div>
 </template>
