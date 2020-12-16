@@ -1,7 +1,7 @@
 <template>
   <div class="submission">
     <div class="container">
-      <form class="form">
+      <form class="form" @submit.prevent="getData">
         <h2 class="form-group-title">Personal Infromation</h2>
         <div class="form-group grid-cols-2">
           <AppTextInput
@@ -106,6 +106,7 @@ import AppTextInput from "@/components/AppTextInput";
 import ButtonPrimary from '@/components/ButtonPrimary';
 import ButtonOutline from '@/components/ButtonOutline';
 import outcomesJson from '@/assets/outcome.json';
+import {fireDb} from '~/plugins/firebase.js'
 
 export default {
   components: {
@@ -128,6 +129,45 @@ export default {
         email: "",
       },
     };
+  },
+  methods: {
+     async saveWork () {
+          await fireDb.collection('Work').add({
+            firstName:this.formData.firstName,
+            lastName: this.formData.lastName,
+            designation: this.formData.designation,
+            department: this.formData.department,
+            status: this.formData.status,
+            university: this.formData.university,
+            title: this.formData.title,
+            description: this.formData.description,
+            url: this.formData.url,
+            unit: this.formData.unit,
+            outcomes: this.formData.outcomes,
+            email:this.formData.email,
+
+          })
+          .then(docRef => {
+            console.log('Work added: ', docRef.id)
+            this.$router.push('/')
+          })
+          .catch(error => {
+            console.error('Error adding Work: ', error)
+          })
+        },
+    async getData(){
+      const Ref = fireDb.collection('Work');
+      const snapshot = await Ref.get();
+      if (snapshot.empty) {
+        console.log('No matching documents.');
+            return;
+        }  
+
+        snapshot.forEach(doc => {
+         console.log(doc.id, '=>', doc.data());
+          });
+
+    },
   },
   computed: {
     outcomes() {
