@@ -16,7 +16,6 @@
             v-scroll-to="{ element: '#learn-more', offset: -80 }"
             >Learn More</nuxt-link
           >
-          <div></div>
         </div>
       </div>
     </div>

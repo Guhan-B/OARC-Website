@@ -9,6 +9,7 @@ export default {
     ],
     link: [
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap'},
+      { rel: 'icon', type: 'image/x-icon', href: 'https://upload.wikimedia.org/wikipedia/en/0/0c/TUemblem.png' }
     ]
   },
 

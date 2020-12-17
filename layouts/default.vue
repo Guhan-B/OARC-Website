@@ -3,7 +3,7 @@
     <Navbar />
     <Nuxt />
     <footer>
-      <p>Copyrights &copy; 2020 , Lorem ipsum dolor.</p>
+      <p>Copyrights &copy; 2020 , WeCollect</p>
     </footer>
   </div>
 </template>
