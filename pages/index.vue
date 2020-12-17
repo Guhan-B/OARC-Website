@@ -3,7 +3,8 @@
     <div class="showcase">
       <div class="container">
         <h1>WeCollect</h1>
-        <p>Collecting useful and awesome open educational resources</p>
+        <p>Collecting useful and awesome <strong>O</strong>pen <strong>E</strong>ducational <strong>R</strong>esources (OER)</p>
+        <p>for research methods and research ethics</p>
         <div class="links">
           <nuxt-link class="btn btn-solid" exact to="/submission"
             >Participate</nuxt-link
@@ -15,6 +16,7 @@
             v-scroll-to="{ element: '#learn-more', offset: -80 }"
             >Learn More</nuxt-link
           >
+          <div></div>
         </div>
       </div>
     </div>
@@ -27,7 +29,7 @@
             <div class="image">
               <img src="@/assets/graduate.svg" alt="" />
             </div>
-            <p>Any Mphil or doctoral student from any department</p>
+            <p>Any Mphil or doctoral students from any department</p>
           </div>
           <div class="card">
             <div class="image">
@@ -103,6 +105,7 @@
 
     <div class="prize">
       <h2>Get a Chance to Win</h2>
+      <div class="bg"></div>
       <div class="container">
         <div class="prize-card">
           <div class="prize-card-top">
@@ -378,17 +381,17 @@ p {
   background: #fff;
 }
 
-.evaluation .btn-group{
-  background: transparent;
-  text-align: center;
-}
-
 .evaluation .container .criteria div {
   background: #71bdbd;
   color: #fff;
   padding: 0.75rem;
   width: 100%;
   border-radius: 3px;
+}
+
+.evaluation .btn-group{
+  background: transparent !important;
+  text-align: center;
 }
 
 .evaluation .container .criteria a {
@@ -406,19 +409,37 @@ p {
   padding: 2rem 0;
   text-align: center;
   background: #ffffff;
+  position: relative;
+  z-index: 100;
+}
+
+.prize .bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70%;
+  background: #508787;
+  z-index: 5;
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: 100%;
 }
 
 .prize h2 {
+  position: relative;
   margin-top: 1rem;
   margin-bottom: 2rem;
-  color: #508787;
+  color: #fff;
   text-align: center;
+  z-index: 200;
 }
 
 .prize .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 1rem;
+  z-index: 20;
+  position: relative;
 }
 
 .prize .container .prize-card {

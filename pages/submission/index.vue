@@ -3,7 +3,7 @@
     <h2 class="form-title">Please fill out this form to add your submission</h2>
     <div class="container">
       <form class="form" @submit.prevent="saveWork">
-        <h2 class="form-group-title">Personal Infromation</h2>
+        <h2 class="form-group-title">Personal Information</h2>
         <div class="form-group grid-cols-2">
           <AppTextInput
             type="text"
