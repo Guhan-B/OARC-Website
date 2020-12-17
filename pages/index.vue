@@ -2,7 +2,7 @@
   <main>
     <div class="showcase">
       <div class="container">
-        <h1>We Collect</h1>
+        <h1>WeCollect</h1>
         <p>Collecting useful and awesome open educational resources</p>
         <div class="links">
           <nuxt-link class="btn btn-solid" exact to="/submission"
@@ -27,13 +27,13 @@
             <div class="image">
               <img src="@/assets/graduate.svg" alt="" />
             </div>
-            <p>Any masters or Mphil or doctoral student from any department</p>
+            <p>Any Mphil or doctoral student from any department</p>
           </div>
           <div class="card">
             <div class="image">
               <img src="@/assets/graduate.svg" alt="" />
             </div>
-            <p>Any staff members who are in early stages of their career</p>
+            <p>Any faculty members who are in early stages of their career</p>
           </div>
         </div>
       </div>
@@ -53,7 +53,7 @@
           <div class="image">
             <img src="@/assets/vote.svg" alt="" />
           </div>
-          <h3>Review and Vote</h3>
+          <h3>Review and Rate</h3>
           <p>20th Jan to 10th Feb</p>
         </div>
         <div>
@@ -86,9 +86,14 @@
             <p>Votes and reviews recieved</p>
           </div>
 
-          <nuxt-link class="btn btn-solid" exact to="/rules"
-            >View More</nuxt-link
+          <div class="btn-group">
+            <nuxt-link class="btn btn-solid" exact to="/rules"
+            >More Details</nuxt-link>
+            <nuxt-link class="btn btn-outline" exact to="/rules"
+            >Download</nuxt-link
           >
+          </div>
+          <!-- <nuxt-link class="btn btn-solid" exact to="/rules">Download</nuxt-link> -->
         </div>
         <div class="evaluation-image">
           <img src="@/assets/winning.jpg" alt="" />
@@ -97,17 +102,17 @@
     </div>
 
     <div class="prize">
-      <h2>Winners Get</h2>
+      <h2>Get a Chance to Win</h2>
       <div class="container">
         <div class="prize-card">
           <div class="prize-card-top">
             <img src="@/assets/cetf.jpg" alt="" />
           </div>
           <div class="prize-card-bottom">
-            <h3>Certificate from TVU</h3>
+            <h3>Certificate</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad,
-              iusto!
+              Certificate Signed by the Vice Chancellor of Thiruvalluvar
+              University
             </p>
           </div>
         </div>
@@ -116,10 +121,10 @@
             <img src="@/assets/mentor.jpg" alt="" />
           </div>
           <div class="prize-card-bottom">
-            <h3>Mentorship with expert researchers</h3>
+            <h3>Mentorship</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad,
-              iusto!
+              Interaction with international researchers and networking with
+              international expert researchers
             </p>
           </div>
         </div>
@@ -128,7 +133,7 @@
             <img src="@/assets/sponser.jpg" alt="" />
           </div>
           <div class="prize-card-bottom">
-            <h3>Sponsorship from corporates</h3>
+            <h3>Sponsorship</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad,
               iusto!
@@ -140,7 +145,7 @@
             <img src="@/assets/reward.jpg" alt="" />
           </div>
           <div class="prize-card-bottom">
-            <h3>Monetary reward</h3>
+            <h3>Cash Prize</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad,
               iusto!
@@ -315,6 +320,8 @@ p {
   gap: 1rem;
 }
 
+
+
 .date .container div {
   position: relative;
   text-align: center;
@@ -369,6 +376,11 @@ p {
 .evaluation .container .criteria div:nth-child(even) {
   color: #508787;
   background: #fff;
+}
+
+.evaluation .btn-group{
+  background: transparent;
+  text-align: center;
 }
 
 .evaluation .container .criteria div {
@@ -426,6 +438,7 @@ p {
   text-align: center;
   padding: 1.15rem 1.15rem;
   background: #ffffff;
+  position: relative;
 }
 
 .prize-card-bottom h3 {
@@ -477,6 +490,7 @@ p {
 
 .mentor .bottom {
   text-align: center;
+  position: relative;
 }
 
 .mentor .bottom h3 {
@@ -518,7 +532,7 @@ p {
     margin-bottom: 1rem;
   }
 
-  .evaluation .container .criteria{
+  .evaluation .container .criteria {
     padding: 0;
   }
 }

@@ -47,59 +47,78 @@
           </div>
         </div>
 
-        <h2 class="form-group-title">Open Educational Resource(OER)</h2>
-        <div class="form-group grid-cols-1">
+        <div class="f-t-g">
+          <h2 class="form-group-title">Open Educational Resource(OER)</h2>
+          <div class="oer-control">
+            <button type="button" class="btn btn-solid" @click="addOer">
+              Add OER
+            </button>
+            <button type="button" class="btn btn-solid" @click="removeOer">
+              Remove OER
+            </button>
+          </div>
+        </div>
+
+        <div
+          class=" oer-group form-group grid-cols-1"
+          v-for="(oer, index) in formData.oers"
+          :key="index"
+        >
+          <h3>Material {{ index + 1}}</h3>
           <AppTextInput
             type="text"
             name="title"
             label="Title"
-            v-model="formData.title"
-          />
-          <AppTextInput
-            type="url"
-            name="material-url"
-            label="Material Url"
-            subtitle="Please upload your materials in google drive and share the public url. If you have more than 1 OER please upload it as a zip file."
-            v-model="formData.url"
+            v-model="oer.title"
           />
 
           <AppTextInput
-            type="number"
-            name="number-oer"
-            label="Number of OER"
-            v-model="formData.number"
+            type="url"
+            name="material-url"
+            label="`Material Url"
+            v-model="oer.url"
           />
 
           <div class="input-select-group">
             <label for="unit">Unit</label>
-            <select required id="unit" v-model="formData.unit">
-              <option value="1">unit 1 - Research</option>
-              <option value="2">unit 2 - Research Ethics</option>
-              <option value="3">unit 3 - Experimental Research</option>
-              <option value="4">unit 4</option>
-              <option value="5">unit 5 - Research Writing</option>
+            <select required id="unit" v-model="oer.unit">
+              <option value="" selected>
+                Please Select A Unit to View Outcomes
+              </option>
+              <option value="1">Unit 1 - Research</option>
+              <option value="2">Unit 2 - Research Ethics</option>
+              <option value="3">Unit 3 - Experimental Research</option>
+              <option value="4">Unit 4</option>
+              <option value="5">Unit 5 - Research Writing</option>
             </select>
           </div>
+
           <div class="input-check-group">
             <label>Outcomes (Please select a unit to view outcomes)</label>
-            <div class="checkbox" v-for="outcome in outcomes" :key="outcome.id">
+            <div
+              class="checkbox"
+              v-for="outcome in outcomes(oer.unit)"
+              :key="outcome.id"
+            >
               <input
                 type="checkbox"
                 :id="outcome.id"
                 :value="outcome.value"
-                v-model="formData.outcomes"
+                v-model="oer.outcomes"
               />
               <label :for="outcome.id">{{ outcome.value }}</label>
             </div>
           </div>
-        </div>
 
-        <AppTextInput
-          type="textarea"
-          name="description"
-          label="Description"
-          v-model="formData.description"
-        />
+          <AppTextInput
+            type="textarea"
+            name="description"
+            label="Description"
+            v-model="oer.desc"
+          />
+
+          <hr />
+        </div>
 
         <div class="form-controls">
           <ButtonPrimary type="submit" title="Add Submission" />
@@ -126,17 +145,20 @@ export default {
       formData: {
         firstName: "",
         lastName: "",
-        designation: "",
         department: "",
         status: "",
         university: "",
-        title: "",
-        description: "",
-        url: "",
-        unit: "",
-        outcomes: [],
         email: "",
-        number: ""
+        oers: [
+          {
+            title: "",
+            url: "",
+            desc: "",
+            outcomes: [],
+            unit: "",
+          },
+        ],
+        number: 1,
       },
     };
   },
@@ -144,21 +166,7 @@ export default {
     async saveWork() {
       await fireDb
         .collection("Work")
-        .add({
-          firstName: this.formData.firstName,
-          lastName: this.formData.lastName,
-          designation: this.formData.designation,
-          department: this.formData.department,
-          status: this.formData.status,
-          university: this.formData.university,
-          title: this.formData.title,
-          description: this.formData.description,
-          url: this.formData.url,
-          unit: this.formData.unit,
-          outcomes: this.formData.outcomes,
-          email: this.formData.email,
-          number: this.formData.number
-        })
+        .add(this.formData)
         .then((docRef) => {
           console.log("Work added: ", docRef.id);
           alert("Your Submission Has Been Saved");
@@ -181,28 +189,85 @@ export default {
         console.log(doc.id, "=>", doc.data());
       });
     },
-  },
-
-  computed: {
-    outcomes() {
-      this.formData.outcomes = [];
-
-      if (this.formData.unit === "") {
+    addOer() {
+      this.formData.number += 1;
+      this.formData.oers.push({
+        title: "",
+        url: "",
+        desc: "",
+        outcomes: [],
+        unit: "",
+      });
+    },
+    removeOer() {
+      if (this.formData.number === 1) {
+        return;
+      }
+      this.formData.number -= 1;
+      this.formData.oers.pop();
+    },
+    outcomes(unit) {
+      if (unit === "") {
         return null;
       } else {
-        return outcomesJson[this.formData.unit];
+        console.log(outcomesJson[unit]);
+        return outcomesJson[unit];
       }
     },
   },
+
+  computed: {},
 };
 </script>
 
 <style scoped>
+hr {
+  border: 0;
+  border-bottom: 1px dashed #ccc;
+  background: #999;
+}
+
+.oer-group{
+  padding: 1rem 0;
+}
+
+.oer-group h3{
+  color: #333;
+  text-align: center;
+}
+
 .submission {
   padding: 1rem 0;
 }
 
-.submission .form-title{
+.oer-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.btn {
+  padding: 0.5rem 0.5rem;
+  font-weight: bold;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.btn-solid {
+  border: 2px #508787 solid;
+  background: #508787;
+  color: white;
+}
+
+.f-t-g {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.submission .form-title {
   text-align: center;
   color: #333;
   margin: 1rem;
@@ -280,17 +345,17 @@ export default {
 }
 
 @media only screen and (max-width: 1050px) {
-  .container{
+  .container {
     width: 80%;
   }
 }
 @media only screen and (max-width: 900px) {
-  .container{
+  .container {
     width: 90%;
   }
 }
 @media only screen and (max-width: 700px) {
-  .grid-cols-2{
+  .grid-cols-2 {
     grid-template-columns: 1fr;
   }
 }
