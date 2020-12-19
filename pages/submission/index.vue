@@ -1,5 +1,6 @@
 <template>
   <div class="submission">
+    <Modal v-show="showModal" :title="modalTitle" :message="modalMessage" :type="modalType" :callback="closeModal"/>
     <h2 class="form-title">Please fill out this form to add your submission</h2>
     <div class="container">
       <form class="form" @submit.prevent="saveWork">
@@ -39,9 +40,9 @@
           <div class="input-select-group">
             <label for="designation">Designation</label>
             <select required id="designation" v-model="formData.status">
-              <option value="Masters">Masters</option>
+              <option value="" selected disabled>Please Select a Value</option>
               <option value="M.Phil">M.Phil</option>
-              <option value="Doctoral">Doctoral</option>
+              <option value="Doctoral">Ph.D</option>
               <option value="Staff Member">Staff Memeber</option>
             </select>
           </div>
@@ -49,22 +50,24 @@
 
         <div class="f-t-g">
           <h2 class="form-group-title">Open Educational Resource(OER)</h2>
-          <div class="oer-control">
-            <button type="button" class="btn btn-solid" @click="addOer">
-              Add OER
-            </button>
-            <button type="button" class="btn btn-solid" @click="removeOer">
-              Remove OER
-            </button>
-          </div>
+          <div class="oer-control"></div>
         </div>
 
         <div
-          class=" oer-group form-group grid-cols-1"
+          class="oer-group form-group grid-cols-1"
           v-for="(oer, index) in formData.oers"
           :key="index"
         >
-          <h3>Material {{ index + 1}}</h3>
+          <div class="new-oer-header">
+            <h3>Material {{ index + 1 }}</h3>
+            <button
+              class="btn btn-red"
+              type="button"
+              @click="() => removeThisOer(index)"
+            >
+              Remove
+            </button>
+          </div>
           <AppTextInput
             type="text"
             name="title"
@@ -82,7 +85,7 @@
           <div class="input-select-group">
             <label for="unit">Unit</label>
             <select required id="unit" v-model="oer.unit">
-              <option value="" selected>
+              <option value="" selected disabled>
                 Please Select A Unit to View Outcomes
               </option>
               <option value="1">Unit 1 - Research</option>
@@ -121,7 +124,10 @@
         </div>
 
         <div class="form-controls">
-          <ButtonPrimary type="submit" title="Add Submission" />
+          <ButtonPrimary type="submit" title="Submit" />
+          <button type="button" class="btn btn-solid" @click="addOer">
+            Add OER
+          </button>
           <ButtonOutline type="reset" title="Reset" />
         </div>
       </form>
@@ -133,7 +139,8 @@
 import AppTextInput from "@/components/AppTextInput";
 import ButtonPrimary from "@/components/ButtonPrimary";
 import ButtonOutline from "@/components/ButtonOutline";
-import outcomesJson from "@/assets/outcome.json";
+import Modal from "@/components/Modal";
+import outcomesJson from "@/assets/data/outcome.json";
 import { fireDb } from "~/plugins/firebase.js";
 
 export default {
@@ -142,6 +149,10 @@ export default {
   },
   data() {
     return {
+      showModal: false,
+      modalTitle: "",
+      modalMessage: "",
+      modalType: "",
       formData: {
         firstName: "",
         lastName: "",
@@ -169,12 +180,18 @@ export default {
         .add(this.formData)
         .then((docRef) => {
           console.log("Work added: ", docRef.id);
-          alert("Your Submission Has Been Saved");
-          this.$router.push("/");
+          this.modalTitle = "Success";
+          this.modalMessage = "Form has been submitted";
+          this.modalType = "success";
+          this.showModal = true;
         })
         .catch((error) => {
           console.error("Error adding Work: ", error);
           alert("Unable to save submission try again later");
+          this.modalTitle = "Error";
+          this.modalMessage = "Unable to submit thr form. Try again";
+          this.modalType = "error";
+          this.showModal = true;
         });
     },
     async getData() {
@@ -214,6 +231,13 @@ export default {
         return outcomesJson[unit];
       }
     },
+    removeThisOer(index) {
+      if (this.formData.oers.length !== 1) this.formData.oers.splice(index, 1);
+    },
+    closeModal(){
+      this.showModal = false;
+      this.$router.push("/")
+    }
   },
 
   computed: {},
@@ -227,11 +251,11 @@ hr {
   background: #999;
 }
 
-.oer-group{
+.oer-group {
   padding: 1rem 0;
 }
 
-.oer-group h3{
+.oer-group h3 {
   color: #333;
   text-align: center;
 }
@@ -246,19 +270,25 @@ hr {
 }
 
 .btn {
-  padding: 0.5rem 0.5rem;
+  padding: 0.5rem 1rem;
   font-weight: bold;
-  font-size: 0.9rem;
+  font-size: 1rem;
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
-  margin-right: 1rem;
 }
 
 .btn-solid {
   border: 2px #508787 solid;
   background: #508787;
   color: white;
+}
+
+.btn-red {
+  border: none;
+  color: white;
+  background: rgb(255, 63, 29);
+  margin-left: 1rem;
 }
 
 .f-t-g {
@@ -344,6 +374,12 @@ hr {
   margin: 2rem 0;
 }
 
+.new-oer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 @media only screen and (max-width: 1050px) {
   .container {
     width: 80%;
@@ -357,6 +393,10 @@ hr {
 @media only screen and (max-width: 700px) {
   .grid-cols-2 {
     grid-template-columns: 1fr;
+  }
+  .input-select-group,
+  .input-check-group {
+    margin: 0.75rem 1rem;
   }
 }
 </style>

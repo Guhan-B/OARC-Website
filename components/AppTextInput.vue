@@ -49,6 +49,12 @@ textarea{
   font-size: 1.05rem;
   resize: vertical;
 }
+
+@media only screen and (max-width: 700px){
+  .input-group{
+    margin: 0.75rem 1rem;
+  }
+}
 </style>
 
 <script>

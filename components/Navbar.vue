@@ -9,7 +9,6 @@
         <ul class="nav-links">
           <li><nuxt-link exact to="/">Home</nuxt-link></li>
           <li><nuxt-link exact to="/submission">Submit OER</nuxt-link></li>
-          <li><nuxt-link exact to="/review">Review</nuxt-link></li>
         </ul>
       </div>
     </div>

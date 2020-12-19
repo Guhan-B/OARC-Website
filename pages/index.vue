@@ -2,20 +2,28 @@
   <main>
     <div class="showcase">
       <div class="container">
-        <h1>WeCollect</h1>
-        <p>Collecting useful and awesome <strong>O</strong>pen <strong>E</strong>ducational <strong>R</strong>esources (OER)</p>
-        <p>for research methods and research ethics</p>
-        <div class="links">
-          <nuxt-link class="btn btn-solid" exact to="/submission"
-            >Participate</nuxt-link
-          >
-          <nuxt-link
-            class="btn btn-outline"
-            exact
-            to="/"
-            v-scroll-to="{ element: '#learn-more', offset: -80 }"
-            >Learn More</nuxt-link
-          >
+        <div class="jumbo-text">
+          <h1>WeCollect</h1>
+          <p>
+            Collecting useful and awesome <strong>O</strong>pen
+            <strong>E</strong>ducational <strong>R</strong>esources (OER) <br />
+            for research methods and research ethics
+          </p>
+          <div class="links">
+            <nuxt-link class="btn btn-solid" exact to="/submission"
+              >Participate</nuxt-link
+            >
+            <nuxt-link
+              class="btn btn-outline"
+              exact
+              to="/"
+              v-scroll-to="{ element: '#learn-more', offset: -80 }"
+              >Learn More</nuxt-link
+            >
+          </div>
+        </div>
+        <div class="logo">
+          <img src="https://upload.wikimedia.org/wikipedia/en/0/0c/TUemblem.png" alt="">
         </div>
       </div>
     </div>
@@ -26,13 +34,13 @@
         <div class="card-container">
           <div class="card">
             <div class="image">
-              <img src="@/assets/graduate.svg" alt="" />
+              <img src="@/assets/svg/graduate.svg" alt="" />
             </div>
             <p>Any Mphil or doctoral students from any department</p>
           </div>
           <div class="card">
             <div class="image">
-              <img src="@/assets/graduate.svg" alt="" />
+              <img src="@/assets/svg/faculty.svg" alt="" />
             </div>
             <p>Any faculty members who are in early stages of their career</p>
           </div>
@@ -45,21 +53,15 @@
       <div class="container">
         <div>
           <div class="image">
-            <img src="@/assets/submit.svg" alt="" />
+            <img src="@/assets/svg/submit.svg" alt="" />
           </div>
           <h3>Submisson</h3>
           <p>20th Dec to 20th Jan</p>
         </div>
+
         <div>
           <div class="image">
-            <img src="@/assets/vote.svg" alt="" />
-          </div>
-          <h3>Review and Rate</h3>
-          <p>20th Jan to 10th Feb</p>
-        </div>
-        <div>
-          <div class="image">
-            <img src="@/assets/success.svg" alt="" />
+            <img src="@/assets/svg/success.svg" alt="" />
           </div>
           <h3>Results</h3>
           <p>27th Feb</p>
@@ -89,15 +91,16 @@
 
           <div class="btn-group">
             <nuxt-link class="btn btn-solid" exact to="/rules"
-            >More Details</nuxt-link>
+              >More Details</nuxt-link
+            >
             <nuxt-link class="btn btn-outline" exact to="/rules"
-            >Download</nuxt-link
-          >
+              >Download</nuxt-link
+            >
           </div>
           <!-- <nuxt-link class="btn btn-solid" exact to="/rules">Download</nuxt-link> -->
         </div>
         <div class="evaluation-image">
-          <img src="@/assets/winning.jpg" alt="" />
+          <img src="@/assets/img/winning.jpg" alt="" />
         </div>
       </div>
     </div>
@@ -108,7 +111,7 @@
       <div class="container">
         <div class="prize-card">
           <div class="prize-card-top">
-            <img src="@/assets/cetf.jpg" alt="" />
+            <img src="@/assets/img/cetf.jpg" alt="" />
           </div>
           <div class="prize-card-bottom">
             <h3>Certificate</h3>
@@ -120,7 +123,7 @@
         </div>
         <div class="prize-card">
           <div class="prize-card-top">
-            <img src="@/assets/mentor.jpg" alt="" />
+            <img src="@/assets/img/mentor.jpg" alt="" />
           </div>
           <div class="prize-card-bottom">
             <h3>Mentorship</h3>
@@ -132,7 +135,7 @@
         </div>
         <div class="prize-card">
           <div class="prize-card-top">
-            <img src="@/assets/sponser.jpg" alt="" />
+            <img src="@/assets/img/sponser.jpg" alt="" />
           </div>
           <div class="prize-card-bottom">
             <h3>Sponsorship</h3>
@@ -144,7 +147,7 @@
         </div>
         <div class="prize-card">
           <div class="prize-card-top">
-            <img src="@/assets/reward.jpg" alt="" />
+            <img src="@/assets/img/reward.jpg" alt="" />
           </div>
           <div class="prize-card-bottom">
             <h3>Cash Prize</h3>
@@ -162,7 +165,7 @@
       <div class="container">
         <div class="mentor">
           <div class="top">
-            <img src="@/assets/mentor 1.jpg" alt="" />
+            <img src="@/assets/img/mentor 1.jpg" alt="" />
           </div>
           <div class="bottom">
             <h3>Dr. Lorem, ipsum.</h3>
@@ -174,7 +177,7 @@
         </div>
         <div class="mentor">
           <div class="top">
-            <img src="@/assets/mentor 1.jpg" alt="" />
+            <img src="@/assets/img/mentor 1.jpg" alt="" />
           </div>
           <div class="bottom">
             <h3>Dr. Lorem, ipsum.</h3>
@@ -186,7 +189,7 @@
         </div>
         <div class="mentor">
           <div class="top">
-            <img src="@/assets/mentor 1.jpg" alt="" />
+            <img src="@/assets/img/mentor 1.jpg" alt="" />
           </div>
           <div class="bottom">
             <h3>Dr. Lorem, ipsum.</h3>
@@ -267,6 +270,28 @@ p {
   background-size: cover;
 }
 
+.showcase {
+  line-height: 1.5;
+}
+
+.showcase .container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* .showcase .logo{
+  width: 200px;
+  height: 200px;
+} */
+
+.showcase .logo img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .links {
   margin: 2rem 0;
 }
@@ -318,11 +343,9 @@ p {
 
 .date .container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 1rem;
 }
-
-
 
 .date .container div {
   position: relative;
@@ -334,6 +357,9 @@ p {
   color: #508787;
   border-radius: 5px;
   margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
 }
 
 .date .container div .image {
@@ -388,7 +414,7 @@ p {
   border-radius: 3px;
 }
 
-.evaluation .btn-group{
+.evaluation .btn-group {
   background: transparent !important;
   text-align: center;
 }
@@ -412,7 +438,7 @@ p {
   z-index: 100;
 }
 
-.prize .bg{
+.prize .bg {
   position: absolute;
   top: 0;
   left: 0;
@@ -554,6 +580,10 @@ p {
 
   .evaluation .container .criteria {
     padding: 0;
+  }
+
+  .showcase .logo{
+    display: none;
   }
 }
 
