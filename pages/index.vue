@@ -165,26 +165,24 @@
       <div class="container">
         <div class="mentor">
           <div class="top">
-            <img src="@/assets/img/mentor 1.jpg" alt="" />
+            <img src="https://scis.athabascau.ca/images/thumbs/vive.jpg" alt="" />
           </div>
           <div class="bottom">
-            <h3>Dr. Lorem, ipsum.</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Recusandae, impedit?
-            </p>
+            <h3>Dr. Vive Kumar</h3>
+            <p>Professor at</p>
+            <p>Athabasca University</p>
+            <p>School of Computing and Information Systems</p>
           </div>
         </div>
         <div class="mentor">
           <div class="top">
-            <img src="@/assets/img/mentor 1.jpg" alt="" />
+            <img src="http://cde.athabascau.ca/ourpeople/images/rorymcg.jpg" alt="" />
           </div>
           <div class="bottom">
-            <h3>Dr. Lorem, ipsum.</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Recusandae, impedit?
-            </p>
+            <h3>Dr. Rory McGreal</h3>
+            <p>Professor at</p>
+            <p>Athabasca University</p>
+            <p>School of Computing and Information Systems</p>
           </div>
         </div>
         <div class="mentor">
@@ -200,6 +198,12 @@
           </div>
         </div>
       </div>
+    </div>
+    
+    <div class="mail-footer">
+      <h2 style="margin-bottom:0.5rem;">Have A Query</h2>
+      <p>Feel free to contact</p>
+      <a href="mailto:bkguhan2001@gmail.com" target="_blank" class="btn btn-outline">Mail Us</a>
     </div>
   </main>
 </template>
@@ -281,10 +285,17 @@ p {
   justify-content: space-between;
 }
 
-/* .showcase .logo{
-  width: 200px;
-  height: 200px;
-} */
+.mail-footer{
+  text-align: center;
+  padding: 1rem 0;
+  background: #508787;
+  color: #ffffff;
+}
+
+.mail-footer .btn{
+  margin: 0;
+  margin-top: 1rem;
+}
 
 .showcase .logo img{
   width: 100%;
