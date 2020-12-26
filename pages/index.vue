@@ -169,9 +169,7 @@
           </div>
           <div class="bottom">
             <h3>Dr. Vive Kumar</h3>
-            <p>Professor at</p>
-            <p>Athabasca University</p>
-            <p>School of Computing and Information Systems</p>
+            <p>Associate Professor in Athabasca University’s School of Computing and Information Systems. With backing from major research funds in Canada such as NSERC, SSHRC, and CFI, he is an active member and contributor to the research community in Canada. With over 100 research publications in refereed journals, international refereed conferences, and book chapters, and with tightly focused professional activities.</p>
           </div>
         </div>
         <div class="mentor">
@@ -180,21 +178,7 @@
           </div>
           <div class="bottom">
             <h3>Dr. Rory McGreal</h3>
-            <p>Professor at</p>
-            <p>Athabasca University</p>
-            <p>School of Computing and Information Systems</p>
-          </div>
-        </div>
-        <div class="mentor">
-          <div class="top">
-            <img src="@/assets/img/mentor 1.jpg" alt="" />
-          </div>
-          <div class="bottom">
-            <h3>Dr. Lorem, ipsum.</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Recusandae, impedit?
-            </p>
+            <p>Professor Rory McGreal is the UNESCO/International Council for Open and Distance Education Chair in Open Educational Resources. He is co-editor of the International Review of Research in Open and Distance Learning (IRRODL), and founder of the OER Knowledge Cloud. Formerly, he served as the Associate Vice President Research and as the director of the Technology Enhanced Knowledge Research Institute (TEKRI). </p>
           </div>
         </div>
       </div>
@@ -515,7 +499,7 @@ p {
 
 .talk .container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 1rem;
 }
 
@@ -531,6 +515,8 @@ p {
   background: #fff;
   border: #ddd solid 1px;
   border-radius: 5px;
+  width: 70%;
+  margin: auto;
 }
 
 .mentor .top img {
@@ -543,16 +529,18 @@ p {
 
 .mentor .top {
   text-align: center;
+  padding: 0 1rem;
 }
 
 .mentor .bottom {
-  text-align: center;
   position: relative;
+  padding: 0 1rem;
 }
 
 .mentor .bottom h3 {
   margin: 1rem 0;
   font-size: 1.2rem;
+  text-align: center;
 }
 
 .mentor .bottom p {
@@ -606,6 +594,10 @@ p {
   }
   .container {
     width: 90%;
+  }
+
+  .mentor{
+    width: 100%;
   }
 }
 
