@@ -133,30 +133,6 @@
             </p>
           </div>
         </div>
-        <div class="prize-card">
-          <div class="prize-card-top">
-            <img src="@/assets/img/sponser.jpg" alt="" />
-          </div>
-          <div class="prize-card-bottom">
-            <h3>Sponsorship</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad,
-              iusto!
-            </p>
-          </div>
-        </div>
-        <div class="prize-card">
-          <div class="prize-card-top">
-            <img src="@/assets/img/reward.jpg" alt="" />
-          </div>
-          <div class="prize-card-bottom">
-            <h3>Cash Prize</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad,
-              iusto!
-            </p>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -169,7 +145,7 @@
           </div>
           <div class="bottom">
             <h3>Dr. Vive Kumar</h3>
-            <p>Associate Professor in Athabasca University’s School of Computing and Information Systems. With backing from major research funds in Canada such as NSERC, SSHRC, and CFI, he is an active member and contributor to the research community in Canada. With over 100 research publications in refereed journals, international refereed conferences, and book chapters, and with tightly focused professional activities.</p>
+            <p>Dr Vive is currently the Associate Dean, Research and Innovation, Faculty of Science and Technology. He is an active member and contributor to the research community in Canada with backing from major research funds such as NSERC, SSHRC, and CFI. With over 100 research publications in refereed journals, international refereed conferences, and book chapters, and with tightly focused professional activities  that include being a journal editor, funding reviewer, and conference administrator, he strives to advance analytics-oriented, computer-mediated, causality-infused balance between learning efficiency and instructional effectiveness.</p>
           </div>
         </div>
         <div class="mentor">
@@ -185,9 +161,8 @@
     </div>
     
     <div class="mail-footer">
-      <h2 style="margin-bottom:0.5rem;">Have A Query</h2>
-      <p>Feel free to contact</p>
-      <a href="mailto:bkguhan2001@gmail.com" target="_blank" class="btn btn-outline">Mail Us</a>
+      <h2 style="margin-bottom:0.5rem;">Have A Query, Feel Free to Contact</h2>
+      <a href="mailto:bkguhan2001@gmail.com" target="_blank" class="btn btn-outline">Contact</a>
     </div>
   </main>
 </template>
@@ -456,7 +431,7 @@ p {
 
 .prize .container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 1rem;
   z-index: 20;
   position: relative;
@@ -469,10 +444,17 @@ p {
   color: #333;
   overflow: hidden;
   border: 1px solid #ddd;
+  width: 70%;
+  margin: auto;
 }
 
 .prize-card .prize-card-top {
   height: 180px;
+}
+
+.prize-card .prize-card-top img{
+  /* height: 180px; */
+  object-fit: cover;
 }
 
 .prize-card .prize-card-bottom {
@@ -516,6 +498,7 @@ p {
   border: #ddd solid 1px;
   border-radius: 5px;
   width: 70%;
+  height: 100%;
   margin: auto;
 }
 
@@ -545,6 +528,7 @@ p {
 
 .mentor .bottom p {
   font-size: 1rem;
+  text-align: justify;
   color: #999;
 }
 
