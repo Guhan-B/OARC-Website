@@ -78,8 +78,22 @@
           <AppTextInput
             type="url"
             name="material-url"
-            label="`Material Url"
+            label="Url"
             v-model="oer.url"
+          />
+
+          <AppTextInput
+            type="url"
+            name="material-url"
+            label="Type"
+            v-model="oer.type"
+          />
+
+          <AppTextInput
+            type="url"
+            name="material-url"
+            label="Author"
+            v-model="oer.author"
           />
 
           <div class="input-select-group">
@@ -167,6 +181,8 @@ export default {
             desc: "",
             outcomes: [],
             unit: "",
+            type: "",
+            author: "",
           },
         ],
         number: 1,

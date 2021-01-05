@@ -142,5 +142,167 @@
             "id":"8",
             "value":"Explain the teqniques of effective and Communication"
         }
+    ],
+    "4":[
+        {
+            "id":"1",
+            "value":"To understand about -Census Method"
+        },
+        {
+            "id":"2",
+            "value":"Concept of : Laws of Statistical Regularities"
+        },
+        {
+            "id":"3",
+            "value":"Laws Inertia of Large Numbers"
+        },
+        {
+            "id":"4",
+            "value":"Essential of Sampling"
+        },
+        {
+            "id":"5",
+            "value":"Explain : Non-Probablity Sampling"
+        },
+        {
+            "id":"6",
+            "value":"Judgement Sampling"
+        },
+        {
+            "id":"7",
+            "value":"Quota Sampling"
+        },
+        {
+            "id":"8",
+            "value":"Convenient Sampling"
+        },
+        {
+            "id":"9",
+            "value":"Discuss about Probability Sampling"
+        },
+        {
+            "id":"10",
+            "value":"Simple random Sampling "
+        },
+        {
+            "id":"11",
+            "value":"Systematic Samplig"
+        },
+        {
+            "id":"12",
+            "value":"Stratified Random Sampling"
+        },
+        {
+            "id":"13",
+            "value":"Meaning of Data"
+        },
+        {
+            "id":"13",
+            "value":"Explain various measurements of Data"
+        },
+        {
+            "id":"13",
+            "value":"Importance of Reliability of Data"
+        },
+        {
+            "id":"13",
+            "value":"Interpretation of Validity of Data"
+        },
+        {
+            "id":"13",
+            "value":"Types of Data"
+        },
+        {
+            "id":"13",
+            "value":"Primary Data"
+        },
+        {
+            "id":"13",
+            "value":"Defintion and Sources"
+        },
+        {
+            "id":"13",
+            "value":"Secondary Data"
+        },
+        {
+            "id":"13",
+            "value":"Definition and Sources"
+        },
+        {
+            "id":"13",
+            "value":"Descrptive Statistics"
+        },
+        {
+            "id":"13",
+            "value":"Measurements of Central Tendency"
+        },
+        {
+            "id":"13",
+            "value":"Measurements of Dispersion"
+        },
+        {
+            "id":"13",
+            "value":"Inferential Data"
+        },
+        {
+            "id":"13",
+            "value":"Types of Hypothesis"
+        },
+        {
+            "id":"13",
+            "value":"Procedure for Testing of Hypothesis"
+        },
+        {
+            "id":"13",
+            "value":"Discuss Chi-Square Test Statistics"
+        },
+        {
+            "id":"13",
+            "value":"Test of independence"
+        },
+        {
+            "id":"13",
+            "value":"Goodness of Chi-square test"
+        },
+        {
+            "id":"13",
+            "value":"What is search Engine?"
+        },
+        {
+            "id":"13",
+            "value":"To understant the different types of Search Engines"
+        },
+        {
+            "id":"13",
+            "value":"To know the various sources of Library and Internet utility"
+        },
+        {
+            "id":"13",
+            "value":"What are the Types of RV?"
+        },
+        {
+            "id":"13",
+            "value":"Definition of Distribution Function and Density function"
+        },
+        {
+            "id":"13",
+            "value":"Binomial Distribution"
+        },
+        {
+            "id":"13",
+            "value":"Defintion, Properties, Fitting of BD"
+        },
+        {
+            "id":"13",
+            "value":"Poisson Distribution - Defintion, Properties, Fitting of PD"
+        },
+        {
+            "id":"13",
+            "value":" Defintion, Properties, Fitting of Normal Distribution"
+        },
+        {
+            "id":"13",
+            "value":"Explain Priciple of least Square with example "
+        }
     ]
 }
