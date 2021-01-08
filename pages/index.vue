@@ -133,6 +133,17 @@
             </p>
           </div>
         </div>
+        <div class="prize-card">
+          <div class="prize-card-top">
+            <img src="@/assets/img/sponser.jpg" alt="" />
+          </div>
+          <div class="prize-card-bottom">
+            <h3>Collaboration</h3>
+            <p>
+              International researchers collaborations
+            </p>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -141,16 +152,16 @@
       <div class="container">
         <div class="mentor">
           <div class="top">
-            <img src="https://scis.athabascau.ca/images/thumbs/vive.jpg" alt="" />
+            <img src="../assets/img/vivekumar.jpg" alt="" />
           </div>
           <div class="bottom">
-            <h3>Dr. Vive Kumar</h3>
+            <h3>Dr. Vivekanandan Suresh Kumar</h3>
             <p>Dr Vive is currently the Associate Dean, Research and Innovation, Faculty of Science and Technology. He is an active member and contributor to the research community in Canada with backing from major research funds such as NSERC, SSHRC, and CFI. With over 100 research publications in refereed journals, international refereed conferences, and book chapters, and with tightly focused professional activities  that include being a journal editor, funding reviewer, and conference administrator, he strives to advance analytics-oriented, computer-mediated, causality-infused balance between learning efficiency and instructional effectiveness.</p>
           </div>
         </div>
         <div class="mentor">
           <div class="top">
-            <img src="http://cde.athabascau.ca/ourpeople/images/rorymcg.jpg" alt="" />
+            <img src="../assets/img/rory.jpg" alt="" />
           </div>
           <div class="bottom">
             <h3>Dr. Rory McGreal</h3>
@@ -431,7 +442,7 @@ p {
 
 .prize .container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 1rem;
   z-index: 20;
   position: relative;
@@ -444,7 +455,7 @@ p {
   color: #333;
   overflow: hidden;
   border: 1px solid #ddd;
-  width: 70%;
+  height: 100%;
   margin: auto;
 }
 
