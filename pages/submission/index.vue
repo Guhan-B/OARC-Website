@@ -82,11 +82,33 @@
             v-model="oer.url"
           />
 
+          <div class="input-select-group">
+            <label for="type">Type</label>
+            <select required id="type" v-model="oer.type">
+              <option value="" selected disabled>
+                Please Select A Type
+              </option>
+              <option value="Reading material">Reading material</option>
+              <option value="Quiz">Quiz</option>
+              <option value="Assignment question">Assignment question</option>
+              <option value="Video">Video</option>
+              <option value="Audio">Audio</option>
+              <option value="Animation">Animation</option>
+              <option value="Simulation">Simulation</option>
+              <option value="Augmented Reality content">Augmented Reality content</option>
+              <option value="Virtual Reality content">Virtual Reality content</option>
+              <option value="Blog">Blog</option>
+              <option value="Social Media Content">Social Media Content</option>
+              <option value="0">Others (Specify Below)</option>
+            </select>
+          </div>
+
           <AppTextInput
-            type="url"
-            name="material-url"
-            label="Type"
-            v-model="oer.type"
+            v-if="oer.type === '0'"
+            type="textarea"
+            name="others"
+            label="Others"
+            v-model="oer.otherType"
           />
 
           <AppTextInput
@@ -110,8 +132,8 @@
             </select>
           </div>
 
-          <div class="input-check-group">
-            <label>Outcomes (Please select a unit to view outcomes)</label>
+          <div class="input-check-group" v-if="oer.unit !== ''">
+            <label>Outcomes</label>
             <div
               class="checkbox"
               v-for="outcome in outcomes(oer.unit)"
@@ -136,9 +158,12 @@
 
           <hr />
         </div>
-
-        <div class="form-controls">
-          <ButtonPrimary type="submit" title="Submit" />
+        <div class="decleration">
+            <input type="checkbox" name="dec" id="dec" :value="true" v-model="allowSubmit">
+            <label for="dec">I accept the <nuxt-link exact to="/">Conditions</nuxt-link></label>
+        </div>
+        <div class="form-controls"> 
+          <ButtonPrimary type="submit" title="Submit" v-if="allowSubmit"/>
           <button type="button" class="btn btn-solid" @click="addOer">
             Add OER
           </button>
@@ -163,6 +188,7 @@ export default {
   },
   data() {
     return {
+      allowSubmit: false,
       showModal: false,
       modalTitle: "",
       modalMessage: "",
@@ -183,6 +209,7 @@ export default {
             unit: "",
             type: "",
             author: "",
+            otherType: ""
           },
         ],
         number: 1,
@@ -388,6 +415,19 @@ hr {
   align-items: center;
   justify-content: center;
   margin: 2rem 0;
+}
+.decleration{
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+}
+
+.decleration input{
+  /* display: inline-block; */
+  margin: 0 10px;
 }
 
 .new-oer-header {

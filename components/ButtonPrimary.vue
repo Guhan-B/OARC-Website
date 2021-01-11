@@ -1,6 +1,6 @@
 <template>
     <div class="button-primary">
-        <button :type="type">{{title}}</button>
+        <button :disabled="disabled" :type="type">{{title}}</button>
     </div>
 </template>
 
@@ -14,6 +14,9 @@ export default {
         type: {
             type: String,
             required: true
+        },
+        disabled: {
+            type: Boolean,
         }
     }
 }
