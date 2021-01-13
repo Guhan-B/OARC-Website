@@ -1,6 +1,12 @@
 <template>
   <div class="submission">
-    <Modal v-show="showModal" :title="modalTitle" :message="modalMessage" :type="modalType" :callback="closeModal"/>
+    <Modal
+      v-show="showModal"
+      :title="modalTitle"
+      :message="modalMessage"
+      :type="modalType"
+      :callback="closeModal"
+    />
     <h2 class="form-title">Please fill out this form to add your submission</h2>
     <div class="container">
       <form class="form" @submit.prevent="saveWork">
@@ -41,9 +47,12 @@
             <label for="designation">Designation</label>
             <select required id="designation" v-model="formData.status">
               <option value="" selected disabled>Please Select a Value</option>
-              <option value="M.Phil">M.Phil</option>
-              <option value="Doctoral">Ph.D</option>
-              <option value="Staff Member">Staff Memeber</option>
+              <option value="M.Phil Student">M.Phil Student</option>
+              <option value="PhD Student">Ph.D Student</option>
+              <option value="Post Doctoral Student">
+                Post Doctoral Student
+              </option>
+              <option value="Faculty Member">Faculty Memeber</option>
             </select>
           </div>
         </div>
@@ -71,23 +80,21 @@
           <AppTextInput
             type="text"
             name="title"
-            label="Title"
+            label="Title of OER"
             v-model="oer.title"
           />
 
           <AppTextInput
             type="url"
             name="material-url"
-            label="Url"
+            label="Url of OER"
             v-model="oer.url"
           />
 
           <div class="input-select-group">
-            <label for="type">Type</label>
+            <label for="type">Type of OER</label>
             <select required id="type" v-model="oer.type">
-              <option value="" selected disabled>
-                Please Select A Type
-              </option>
+              <option value="" selected disabled>Please Select A Type</option>
               <option value="Reading material">Reading material</option>
               <option value="Quiz">Quiz</option>
               <option value="Assignment question">Assignment question</option>
@@ -95,8 +102,12 @@
               <option value="Audio">Audio</option>
               <option value="Animation">Animation</option>
               <option value="Simulation">Simulation</option>
-              <option value="Augmented Reality content">Augmented Reality content</option>
-              <option value="Virtual Reality content">Virtual Reality content</option>
+              <option value="Augmented Reality content">
+                Augmented Reality content
+              </option>
+              <option value="Virtual Reality content">
+                Virtual Reality content
+              </option>
               <option value="Blog">Blog</option>
               <option value="Social Media Content">Social Media Content</option>
               <option value="0">Others (Specify Below)</option>
@@ -111,11 +122,26 @@
             v-model="oer.otherType"
           />
 
+          <div class="two-input">
+            <AppTextInput
+              type="text"
+              name="material-url"
+              label="Author First Name"
+              v-model="oer.authorFname"
+            />
+            <AppTextInput
+              type="text"
+              name="material-url"
+              label="Author Last Name"
+              v-model="oer.authorLname"
+            />
+          </div>
+
           <AppTextInput
-            type="url"
+            type="text"
             name="material-url"
-            label="Author"
-            v-model="oer.author"
+            label="Organization"
+            v-model="oer.authorOrg"
           />
 
           <div class="input-select-group">
@@ -158,12 +184,79 @@
 
           <hr />
         </div>
-        <div class="decleration">
-            <input type="checkbox" name="dec" id="dec" :value="true" v-model="allowSubmit">
-            <label for="dec">I accept the <nuxt-link exact to="/">Conditions</nuxt-link></label>
+        <div class="decleration_wrapper">
+          <p style="margin-bottom: 10px">
+            I confirm that the OER entry submitted by me
+          </p>
+          <div>
+            <div class="decleration">
+              <input
+                type="checkbox"
+                name="dec"
+                id="dec1"
+                :value="1"
+                v-model="allowSubmit"
+              />
+              <label for="dec1">Does not contain any adult content</label>
+            </div>
+            <div class="decleration">
+              <input
+                type="checkbox"
+                name="dec"
+                id="dec2"
+                :value="2"
+                v-model="allowSubmit"
+              />
+              <label for="dec2"
+                >Does not contain any religious and political content</label
+              >
+            </div>
+            <div class="decleration">
+              <input
+                type="checkbox"
+                name="dec"
+                id="dec3"
+                :value="3"
+                v-model="allowSubmit"
+              />
+              <label for="dec3"
+                >Does not contain any discriminative / anti-social content is
+                permissible</label
+              >
+            </div>
+            <div class="decleration">
+              <input
+                type="checkbox"
+                name="dec"
+                id="dec4"
+                :value="4"
+                v-model="allowSubmit"
+              />
+              <label for="dec4"
+                >Does not contain any gender bias / racial bias content</label
+              >
+            </div>
+            <div class="decleration">
+              <input
+                type="checkbox"
+                name="dec"
+                id="dec5"
+                :value="5"
+                v-model="allowSubmit"
+              />
+              <label for="dec5"
+                >Does not contain any other forms for prohibited contents</label
+              >
+            </div>
+          </div>
         </div>
-        <div class="form-controls"> 
-          <ButtonPrimary type="submit" title="Submit" v-if="allowSubmit"/>
+
+        <div class="form-controls">
+          <ButtonPrimary
+            type="submit"
+            title="Submit"
+            v-if="allowSubmit.length === 5"
+          />
           <button type="button" class="btn btn-solid" @click="addOer">
             Add OER
           </button>
@@ -188,7 +281,7 @@ export default {
   },
   data() {
     return {
-      allowSubmit: false,
+      allowSubmit: [],
       showModal: false,
       modalTitle: "",
       modalMessage: "",
@@ -208,8 +301,10 @@ export default {
             outcomes: [],
             unit: "",
             type: "",
-            author: "",
-            otherType: ""
+            authorFname: "",
+            authorLname: "",
+            otherType: "",
+            authorOrg: ""
           },
         ],
         number: 1,
@@ -277,10 +372,10 @@ export default {
     removeThisOer(index) {
       if (this.formData.oers.length !== 1) this.formData.oers.splice(index, 1);
     },
-    closeModal(){
+    closeModal() {
       this.showModal = false;
-      this.$router.push("/")
-    }
+      this.$router.push("/");
+    },
   },
 
   computed: {},
@@ -356,6 +451,11 @@ hr {
   color: #333;
 }
 
+.two-input {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 .input-select-group,
 .input-check-group {
   margin: 0.75rem 2rem;
@@ -416,17 +516,24 @@ hr {
   justify-content: center;
   margin: 2rem 0;
 }
-.decleration{
+
+.decleration_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #555;
+}
+.decleration {
   width: 100%;
   text-align: center;
   display: flex;
   align-items: center;
-  justify-content: center;
-  color: #333;
+  justify-content: flex-start;
+  color: #555;
 }
 
-.decleration input{
-  /* display: inline-block; */
+.decleration input {
   margin: 0 10px;
 }
 

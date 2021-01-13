@@ -36,7 +36,7 @@
             <div class="image">
               <img src="@/assets/svg/graduate.svg" alt="" />
             </div>
-            <p>Any Mphil or doctoral students from any department</p>
+            <p>Any MPhil or PhD or Post Doctoral student from any department</p>
           </div>
           <div class="card">
             <div class="image">
@@ -55,7 +55,7 @@
           <div class="image">
             <img src="@/assets/svg/submit.svg" alt="" />
           </div>
-          <h3>Submisson</h3>
+          <h3>Submisson Opens</h3>
           <p>20th Dec to 20th Jan</p>
         </div>
 
@@ -116,8 +116,7 @@
           <div class="prize-card-bottom">
             <h3>Certificate</h3>
             <p>
-              Certificate Signed by the Vice Chancellor of Thiruvalluvar
-              University
+              Certificate Signed by the Vice Chancellor of Thiruvalluvar University
             </p>
           </div>
         </div>
@@ -128,8 +127,7 @@
           <div class="prize-card-bottom">
             <h3>Mentorship</h3>
             <p>
-              Interaction with international researchers and networking with
-              international expert researchers
+              Mentoring and networking with international expert researchers
             </p>
           </div>
         </div>
@@ -138,9 +136,9 @@
             <img src="@/assets/img/sponser.jpg" alt="" />
           </div>
           <div class="prize-card-bottom">
-            <h3>Collaboration</h3>
+            <h3>Research Collaboration</h3>
             <p>
-              International researchers collaborations
+              Potential research collaboration and MoU with international research communities
             </p>
           </div>
         </div>
@@ -156,7 +154,7 @@
           </div>
           <div class="bottom">
             <h3>Dr. Vivekanandan Suresh Kumar</h3>
-            <p>Dr Vive is currently the Associate Dean, Research and Innovation, Faculty of Science and Technology. He is an active member and contributor to the research community in Canada with backing from major research funds such as NSERC, SSHRC, and CFI. With over 100 research publications in refereed journals, international refereed conferences, and book chapters, and with tightly focused professional activities  that include being a journal editor, funding reviewer, and conference administrator, he strives to advance analytics-oriented, computer-mediated, causality-infused balance between learning efficiency and instructional effectiveness.</p>
+            <p>Dr Vive is the Associate Dean, Research and Innovation, Faculty of Science and Technology. He is an active member and contributor to the research community in Canada with backing from major research funds such as NSERC, SSHRC, and CFI. With over 100 research publications in refereed journals, international refereed conferences, and book chapters, and with tightly focused professional activities  that include being a journal editor, funding reviewer, and conference administrator, he strives to advance analytics-oriented, computer-mediated, causality-infused balance between learning efficiency and instructional effectiveness.</p>
           </div>
         </div>
         <div class="mentor">
@@ -172,8 +170,8 @@
     </div>
     
     <div class="mail-footer">
-      <h2 style="margin-bottom:0.5rem;">Have A Query, Feel Free to Contact</h2>
-      <a href="mailto:bkguhan2001@gmail.com" target="_blank" class="btn btn-outline">Contact</a>
+      <h2 style="margin-bottom:0.5rem;">For any clarification, please contact</h2>
+      <h2 style="margin-bottom:0.5rem; text-decoration: underline;">sample@gmail.com</h2>
     </div>
   </main>
 </template>
