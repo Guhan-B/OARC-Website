@@ -313,6 +313,34 @@
               />
             </div>
           </div>
+          <div class="schedule">
+            <h3 class="title">Winners Get</h3>
+            <div class="prize">
+              <h4>Certificate</h4>
+              <p>Certificate Signed by the Vice Chancellor of Thiruvalluvar University </p>
+            </div>
+            <div class="prize">
+              <h4>Mentorship</h4>
+              <p>Mentoring and networking with international expert researchers</p>
+            </div>
+            <div class="prize">
+              <h4>Research Collaboration</h4>
+              <p>Potential research collaboration and MoU with international research communities</p>
+            </div>
+          </div>
+          <div class="schedule">
+            <h3 class="title">Talk With Mentors</h3>
+            <div class="mentor">
+              <img src="@/assets/img/rory.jpg" alt="">
+              <h4>Dr. Rory McGreal</h4>
+              <nuxt-link class="btn btn-solid" to="/">Learn More</nuxt-link>
+            </div>
+            <div class="mentor">
+              <img src="@/assets/img/vivekumar.jpg" alt="">
+              <h4>Dr. Vivekanandan Suresh Kumar</h4>
+              <nuxt-link class="btn btn-solid" to="/">Learn More</nuxt-link>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -337,6 +365,37 @@ img {
   margin: auto;
 }
 
+.mentor{
+  text-align: center;
+}
+
+.mentor img{
+  width: 50%;
+  /* height: 200px; */
+  object-fit: cover;
+  object-position: bottom;
+  margin: 1rem auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.mentor a{
+  margin: 1rem 0;
+}
+
+.prize{
+  margin: 1rem 0;
+}
+
+.prize h4{
+  margin-bottom: 0.25rem;
+  color: #333;
+}
+
+.prize p{
+  color: #555;
+}
+
 .details .container {
   display: flex;
   align-items: flex-start;
@@ -346,6 +405,10 @@ img {
 .left {
   flex: 1;
   margin-right: 2rem;
+}
+
+.right{
+  flex: 0.5;
 }
 
 a {

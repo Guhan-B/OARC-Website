@@ -72,6 +72,7 @@
             <button
               class="btn btn-red"
               type="button"
+              v-if="formData.oers.length > 1"
               @click="() => removeThisOer(index)"
             >
               Remove
@@ -184,11 +185,11 @@
 
           <hr />
         </div>
+        <p style="margin-bottom: 20px; text-align: left; font-weight:bold;">
+          I confirm that the OER entry submitted by me
+        </p>
         <div class="decleration_wrapper">
-          <p style="margin-bottom: 10px">
-            I confirm that the OER entry submitted by me
-          </p>
-          <div>
+          <div class="points">
             <div class="decleration">
               <input
                 type="checkbox"
@@ -197,7 +198,7 @@
                 :value="1"
                 v-model="allowSubmit"
               />
-              <label for="dec1">Does not contain any adult content</label>
+              <label for="dec1">Does <strong>NOT</strong> contain any adult content</label>
             </div>
             <div class="decleration">
               <input
@@ -208,7 +209,7 @@
                 v-model="allowSubmit"
               />
               <label for="dec2"
-                >Does not contain any religious and political content</label
+                >Does <strong>NOT</strong> contain any religious and political content</label
               >
             </div>
             <div class="decleration">
@@ -220,7 +221,7 @@
                 v-model="allowSubmit"
               />
               <label for="dec3"
-                >Does not contain any discriminative / anti-social content is
+                >Does <strong>NOT</strong> contain any discriminative / anti-social content is
                 permissible</label
               >
             </div>
@@ -233,7 +234,7 @@
                 v-model="allowSubmit"
               />
               <label for="dec4"
-                >Does not contain any gender bias / racial bias content</label
+                >Does <strong>NOT</strong> contain any gender bias / racial bias content</label
               >
             </div>
             <div class="decleration">
@@ -245,7 +246,7 @@
                 v-model="allowSubmit"
               />
               <label for="dec5"
-                >Does not contain any other forms for prohibited contents</label
+                >Does <strong>NOT</strong> contain any other forms for prohibited contents</label
               >
             </div>
           </div>
@@ -304,7 +305,7 @@ export default {
             authorFname: "",
             authorLname: "",
             otherType: "",
-            authorOrg: ""
+            authorOrg: "",
           },
         ],
         number: 1,
@@ -327,7 +328,7 @@ export default {
           console.error("Error adding Work: ", error);
           alert("Unable to save submission try again later");
           this.modalTitle = "Error";
-          this.modalMessage = "Unable to submit thr form. Try again";
+          this.modalMessage = "Unable to submit the form. Try again";
           this.modalType = "error";
           this.showModal = true;
         });
@@ -526,7 +527,6 @@ hr {
 }
 .decleration {
   width: 100%;
-  text-align: center;
   display: flex;
   align-items: center;
   justify-content: flex-start;
