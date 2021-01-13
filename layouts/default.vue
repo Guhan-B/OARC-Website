@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Navbar />
+    <Navbar id="top" />
     <Nuxt />
     <footer>
       <p>Copyrights &copy; 2020 , WeCollect</p>

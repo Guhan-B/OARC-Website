@@ -2,7 +2,7 @@
   <main>
     <div class="showcase">
       <div class="container">
-        <div class="jumbo-text">
+        <div class="text-content">
           <h1>WeCollect</h1>
           <p>
             Collecting useful and awesome <strong>O</strong>pen
@@ -13,192 +13,486 @@
             <nuxt-link class="btn btn-solid" exact to="/submission"
               >Participate</nuxt-link
             >
-            <nuxt-link
-              class="btn btn-outline"
-              exact
-              to="/"
-              v-scroll-to="{ element: '#learn-more', offset: -80 }"
-              >Learn More</nuxt-link
-            >
+            <nuxt-link class="btn btn-outline" to="/">About</nuxt-link>
           </div>
         </div>
-        <div class="logo">
-          <img src="https://upload.wikimedia.org/wikipedia/en/0/0c/TUemblem.png" alt="">
-        </div>
+        <!-- <div class="image">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/0/0c/TUemblem.png"
+            alt=""
+          />
+        </div> -->
       </div>
     </div>
-
-    <div class="who-can" id="learn-more">
+    <div class="details">
       <div class="container">
-        <h2>Who Can Participate?</h2>
-        <div class="card-container">
-          <div class="card">
-            <div class="image">
-              <img src="@/assets/svg/graduate.svg" alt="" />
+        <div class="left">
+          <div class="about">
+            <h2>WeCollect - Open Educational Resources</h2>
+            <div>
+              <blockquote>
+                இலகு சீருடை நாற்றிசை நாடுகள் யாவுஞ் சென்று புதுமை கொணர்ந்து
+                இங்கே திலக வாணுதலார் தங்கள் பாரத தேசம் ஓங்க உழைத்திடல்
+                வேண்டுமாம்
+              </blockquote>
+              <cite>-பாரதியார்</cite>
             </div>
-            <p>Any MPhil or PhD or Post Doctoral student from any department</p>
+            <p>
+              The legendary poet Bharathi wants us to explore the globe, bring
+              all latest knowledge to strengthen the country. We all know the
+              famous expression by Isaac Newton “If I have seen further it is by
+              standing on the shoulders of Giants”.
+            </p>
+            <p>
+              WeCollect is an effort to literally stand on the shoulders of
+              giants and bring back the knowledge from across the globe!!!
+              Thanks to the internet and technology, there is so much wealth of
+              presentable knowledge that is freely available, curated, and ready
+              to be consumed on almost all topics in the world. We do not even
+              have to travel to different countries!! However, these rich
+              resources are not exploited by the needy for several reasons -
+              lack of a catalog and the difficulty of finding what is needed are
+              the most-often cited barriers. Our initiative aims to create a
+              repository of all such Open Educational Resources (OERs) related
+              to Research Methods relevant for researchers from multiple
+              disciplines and multidisciplinary, interdisciplinary and
+              transdisciplinary researchers to alleviate the barrier.
+            </p>
+            <p>
+              This is a competition open to all the members of Thiruvalluvar
+              University, especially to researchers - inclusive of research
+              supervisors, teaching staff members passionate about Research
+              Methods or a doctoral student or an MPhil student. You can submit
+              any number of resources. Each submission will be assessed by
+              experts based on the rubrics. If you submit more than one
+              resource, your score will be the sum of all the scores of your
+              submissions. Resources in English or Tamil are only eligible for
+              this competition. Other languages are out of scope at this point
+              in time.
+            </p>
+            <p style="background-color: #508787; color: #ffffff; padding: 1rem">
+              <strong
+                >Any candidate of MPhil or PhD or Post Doctoral student from any
+                department and Any faculty members who are in early stages of
+                their career can participate in this initiative.Please note, any
+                prohibited content will disqualify your candidature.</strong
+              >
+            </p>
           </div>
-          <div class="card">
-            <div class="image">
-              <img src="@/assets/svg/faculty.svg" alt="" />
+          <div class="about">
+            <h2>Some Information on OER</h2>
+            <p>
+              OER stands for "Open Educational Resources" and is associated with
+              an educational movement that began about 20 years ago and has
+              become a global educational movement. The open provision of
+              educational resources, enabled by Information and Communication
+              Technologies (ICT), for consultation, use and adaptation by the
+              community of users for non-commercial purposes. OER are digitised
+              materials offered freely and openly for educators, students and
+              self learners to use and reuse for teaching, learning and
+              research.
+            </p>
+            <p>
+              The resource should be either in the public domain or released
+              with an open license. An OPEN license is a type of license that
+              grants permission to access, re-use and redistribute a work with
+              few or no restrictions. These resources include complete online
+              courses, course materials, modules, textbooks, streaming videos,
+              tests, assessment tools, software, many other tools, materials &
+              techniques that are useful for teaching, learning, as well as for
+              research purposes.
+            </p>
+            <p>
+              The terms “open content” and “open educational resources” describe
+              any copyrightable work that is either (1) in the public domain or
+              (2) licensed in a manner that provides users with free and
+              perpetual permission to engage in the 5R activities:
+            </p>
+            <ul>
+              <li>
+                Retain – the right to make, own, and control copies of the
+                content (e.g., download, duplicate, store, and manage)
+              </li>
+              <li>
+                Reuse – the right to use the content in a wide range of ways
+                (e.g., in a class, in a study group, on a website, in a video)
+              </li>
+              <li>
+                Revise – the right to adapt, adjust, modify, or alter the
+                content itself (e.g., translate the content into another
+                language)
+              </li>
+              <li>
+                Remix – the right to combine the original or revised content
+                with other material to create something new (e.g., incorporate
+                the content into a mash up)
+              </li>
+              <li>
+                Redistribute – the right to share copies of the original
+                content, your revisions, or your remixes with others (e.g., give
+                a copy of the content to a friend)
+              </li>
+            </ul>
+            <p>
+              Example: <strong>MOOCS</strong>: MOOCs stands for Massive Open
+              Online Courses. These are free online courses and any individual
+              can enroll. MOOCs offer a wide range of courses in many different
+              subjects for individuals to be able to evolve their knowledge and
+              education in an affordable and easy manner.
+            </p>
+            <p>
+              Many materials casually recognized as OER, technically, do not
+              fall into that category. For example, a video that has a creative
+              commons license might not necessarily be open; the agreement may
+              instead allow it to be freely used but not altered or repurposed.
+              . Other materials allow sharing and modifications but only within
+              a paid subscription service. Materials thus restricted in one or
+              more of the 5R aspects would not be considered OER.
+            </p>
+            <p>
+              That does not mean OER has to be completely nonprofit. To make
+              ongoing OER projects sustainable, some have allowed companies to
+              offer organized “playlists” or other curated packages of materials
+              for a fee. projects, such as the SciShow series on YouTube, allow
+              donations through patronage websites such as Patreon and Subable.
+            </p>
+            <p>
+              Inspired by an open source license move in the world of computing
+              in 2001, a group of experts comprised of educators, technologists,
+              legal scholars, investors, entrepreneurs, and philanthropists
+              formed a not-for-profit organization called Creative Commons and
+              developed the first set of open licenses in 2002. This brought a
+              much needed clarity about sharing materials online.
+            </p>
+            <p>
+              For more information on OERs, please refer to the
+              <a
+                target="_Blank"
+                href="https://www.oercommons.org/static/staticpages/documents/FAQ-OER-K-12.pdf?f923a5a5e335"
+                >FAQ link</a
+              >.
+            </p>
+          </div>
+          <div class="about">
+            <h2>Some Example OER repositories</h2>
+            <ul>
+              <li>
+                <a href="https://www.library.umass.edu/oer/oer-repositories/"
+                  >https://www.library.umass.edu/oer/oer-repositories/</a
+                >
+              </li>
+              <li>
+                <a href="https://pitt.libguides.com/openeducation/biglist"
+                  >https://pitt.libguides.com/openeducation/biglist</a
+                >
+              </li>
+              <li>
+                <a href="https://osf.io/">https://osf.io/</a>
+              </li>
+              <li>
+                <a
+                  href="https://open.bccampus.ca/browse-our-collection/find-open-textbooks/"
+                  >https://open.bccampus.ca/browse-our-collection/find-open-textbooks/</a
+                >
+              </li>
+              <li>
+                <a href="https://www.oerknowledgecloud.org/"
+                  >https://www.oerknowledgecloud.org/</a
+                >
+              </li>
+              <li>
+                <a href="https://unesdoc.unesco.org/home"
+                  >https://unesdoc.unesco.org/home</a
+                >
+              </li>
+              <li>
+                <a href="https://open.umn.edu/opentextbooks/"
+                  >https://open.umn.edu/opentextbooks/</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="about">
+            <h2>Some Useful References / Inputs</h2>
+            <ul>
+              <li>
+                <a href="https://libguides.pvcc.edu/oers/home"
+                  >Open Educational Resources Playbook</a
+                >
+              </li>
+              <li>
+                <a href="https://pressbooks.bccampus.ca/facultyoertoolkit/"
+                  >Faculty OER Toolkit</a
+                >
+              </li>
+              <li>
+                Use Google smartly with
+                <a href="http://www.google.com/advanced_search"
+                  >http://www.google.com/advanced_search</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://courses.lumenlearning.com/suny-oercommunitycourse-understandingoer/"
+                  >Understanding OER</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="about">
+            <h2>Some Points to be noted for the competition</h2>
+            <p>
+              For the competition, please do NOT submit the entire OER
+              repository. Instead, submit specific content from any such OER
+              repository relevant for the identified learning outcomes. For
+              example, you can submit
+              <strong>
+                "Qualitative case study methodology: Study design and
+                implementation for novice researchers."
+              </strong>
+              "The Qualitative Report, 13 (4)" by Baxter, P. & Jack, S. with the
+              URL
+              <strong
+                ><a href="http://www.nova.edu/ssss/QR/QR13-4/baxter.pdf"
+                  >http://www.nova.edu/ssss/QR/QR13-4/baxter.pdf</a
+                ></strong
+              >
+              but <strong>NOT</strong> the entire journal or The Quality Report
+              / TQR (<a href="https://nsuworks.nova.edu/tqr/"
+                >https://nsuworks.nova.edu/tqr/</a
+              >) repository as such.
+            </p>
+            <p>
+              When you submit the OER, please specify the type of content
+              (reading material, quiz, assignment question etc. ) along with the
+              author details. If you are the author, please provide your full
+              name, organization and contact details. For the example given
+              above, the type of content would be "reading material" and the
+              author name would be “Pamela Baxter, McMaster University and Susan
+              Jack, McMaster University”.
+            </p>
+          </div>
+        </div>
+        <div class="right">
+          <div class="schedule">
+            <h3 class="title">Important Dates</h3>
+            <div class="date">
+              <div class="icon">
+                <img src="@/assets/svg/submit.svg" alt="" />
+              </div>
+              <div class="date-text">
+                <h3>Submission Starts</h3>
+                <p>27th January 2020</p>
+              </div>
             </div>
-            <p>Any faculty members who are in early stages of their career</p>
+            <div class="date">
+              <div class="icon">
+                <img src="@/assets/svg/submit.svg" alt="" />
+              </div>
+              <div class="date-text">
+                <h3>Submission Ends</h3>
+                <p>27th January 2020</p>
+              </div>
+            </div>
+            <div class="date">
+              <div class="icon">
+                <img src="@/assets/svg/success.svg" alt="" />
+              </div>
+              <div class="date-text">
+                <h3>Results</h3>
+                <p>27th January 2020</p>
+              </div>
+            </div>
+          </div>
+          <div class="schedule">
+            <h3 class="title">Sponsered By</h3>
+            <div class="image">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/en/0/0c/TUemblem.png"
+                alt=""
+              />
+            </div>
           </div>
         </div>
       </div>
     </div>
-
-    <div class="date">
-      <h2>Important Dates</h2>
-      <div class="container">
-        <div>
-          <div class="image">
-            <img src="@/assets/svg/submit.svg" alt="" />
-          </div>
-          <h3>Submisson Opens</h3>
-          <p>20th Dec to 20th Jan</p>
-        </div>
-
-        <div>
-          <div class="image">
-            <img src="@/assets/svg/success.svg" alt="" />
-          </div>
-          <h3>Results</h3>
-          <p>27th Feb</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="evaluation">
-      <h2>Rubrics For Winning</h2>
-      <div class="container">
-        <div class="criteria">
-          <div>
-            <p>Number of OER submitted</p>
-          </div>
-          <div>
-            <p>Complexity of the topic</p>
-          </div>
-          <div>
-            <p>Uniqueness of the OER</p>
-          </div>
-          <div>
-            <p>Depth of knowledge expressed</p>
-          </div>
-          <div>
-            <p>Votes and reviews recieved</p>
-          </div>
-
-          <div class="btn-group">
-            <nuxt-link class="btn btn-solid" exact to="/rules"
-              >More Details</nuxt-link
-            >
-            <nuxt-link class="btn btn-outline" exact to="/rules"
-              >Download</nuxt-link
-            >
-          </div>
-          <!-- <nuxt-link class="btn btn-solid" exact to="/rules">Download</nuxt-link> -->
-        </div>
-        <div class="evaluation-image">
-          <img src="@/assets/img/winning.jpg" alt="" />
-        </div>
-      </div>
-    </div>
-
-    <div class="prize">
-      <h2>Get a Chance to Win</h2>
-      <div class="bg"></div>
-      <div class="container">
-        <div class="prize-card">
-          <div class="prize-card-top">
-            <img src="@/assets/img/cetf.jpg" alt="" />
-          </div>
-          <div class="prize-card-bottom">
-            <h3>Certificate</h3>
-            <p>
-              Certificate Signed by the Vice Chancellor of Thiruvalluvar University
-            </p>
-          </div>
-        </div>
-        <div class="prize-card">
-          <div class="prize-card-top">
-            <img src="@/assets/img/mentor.jpg" alt="" />
-          </div>
-          <div class="prize-card-bottom">
-            <h3>Mentorship</h3>
-            <p>
-              Mentoring and networking with international expert researchers
-            </p>
-          </div>
-        </div>
-        <div class="prize-card">
-          <div class="prize-card-top">
-            <img src="@/assets/img/sponser.jpg" alt="" />
-          </div>
-          <div class="prize-card-bottom">
-            <h3>Research Collaboration</h3>
-            <p>
-              Potential research collaboration and MoU with international research communities
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="talk">
-      <h2>Talk With Mentors</h2>
-      <div class="container">
-        <div class="mentor">
-          <div class="top">
-            <img src="../assets/img/vivekumar.jpg" alt="" />
-          </div>
-          <div class="bottom">
-            <h3>Dr. Vivekanandan Suresh Kumar</h3>
-            <p>Dr Vive is the Associate Dean, Research and Innovation, Faculty of Science and Technology. He is an active member and contributor to the research community in Canada with backing from major research funds such as NSERC, SSHRC, and CFI. With over 100 research publications in refereed journals, international refereed conferences, and book chapters, and with tightly focused professional activities  that include being a journal editor, funding reviewer, and conference administrator, he strives to advance analytics-oriented, computer-mediated, causality-infused balance between learning efficiency and instructional effectiveness.</p>
-          </div>
-        </div>
-        <div class="mentor">
-          <div class="top">
-            <img src="../assets/img/rory.jpg" alt="" />
-          </div>
-          <div class="bottom">
-            <h3>Dr. Rory McGreal</h3>
-            <p>Professor Rory McGreal is the UNESCO/International Council for Open and Distance Education Chair in Open Educational Resources. He is co-editor of the International Review of Research in Open and Distance Learning (IRRODL), and founder of the OER Knowledge Cloud. Formerly, he served as the Associate Vice President Research and as the director of the Technology Enhanced Knowledge Research Institute (TEKRI). </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    
     <div class="mail-footer">
-      <h2 style="margin-bottom:0.5rem;">For any clarification, please contact</h2>
-      <h2 style="margin-bottom:0.5rem; text-decoration: underline;">sample@gmail.com</h2>
+      <h2 style="margin-bottom: 0.5rem">
+        For Any Clarification, Please Contact
+      </h2>
+      <h2 style="margin-bottom: 0.5rem; text-decoration: underline">
+        sample@gmail.com
+      </h2>
     </div>
   </main>
 </template>
-
-<script>
-export default {};
-</script>
 
 <style scoped>
 img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+}
+.container {
+  width: 70%;
+  margin: auto;
 }
 
-h2 {
-  font-size: 2rem;
+.details .container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
-h1 {
-  margin: 0.75rem 0;
-  font-size: 2.5rem;
+.left {
+  flex: 1;
+  margin-right: 2rem;
 }
 
-p {
-  line-height: 1.2;
-  font-size: 1.25rem;
+a {
+  color: #508787;
+}
+
+.about {
+  padding: 2rem;
+  color: #333;
+  border-top: #508787 5px solid;
+  margin-bottom: 2rem;
+  background: white;
+}
+
+.about h2 {
+  margin-bottom: 2rem;
+}
+
+.about p {
+  line-height: 1.8;
+  font-size: 1.025rem;
+  margin-block: 1rem;
+}
+
+.about p a {
+  color: #508787;
+}
+
+.about blockquote {
+  color: #508787;
+  font-weight: bold;
+}
+
+.about cite {
+  text-align: right;
+  margin-top: 0.75rem;
+  display: block;
+  color: #508787;
+}
+
+.about ul {
+  margin-left: 2rem;
+  line-height: 1.8;
+  list-style: decimal;
+}
+
+.about ul li {
+  list-style: decimal;
+  list-style-position: inside;
+}
+
+.schedule {
+  background: white;
+  padding: 2rem 2rem;
+  margin-bottom: 2rem;
+  border-top: #508787 5px solid;
+}
+
+.schedule .title {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #555;
+  font-size: 1.35rem;
+}
+
+.schedule .image {
+  width: 180px;
+  height: 180px;
+  margin: 2rem auto;
+}
+
+.schedule .date {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.date .icon {
+  height: 50px;
+  width: 50px;
+  overflow: hidden;
+  margin-right: 1.5rem;
+  border-radius: 25px;
+  padding: 10px;
+  background: whitesmoke;
+}
+
+.date-text h3 {
+  font-size: 1.05rem;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.date-text p {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.elegibility .el {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1rem 2rem;
+  background: #508787;
+  color: #ffffff;
+  font-size: 1.1rem;
+  margin-top: 2rem;
+}
+
+.elegibility .el .icon {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  margin-right: 1rem;
+}
+
+.showcase {
+  height: 50vh;
+  color: white;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://images.pexels.com/photos/669610/pexels-photo-669610.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.showcase .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.showcase .text-content {
+  text-align: left;
+  line-height: 1.5;
+}
+
+.showcase .text-content h1 {
+  font-size: 2.25rem;
+}
+
+.showcase .text-content p {
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+  font-size: 1.15rem;
+  color: #ffffffdd;
 }
 
 .btn {
@@ -218,394 +512,25 @@ p {
 }
 
 .btn-outline {
-  border: 2px #508787 solid;
+  border: 2px white solid;
   color: #508787;
   background: white;
 }
 
-.container {
-  height: 100%;
-  width: 70%;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.details .container {
+  padding: 2rem 0;
 }
 
-.showcase {
-  height: 70vh;
-  color: white;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("https://images.pexels.com/photos/669610/pexels-photo-669610.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.showcase {
-  line-height: 1.5;
-}
-
-.showcase .container{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.mail-footer{
+.mail-footer {
   text-align: center;
   padding: 1rem 0;
   background: #508787;
   color: #ffffff;
 }
 
-.mail-footer .btn{
-  margin: 0;
-  margin-top: 1rem;
-}
-
-.showcase .logo img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.links {
-  margin: 2rem 0;
-}
-
-.who-can {
-  text-align: center;
-  padding: 2rem 0;
-}
-
-.who-can h2 {
-  color: #508787;
-  margin: 1rem 0;
-}
-
-.card {
-  background: #508787;
-  color: white;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  width: 70%;
-  padding: 1rem 2rem;
-  margin: 2rem auto;
-  border-radius: 5px;
-}
-
-.card .image {
-  width: 80px;
-  height: 80px;
-  background: white;
-  border-radius: 50px;
-  overflow: hidden;
-  padding: 1rem;
-  margin: 0 1rem;
-}
-
-.date {
-  padding: 2rem 0;
-  text-align: center;
-  background: #508787;
-}
-
-.date h2 {
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-  color: #fff;
-}
-
-.date .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-}
-
-.date .container div {
-  position: relative;
-  text-align: center;
-  padding: 3rem 0rem;
-  font-size: 1.5rem;
-  line-height: 2;
-  background: #ffffff;
-  color: #508787;
-  border-radius: 5px;
-  margin-top: 40px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 300px;
-}
-
-.date .container div .image {
-  width: 80px;
-  height: 80px;
-  background: #f4f4f4;
-  border-radius: 50px;
-  overflow: hidden;
-  padding: 1rem;
-  margin: 0 1rem;
+.back-to-top {
   position: absolute;
-  top: -40px;
-  left: 50%;
-  transform: translateX(-70%);
-}
-
-.evaluation {
-  padding: 2rem 0;
-}
-
-.evaluation .container {
-  display: flex;
-  flex-direction: row;
-}
-
-.evaluation h2 {
-  text-align: center;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-  color: #333;
-}
-
-.evaluation .container .criteria {
-  flex: 1;
-  line-height: 1.2;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-}
-
-.evaluation .container .criteria div:nth-child(even) {
-  color: #508787;
-  background: #fff;
-}
-
-.evaluation .container .criteria div {
-  background: #71bdbd;
-  color: #fff;
-  padding: 0.75rem;
-  width: 100%;
-  border-radius: 3px;
-}
-
-.evaluation .btn-group {
-  background: transparent !important;
-  text-align: center;
-}
-
-.evaluation .container .criteria a {
-  margin: 1rem 0;
-  align-self: center;
-}
-
-.evaluation .container .evaluation-image {
-  flex: 1;
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-.prize {
-  padding: 2rem 0;
-  text-align: center;
-  background: #ffffff;
-  position: relative;
-  z-index: 100;
-}
-
-.prize .bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 70%;
-  background: #508787;
-  z-index: 5;
-  border-bottom-left-radius: 100%;
-  border-bottom-right-radius: 100%;
-}
-
-.prize h2 {
-  position: relative;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-  color: #fff;
-  text-align: center;
-  z-index: 200;
-}
-
-.prize .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 1rem;
-  z-index: 20;
-  position: relative;
-}
-
-.prize .container .prize-card {
-  text-align: center;
-  font-size: 1.2rem;
-  border-radius: 5px;
-  color: #333;
-  overflow: hidden;
-  border: 1px solid #ddd;
-  height: 100%;
-  margin: auto;
-}
-
-.prize-card .prize-card-top {
-  height: 180px;
-}
-
-.prize-card .prize-card-top img{
-  /* height: 180px; */
-  object-fit: cover;
-}
-
-.prize-card .prize-card-bottom {
-  text-align: center;
-  padding: 1.15rem 1.15rem;
-  background: #ffffff;
-  position: relative;
-}
-
-.prize-card-bottom h3 {
-  font-size: 1.25rem;
-  color: #333;
-  margin-bottom: 1rem;
-}
-
-.prize-card-bottom p {
-  font-size: 1rem;
-  color: #999;
-}
-
-.talk {
-  padding: 2rem 0;
-}
-
-.talk .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-}
-
-.talk h2 {
-  text-align: center;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-  color: #333;
-}
-
-.mentor {
-  padding: 1.5rem;
-  background: #fff;
-  border: #ddd solid 1px;
-  border-radius: 5px;
-  width: 70%;
-  height: 100%;
-  margin: auto;
-}
-
-.mentor .top img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin: 0 auto;
-}
-
-.mentor .top {
-  text-align: center;
-  padding: 0 1rem;
-}
-
-.mentor .bottom {
-  position: relative;
-  padding: 0 1rem;
-}
-
-.mentor .bottom h3 {
-  margin: 1rem 0;
-  font-size: 1.2rem;
-  text-align: center;
-}
-
-.mentor .bottom p {
-  font-size: 1rem;
-  text-align: justify;
-  color: #999;
-}
-
-@media only screen and (max-width: 1000px) {
-  .prize .container,
-  .date .container,
-  .talk .container {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media only screen and (max-width: 850px) {
-  .evaluation .container {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .evaluation .container .evaluation-image {
-    flex: 1;
-    border-radius: 5px;
-    overflow: hidden;
-    margin: 1rem 0;
-  }
-  .card {
-    flex-direction: column;
-    padding: 2rem;
-  }
-
-  .card .image {
-    margin-bottom: 1rem;
-  }
-
-  .evaluation .container .criteria {
-    padding: 0;
-  }
-
-  .showcase .logo{
-    display: none;
-  }
-}
-
-@media only screen and (max-width: 650px) {
-  .prize .container,
-  .date .container,
-  .talk .container {
-    grid-template-columns: 1fr;
-  }
-  .container {
-    width: 90%;
-  }
-
-  .mentor{
-    width: 100%;
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  .card {
-    width: 100%;
-  }
-  .showcase .container {
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-
-  .btn {
-    margin: 0 5px;
-  }
+  bottom: 20px;
+  right: 20px;
 }
 </style>
