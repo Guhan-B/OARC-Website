@@ -32,9 +32,9 @@
               v-model="formData.email"
             />
 
-            <!-- <button type="button" class="btn btn-solid" @click="verifyEmail">
+            <button type="button" class="btn btn-solid" @click="verifyEmail">
               verifyEmail
-            </button> -->
+            </button>
           </div>
           <AppTextInput
             type="text"
@@ -357,8 +357,13 @@ export default {
       });
     },
     async verifyEmail() {
+      if(fireAuth.currentUser){
+        console.log("Loggin out")
+        await fireAuth.signOut();
+        this.verifyEmail();
+      }
+      else{
       await fireAuth.signInAnonymously().then(() => {
-        console.log(fireAuth.currentUser.emailVerified);
         if (fireAuth.currentUser.emailVerified === false) {
           fireAuth.currentUser.updateEmail(this.formData.email).then(() => {
             fireAuth.currentUser.sendEmailVerification();
@@ -367,7 +372,10 @@ export default {
         } else {
           console.log("no GG");
         }
+        
       });
+      }
+
     },
     addOer() {
       this.formData.number += 1;
