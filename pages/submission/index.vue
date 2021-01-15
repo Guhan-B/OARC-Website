@@ -30,6 +30,16 @@
             label="Email"
             v-model="formData.email"
           />
+            <div class="form-controls">
+          <ButtonPrimary
+            type="submit"
+            title="Submit"
+            v-if="allowSubmit.length === 5"
+          />
+          <button type="button" class="btn btn-solid" @click="emailv">
+            verify
+          </button>
+            </div>
           <AppTextInput
             type="text"
             name="department"
@@ -274,7 +284,7 @@ import ButtonPrimary from "@/components/ButtonPrimary";
 import ButtonOutline from "@/components/ButtonOutline";
 import Modal from "@/components/Modal";
 import outcomesJson from "@/assets/data/outcome.json";
-import { fireDb } from "~/plugins/firebase.js";
+import { fireDb , fireAuth } from "~/plugins/firebase.js";
 
 export default {
   components: {
@@ -344,6 +354,18 @@ export default {
       snapshot.forEach((doc) => {
         console.log(doc.id, "=>", doc.data());
       });
+    },
+    async emailv(){
+      await fireAuth.signInAnonymously()
+      .then(()=>{
+        if(fireAuth.currentUser.emailVerified==false){
+          fireAuth.currentUser.updateEmail(this.formData.email).then(()=>{
+            fireAuth.currentUser.sendEmailVerification();
+             console.log("GG");
+          });
+         
+        }
+      })
     },
     addOer() {
       this.formData.number += 1;
