@@ -24,22 +24,18 @@
             label="Last Name"
             v-model="formData.lastName"
           />
-          <AppTextInput
-            type="email"
-            name="email"
-            label="Email"
-            v-model="formData.email"
-          />
-            <div class="form-controls">
-          <ButtonPrimary
-            type="submit"
-            title="Submit"
-            v-if="allowSubmit.length === 5"
-          />
-          <button type="button" class="btn btn-solid" @click="emailv">
-            verify
-          </button>
-            </div>
+          <div class="email-group">
+            <AppTextInput
+              type="email"
+              name="email"
+              label="Email"
+              v-model="formData.email"
+            />
+
+            <!-- <button type="button" class="btn btn-solid" @click="verifyEmail">
+              verifyEmail
+            </button> -->
+          </div>
           <AppTextInput
             type="text"
             name="department"
@@ -195,7 +191,7 @@
 
           <hr />
         </div>
-        <p style="margin-bottom: 20px; text-align: left; font-weight:bold;">
+        <p style="margin-bottom: 20px; text-align: left; font-weight: bold">
           I confirm that the OER entry submitted by me
         </p>
         <div class="decleration_wrapper">
@@ -208,7 +204,9 @@
                 :value="1"
                 v-model="allowSubmit"
               />
-              <label for="dec1">Does <strong>NOT</strong> contain any adult content</label>
+              <label for="dec1"
+                >Does <strong>NOT</strong> contain any adult content</label
+              >
             </div>
             <div class="decleration">
               <input
@@ -219,7 +217,8 @@
                 v-model="allowSubmit"
               />
               <label for="dec2"
-                >Does <strong>NOT</strong> contain any religious and political content</label
+                >Does <strong>NOT</strong> contain any religious and political
+                content</label
               >
             </div>
             <div class="decleration">
@@ -231,8 +230,8 @@
                 v-model="allowSubmit"
               />
               <label for="dec3"
-                >Does <strong>NOT</strong> contain any discriminative / anti-social content is
-                permissible</label
+                >Does <strong>NOT</strong> contain any discriminative /
+                anti-social content is permissible</label
               >
             </div>
             <div class="decleration">
@@ -244,7 +243,8 @@
                 v-model="allowSubmit"
               />
               <label for="dec4"
-                >Does <strong>NOT</strong> contain any gender bias / racial bias content</label
+                >Does <strong>NOT</strong> contain any gender bias / racial bias
+                content</label
               >
             </div>
             <div class="decleration">
@@ -256,7 +256,8 @@
                 v-model="allowSubmit"
               />
               <label for="dec5"
-                >Does <strong>NOT</strong> contain any other forms for prohibited contents</label
+                >Does <strong>NOT</strong> contain any other forms for
+                prohibited contents</label
               >
             </div>
           </div>
@@ -284,7 +285,7 @@ import ButtonPrimary from "@/components/ButtonPrimary";
 import ButtonOutline from "@/components/ButtonOutline";
 import Modal from "@/components/Modal";
 import outcomesJson from "@/assets/data/outcome.json";
-import { fireDb , fireAuth } from "~/plugins/firebase.js";
+import { fireDb, fireAuth } from "~/plugins/firebase.js";
 
 export default {
   components: {
@@ -355,17 +356,18 @@ export default {
         console.log(doc.id, "=>", doc.data());
       });
     },
-    async emailv(){
-      await fireAuth.signInAnonymously()
-      .then(()=>{
-        if(fireAuth.currentUser.emailVerified==false){
-          fireAuth.currentUser.updateEmail(this.formData.email).then(()=>{
+    async verifyEmail() {
+      await fireAuth.signInAnonymously().then(() => {
+        console.log(fireAuth.currentUser.emailVerified);
+        if (fireAuth.currentUser.emailVerified === false) {
+          fireAuth.currentUser.updateEmail(this.formData.email).then(() => {
             fireAuth.currentUser.sendEmailVerification();
-             console.log("GG");
+            console.log("GG");
           });
-         
+        } else {
+          console.log("no GG");
         }
-      })
+      });
     },
     addOer() {
       this.formData.number += 1;
@@ -401,7 +403,9 @@ export default {
     },
   },
 
-  computed: {},
+  computed: {
+    
+  },
 };
 </script>
 
@@ -410,6 +414,10 @@ hr {
   border: 0;
   border-bottom: 1px dashed #ccc;
   background: #999;
+}
+
+.email-group button {
+  margin: 0.75rem 2rem;
 }
 
 .oer-group {
@@ -515,7 +523,7 @@ hr {
 
 .input-select-group select {
   border: 1px solid rgba(51, 51, 51, 0.5);
-  padding: 0.5rem;
+  padding: 0.35rem 0.5rem;
   color: #222;
   width: 100%;
   border-radius: 3px;
@@ -563,6 +571,10 @@ hr {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.submission{
+  width: 100%;
 }
 
 @media only screen and (max-width: 1050px) {

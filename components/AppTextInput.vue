@@ -2,7 +2,7 @@
   <div class="input-group">
     <label :for="name">{{ label }}</label>
     <textarea required v-if="type == 'textarea'"  :id="name" @input="emitEvent" :value="value" ></textarea>
-    <input required v-else :type="type" :id="name" @input="emitEvent" :value="value" />
+    <input required v-else :type="type" :id="name" @input="emitEvent" :value="value"/>
     <p class="subtitle">{{ subtitle }}</p>
   </div>
 </template>
@@ -42,7 +42,7 @@ textarea{
 .input-group select,
 .input-group textarea {
   border: 1px solid rgba(51, 51, 51, 0.5);
-  padding: 0.5rem;
+  padding: 0.35rem 0.5rem;
   color: #222;
   width: 100%;
   border-radius: 3px;
@@ -64,7 +64,10 @@ export default {
       name: {},
       value: {},
       label: {},
-      subtitle: {}
+      subtitle: {},
+      change: {
+
+      }
   },
   methods: {
     emitEvent(e) {

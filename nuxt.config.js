@@ -17,6 +17,7 @@ export default {
   css: [
   ],
 
+  mode:'universal',
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
     '~/plugins/firebase.js'
@@ -29,6 +30,10 @@ export default {
   buildModules: [
   ],
 
+  loading: {
+    height: '5px',
+    color: 'green'
+  },
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
     'vue-scrollto/nuxt',

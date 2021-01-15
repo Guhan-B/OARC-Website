@@ -10,18 +10,18 @@
             for research methods and research ethics
           </p>
           <div class="links">
-            <nuxt-link class="btn btn-solid" exact to="/submission"
-              >Participate</nuxt-link
+            <nuxt-link class="btn btn-solid" exact to="/rules"
+              >Rubrics</nuxt-link
             >
-            <nuxt-link class="btn btn-outline" to="/">About</nuxt-link>
+            <nuxt-link class="btn btn-outline" to="/aboutoer">About OER</nuxt-link>
           </div>
         </div>
-        <!-- <div class="image">
+        <div class="image">
           <img
             src="https://upload.wikimedia.org/wikipedia/en/0/0c/TUemblem.png"
             alt=""
           />
-        </div> -->
+        </div>
       </div>
     </div>
     <div class="details">
@@ -80,166 +80,6 @@
             </p>
           </div>
           <div class="about">
-            <h2>Some Information on OER</h2>
-            <p>
-              OER stands for "Open Educational Resources" and is associated with
-              an educational movement that began about 20 years ago and has
-              become a global educational movement. The open provision of
-              educational resources, enabled by Information and Communication
-              Technologies (ICT), for consultation, use and adaptation by the
-              community of users for non-commercial purposes. OER are digitised
-              materials offered freely and openly for educators, students and
-              self learners to use and reuse for teaching, learning and
-              research.
-            </p>
-            <p>
-              The resource should be either in the public domain or released
-              with an open license. An OPEN license is a type of license that
-              grants permission to access, re-use and redistribute a work with
-              few or no restrictions. These resources include complete online
-              courses, course materials, modules, textbooks, streaming videos,
-              tests, assessment tools, software, many other tools, materials &
-              techniques that are useful for teaching, learning, as well as for
-              research purposes.
-            </p>
-            <p>
-              The terms “open content” and “open educational resources” describe
-              any copyrightable work that is either (1) in the public domain or
-              (2) licensed in a manner that provides users with free and
-              perpetual permission to engage in the 5R activities:
-            </p>
-            <ul>
-              <li>
-                Retain – the right to make, own, and control copies of the
-                content (e.g., download, duplicate, store, and manage)
-              </li>
-              <li>
-                Reuse – the right to use the content in a wide range of ways
-                (e.g., in a class, in a study group, on a website, in a video)
-              </li>
-              <li>
-                Revise – the right to adapt, adjust, modify, or alter the
-                content itself (e.g., translate the content into another
-                language)
-              </li>
-              <li>
-                Remix – the right to combine the original or revised content
-                with other material to create something new (e.g., incorporate
-                the content into a mash up)
-              </li>
-              <li>
-                Redistribute – the right to share copies of the original
-                content, your revisions, or your remixes with others (e.g., give
-                a copy of the content to a friend)
-              </li>
-            </ul>
-            <p>
-              Example: <strong>MOOCS</strong>: MOOCs stands for Massive Open
-              Online Courses. These are free online courses and any individual
-              can enroll. MOOCs offer a wide range of courses in many different
-              subjects for individuals to be able to evolve their knowledge and
-              education in an affordable and easy manner.
-            </p>
-            <p>
-              Many materials casually recognized as OER, technically, do not
-              fall into that category. For example, a video that has a creative
-              commons license might not necessarily be open; the agreement may
-              instead allow it to be freely used but not altered or repurposed.
-              . Other materials allow sharing and modifications but only within
-              a paid subscription service. Materials thus restricted in one or
-              more of the 5R aspects would not be considered OER.
-            </p>
-            <p>
-              That does not mean OER has to be completely nonprofit. To make
-              ongoing OER projects sustainable, some have allowed companies to
-              offer organized “playlists” or other curated packages of materials
-              for a fee. projects, such as the SciShow series on YouTube, allow
-              donations through patronage websites such as Patreon and Subable.
-            </p>
-            <p>
-              Inspired by an open source license move in the world of computing
-              in 2001, a group of experts comprised of educators, technologists,
-              legal scholars, investors, entrepreneurs, and philanthropists
-              formed a not-for-profit organization called Creative Commons and
-              developed the first set of open licenses in 2002. This brought a
-              much needed clarity about sharing materials online.
-            </p>
-            <p>
-              For more information on OERs, please refer to the
-              <a
-                target="_Blank"
-                href="https://www.oercommons.org/static/staticpages/documents/FAQ-OER-K-12.pdf?f923a5a5e335"
-                >FAQ link</a
-              >.
-            </p>
-          </div>
-          <div class="about">
-            <h2>Some Example OER repositories</h2>
-            <ul>
-              <li>
-                <a href="https://www.library.umass.edu/oer/oer-repositories/"
-                  >https://www.library.umass.edu/oer/oer-repositories/</a
-                >
-              </li>
-              <li>
-                <a href="https://pitt.libguides.com/openeducation/biglist"
-                  >https://pitt.libguides.com/openeducation/biglist</a
-                >
-              </li>
-              <li>
-                <a href="https://osf.io/">https://osf.io/</a>
-              </li>
-              <li>
-                <a
-                  href="https://open.bccampus.ca/browse-our-collection/find-open-textbooks/"
-                  >https://open.bccampus.ca/browse-our-collection/find-open-textbooks/</a
-                >
-              </li>
-              <li>
-                <a href="https://www.oerknowledgecloud.org/"
-                  >https://www.oerknowledgecloud.org/</a
-                >
-              </li>
-              <li>
-                <a href="https://unesdoc.unesco.org/home"
-                  >https://unesdoc.unesco.org/home</a
-                >
-              </li>
-              <li>
-                <a href="https://open.umn.edu/opentextbooks/"
-                  >https://open.umn.edu/opentextbooks/</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="about">
-            <h2>Some Useful References / Inputs</h2>
-            <ul>
-              <li>
-                <a href="https://libguides.pvcc.edu/oers/home"
-                  >Open Educational Resources Playbook</a
-                >
-              </li>
-              <li>
-                <a href="https://pressbooks.bccampus.ca/facultyoertoolkit/"
-                  >Faculty OER Toolkit</a
-                >
-              </li>
-              <li>
-                Use Google smartly with
-                <a href="http://www.google.com/advanced_search"
-                  >http://www.google.com/advanced_search</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://courses.lumenlearning.com/suny-oercommunitycourse-understandingoer/"
-                  >Understanding OER</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="about">
             <h2>Some Points to be noted for the competition</h2>
             <p>
               For the competition, please do NOT submit the entire OER
@@ -272,6 +112,16 @@
               Jack, McMaster University”.
             </p>
           </div>
+          <!-- <div class="about">
+            <h2>Rubrics for winning</h2>
+            <ul>
+              <li>Number of OER submitted</li>
+              <li>Complexity of the topic</li>
+              <li>Uniqueness of the OER</li>
+              <li>Depth of knowledge expressed</li>
+              <li>Votes and reviews recieved</li>
+            </ul>
+          </div> -->
         </div>
         <div class="right">
           <div class="schedule">
@@ -317,28 +167,44 @@
             <h3 class="title">Winners Get</h3>
             <div class="prize">
               <h4>Certificate</h4>
-              <p>Certificate Signed by the Vice Chancellor of Thiruvalluvar University </p>
+              <p>
+                Certificate Signed by the Vice Chancellor of Thiruvalluvar
+                University
+              </p>
             </div>
             <div class="prize">
               <h4>Mentorship</h4>
-              <p>Mentoring and networking with international expert researchers</p>
+              <p>
+                Mentoring and networking with international expert researchers
+              </p>
             </div>
             <div class="prize">
               <h4>Research Collaboration</h4>
-              <p>Potential research collaboration and MoU with international research communities</p>
+              <p>
+                Potential research collaboration and MoU with international
+                research communities
+              </p>
             </div>
           </div>
           <div class="schedule">
             <h3 class="title">Talk With Mentors</h3>
             <div class="mentor">
-              <img src="@/assets/img/rory.jpg" alt="">
+              <img src="@/assets/img/rory.jpg" alt="" />
               <h4>Dr. Rory McGreal</h4>
-              <nuxt-link class="btn btn-solid" to="/">Learn More</nuxt-link>
+              <p>
+                Professor Rory McGreal is the UNESCO/International Council for
+                Open and Distance Education Chair in Open Educational Resources.
+              </p>
+              <a class="btn btn-solid" target="_blank" href="http://cde.athabascau.ca/ourpeople/faculty/rmcgreal.php">Learn More</a>
             </div>
             <div class="mentor">
-              <img src="@/assets/img/vivekumar.jpg" alt="">
+              <img src="@/assets/img/vivekumar.jpg" alt="" />
               <h4>Dr. Vivekanandan Suresh Kumar</h4>
-              <nuxt-link class="btn btn-solid" to="/">Learn More</nuxt-link>
+              <p>
+                Dr Vive is the Associate Dean, Research and Innovation, Faculty
+                of Science and Technology at Athabasca University.
+              </p>
+              <a class="btn btn-solid" target="_blank" href="https://vivek.athabascau.ca/">Learn More</a>
             </div>
           </div>
         </div>
@@ -346,7 +212,7 @@
     </div>
     <div class="mail-footer">
       <h2 style="margin-bottom: 0.5rem">
-        For Any Clarification, Please Contact
+        For any clarification, please contact
       </h2>
       <h2 style="margin-bottom: 0.5rem; text-decoration: underline">
         sample@gmail.com
@@ -365,11 +231,11 @@ img {
   margin: auto;
 }
 
-.mentor{
+.mentor {
   text-align: center;
 }
 
-.mentor img{
+.mentor img {
   width: 50%;
   /* height: 200px; */
   object-fit: cover;
@@ -379,20 +245,26 @@ img {
   border-radius: 10px;
 }
 
-.mentor a{
+.mentor a {
   margin: 1rem 0;
 }
 
-.prize{
+.mentor p {
+  margin-top: 0.5rem;
+  color: #555;
+  text-align: justify;
+}
+
+.prize {
   margin: 1rem 0;
 }
 
-.prize h4{
+.prize h4 {
   margin-bottom: 0.25rem;
   color: #333;
 }
 
-.prize p{
+.prize p {
   color: #555;
 }
 
@@ -407,7 +279,7 @@ img {
   margin-right: 2rem;
 }
 
-.right{
+.right {
   flex: 0.5;
 }
 
@@ -595,5 +467,44 @@ a {
   position: absolute;
   bottom: 20px;
   right: 20px;
+}
+
+@media only screen and (max-width: 1160px) {
+  .container{
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .container{
+    width: 95%;
+  }
+
+  .showcase .container{
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .details .container{
+    flex-direction: column;
+    text-align: center;
+  }
+  .image{
+    display: none;
+  }
+  .left{
+    margin: 0;
+  }
+  .text-content{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text-content p{
+    text-align: center;
+  }
 }
 </style>
