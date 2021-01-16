@@ -1,0 +1,77 @@
+[
+    {
+        "name": "Complexity of the topic covered by the OER",
+        "points": [
+            {
+                "point": 0,
+                "for": "Not Relevant"
+            },
+            {
+                "point": 5,
+                "for": "Basic Introduction"
+            },
+            {
+                "point": 10,
+                "for": "Intermediate Level"
+            },
+            {
+                "point": 15,
+                "for": "Advanced Level"
+            },
+            {
+                "point": -5,
+                "for": "Not open content/Ethical Violation"
+            }
+        ]
+    },
+    {
+        "name": "Depth of knowledge expressed in the topic",
+        "points": [
+            {
+                "point": 0,
+                "for": "Not Relevant"
+            },
+            {
+                "point": 5,
+                "for": "Blooms level 1 & 2"
+            },
+            {
+                "point": 10,
+                "for": "Blooms level 3 & 4"
+            },
+            {
+                "point": 15,
+                "for": "Blooms level 5 & 6"
+            },
+            {
+                "point": -5,
+                "for": "NA"
+            }
+        ]
+    },
+    {
+        "name": "Uniqueness of the OER",
+        "points": [
+            {
+                "point": 0,
+                "for": "More than 50% of participants submitted the same OER"
+            },
+            {
+                "point": 5,
+                "for": "Less than 25% of participants submitted the same OER"
+            },
+            {
+                "point": 10,
+                "for": "Less than 10% of participants submitted the same OER"
+            },
+            {
+                "point": 15,
+                "for": "No other student has submitted the same OER"
+            },
+            {
+                "point": -5,
+                "for": "NA"
+            }
+        ]
+    }
+]

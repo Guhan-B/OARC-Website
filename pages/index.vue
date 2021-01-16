@@ -10,10 +10,10 @@
             for research methods and research ethics
           </p>
           <div class="links">
-            <nuxt-link class="btn btn-solid" exact to="/rules"
-              >Rubrics</nuxt-link
+            <nuxt-link class="link" exact to="/rules"
+              >Rules</nuxt-link
             >
-            <nuxt-link class="btn btn-outline" to="/aboutoer">About OER</nuxt-link>
+            <nuxt-link class="link" to="/aboutoer">About OER</nuxt-link>
           </div>
         </div>
         <div class="image">
@@ -74,10 +74,11 @@
               <strong
                 >Any candidate of MPhil or PhD or Post Doctoral student from any
                 department and Any faculty members who are in early stages of
-                their career can participate in this initiative.Please note, any
-                prohibited content will disqualify your candidature.</strong
+                their career can participate in this initiative.</strong
               >
             </p>
+            <p><strong>Please note, any
+                prohibited content will disqualify your candidature.</strong></p>
           </div>
           <div class="about">
             <h2>Some Points to be noted for the competition</h2>
@@ -112,16 +113,20 @@
               Jack, McMaster University”.
             </p>
           </div>
-          <!-- <div class="about">
+          <div class="about">
             <h2>Rubrics for winning</h2>
             <ul>
-              <li>Number of OER submitted</li>
-              <li>Complexity of the topic</li>
-              <li>Uniqueness of the OER</li>
-              <li>Depth of knowledge expressed</li>
-              <li>Votes and reviews recieved</li>
+              <h4><li>Number of OER submitted</li></h4>
+              <h4><li>Complexity of the topic</li></h4>
+              <h4><li>Uniqueness of the OER</li></h4>
+              <h4><li>Clarity of the content</li></h4>
+              <h4><li>Votes and reviews recieved</li></h4>
             </ul>
-          </div> -->
+            <div class="rules-links">
+              <nuxt-link to="/rules" class="btn btn-solid">View More</nuxt-link>
+              <a target="_blank" href="https://docs.google.com/spreadsheets/d/1WJiYoe-BzCiQcyuqG4oh8BAAp_PoBTIuzUVGNHBFWo4/edit?usp=sharing" class="btn btn-outline">Download</a>
+            </div>
+          </div>
         </div>
         <div class="right">
           <div class="schedule">
@@ -154,9 +159,9 @@
               </div>
             </div>
           </div>
-          <div class="schedule">
+          <div class="schedule sponser">
             <h3 class="title">Sponsered By</h3>
-            <div class="image">
+            <div class="sponser-image">
               <img
                 src="https://upload.wikimedia.org/wikipedia/en/0/0c/TUemblem.png"
                 alt=""
@@ -235,6 +240,13 @@ img {
   text-align: center;
 }
 
+.rules-links{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
 .mentor img {
   width: 50%;
   /* height: 200px; */
@@ -253,6 +265,16 @@ img {
   margin-top: 0.5rem;
   color: #555;
   text-align: justify;
+}
+
+.link{
+  font-weight: bold;
+  margin-right: 1rem;
+  font-size: 1.15rem;
+  color: aliceblue;
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.25);
+  padding: 0.65rem 1rem;
 }
 
 .prize {
@@ -469,6 +491,15 @@ a {
   right: 20px;
 }
 
+.sponser-image{
+  width: 80%;
+  margin: auto;
+}
+
+.sponser{
+  display: none;
+}
+
 @media only screen and (max-width: 1160px) {
   .container{
     width: 90%;
@@ -492,6 +523,9 @@ a {
   }
   .image{
     display: none;
+  }
+  .sponser{
+    display: block;
   }
   .left{
     margin: 0;

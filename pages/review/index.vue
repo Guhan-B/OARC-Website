@@ -21,7 +21,7 @@
           <td>{{ oer.status }}</td>
           <td>{{ oer.number }}</td>
           <td>
-              <nuxt-link class="btn" :to="'/review/' + oer.id">View</nuxt-link>
+            <nuxt-link class="btn" :to="'/review/' + oer.id">View</nuxt-link>
           </td>
         </tr>
       </tbody>
@@ -30,27 +30,27 @@
 </template>
 
 <style scoped>
-.review{
-    width: 100%;
-    flex: 1;
+.review {
+  width: 100%;
+  flex: 1;
 }
 table {
-  width: 80%;
+  width: 90%;
   margin: 1rem auto;
   border-collapse: collapse;
   text-align: left;
 }
 
-tbody tr:nth-of-type(even){
-    background: white;
+tbody tr:nth-of-type(even) {
+  background: white;
 }
 
-.btn{
-    display: block;
-    margin: auto;
-    color: #508787;
-    width: fit-content;
-    text-decoration: none;
+.btn {
+  display: block;
+  margin: auto;
+  color: #508787;
+  width: fit-content;
+  text-decoration: none;
 }
 
 th {
@@ -74,12 +74,8 @@ td {
 export default {
   data() {
     return {
+      oers: this.$store.getters.oers,
     };
-  },
-  computed: {
-      oers() {
-          return this.$store.getters.oers;
-      }
   },
 };
 </script>

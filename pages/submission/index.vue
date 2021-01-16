@@ -152,16 +152,24 @@
           />
 
           <div class="input-select-group">
+            <label for="unit">Department</label>
+            <select required id="department" v-model="oer.dept">
+              <option value="" selected disabled>
+                Please Select A Department to View Units
+              </option>
+              <option value="english">English</option>
+              <option value="maths">Maths</option>
+              <option value="tamil">Tamil</option>
+            </select>
+          </div>
+
+          <div class="input-select-group"  v-if="oer.dept!==''">
             <label for="unit">Unit</label>
             <select required id="unit" v-model="oer.unit">
               <option value="" selected disabled>
                 Please Select A Unit to View Outcomes
               </option>
-              <option value="1">Unit 1 - Research</option>
-              <option value="2">Unit 2 - Research Ethics</option>
-              <option value="3">Unit 3 - Experimental Research</option>
-              <option value="4">Unit 4</option>
-              <option value="5">Unit 5 - Research Writing</option>
+              <option v-for="unit in units(oer.dept)" :key="unit.id" :value="unit.id">{{unit.unit}}</option>
             </select>
           </div>
 
@@ -285,6 +293,7 @@ import ButtonPrimary from "@/components/ButtonPrimary";
 import ButtonOutline from "@/components/ButtonOutline";
 import Modal from "@/components/Modal";
 import outcomesJson from "@/assets/data/outcome.json";
+import unitsJson from "@/assets/data/units.json";
 import { fireDb, fireAuth } from "~/plugins/firebase.js";
 
 export default {
@@ -317,6 +326,9 @@ export default {
             authorLname: "",
             otherType: "",
             authorOrg: "",
+            dept: "",
+            alottedPoints: [],
+            points: -1,
           },
         ],
         number: 1,
@@ -400,6 +412,14 @@ export default {
       } else {
         console.log(outcomesJson[unit]);
         return outcomesJson[unit];
+      }
+    },
+    units(dept) {
+      if(dept === "") {
+        return null;
+      }
+      else{
+        return unitsJson[dept];
       }
     },
     removeThisOer(index) {
