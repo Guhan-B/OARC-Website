@@ -25,6 +25,33 @@
     </div>
   </div>
 </template>
+<script>
+import {fireAuth} from "~/plugins/firebase.js";
+import { getUserFromCookie, getUserFromSession } from '@/helpers'
+export default {
+
+asyncData({ req, redirect }) {
+    console.log("Called")
+    if (process.server) {
+      console.log('server', req.headers)
+      const user = getUserFromCookie(req)
+      console.log(user)
+      //   console.log('b', getUserFromCookie(req))
+      if (!user) {
+        console.log('redirecting server')
+        redirect('/home')
+      }
+    } else {
+      var user = fireAuth.currentUser
+      console.log(user)
+      if (!user) {
+        redirect('/home')
+      }
+      //   console.log($nuxt.$router)
+    }
+  },
+}
+</script>
 
 <style scoped>
 .container {

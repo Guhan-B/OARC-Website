@@ -9,12 +9,55 @@
         <ul class="nav-links">
           <li><nuxt-link exact to="/">Home</nuxt-link></li>
           <li><nuxt-link exact to="/submission">Submit OER</nuxt-link></li>
+          <li v-if="loggedIn" @click="logout">Logout</li>
         </ul>
       </div>
     </div>
   </div>
 </template>
-
+<script>
+import Cookies from 'js-cookie';
+import {fireAuth} from "~/plugins/firebase.js";
+export default {
+  data() {
+    return {
+      loggedIn: false
+    }
+  },
+  mounted() {
+    this.setupFirebase()
+  },
+  asyncData() {},
+  methods: {
+    setupFirebase() {
+     fireAuth.onAuthStateChanged(user => {
+        if (user) {
+          // User is signed in.
+          console.log('signed in')
+          fireAuth
+            .currentUser.getIdToken(true)
+            .then(token => Cookies.set('access_token', token))
+          this.loggedIn = true
+        } else {
+          Cookies.remove('access_token')
+          // if (Cookies.set('access_token', 'blah')) {
+          // }
+          // No user is signed in.
+          this.loggedIn = false
+          console.log('signed out', this.loggedIn)
+        }
+      })
+    },
+    logout() {
+        fireAuth
+        .signOut()
+        .then(() => {
+          this.$router.replace({ name: 'home' })
+        })
+    }
+  }
+}
+</script>
 <style>
 .navbar {
   height: 80px;

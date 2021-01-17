@@ -5,19 +5,43 @@
     <div class="auth-form">
       <div class="username">
         <label for="username">Username</label>
-        <input type="text" name="username" id="username" autocomplete="false"/>
+        <input type="text" name="username" id="username" autocomplete="false" v-model="email"/>
       </div>
       <div class="password">
         <label for="password">Password</label>
-        <input type="password" name="password" id="password" autocomplete="false"/>
+        <input type="password" name="password" id="password" autocomplete="false" v-model="password"/>
       </div>
-      <button type="submit" class="btn btn-solid">Login</button>
+      <button type="submit" class="btn btn-solid" @click.prevent="pressed">Login</button>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+import {fireAuth} from "~/plugins/firebase.js";
+export default {
+  data() {
+    return {
+      email: '',
+      password: '',
+      error: ''
+    }
+  },
+  methods: {
+    pressed() {
+     fireAuth
+        .signInWithEmailAndPassword(this.email, this.password)
+        .then(data => {
+          console.log(data)
+          this.$router.replace({ name: 'review' })
+        })
+        .catch(error => {
+          this.error = error
+          console.log(error);
+        })
+    }
+  }
+
+};
 </script>
 
 <style>
