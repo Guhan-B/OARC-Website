@@ -51,10 +51,7 @@ export default {
       allotedPoints: this.$store.getters.allotedPointsByIdIndex({
         id: this.$route.params.id,
         index: this.$route.params.index,
-      })?this.$store.getters.allotedPointsByIdIndex({
-        id: this.$route.params.id,
-        index: this.$route.params.index,
-      }):[],
+      })
     };
   },
   asyncData({ req, redirect }) {
@@ -93,9 +90,7 @@ export default {
         allotedPoints: this.allotedPoints,
         points: totalPoints,
       });
-
-    //   this.$router.replace("/review/" + this.$route.params.id);
-      this.$router.goBack();
+      this.$router.replace("/review/" + this.$route.params.id);
     },
   },
   computed: {

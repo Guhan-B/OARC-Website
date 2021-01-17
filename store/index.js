@@ -35,6 +35,9 @@ const createStore = () => {
                 newOers[reqIndex].oers[payload.index].allotedPoints = payload.allotedPoints;
                 newOers[reqIndex].oers[payload.index].points = payload.points;
                 state.oers = newOers;
+                var db = fireDb;
+                db.collection("Work").doc(newOers[reqIndex].id).update({oers:newOers[reqIndex].oers});
+
             }
         },
         getters: {
@@ -45,7 +48,6 @@ const createStore = () => {
                 const oer = state.oers.filter((el) => {
                     return el.id === id;
                 });
-                console.log("fuck")
                 console.log(oer);
                 return oer[0];
             },

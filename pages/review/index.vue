@@ -79,25 +79,27 @@ export default {
       oers: this.$store.getters.oers,
     };
   },
-  // asyncData({ req, redirect }) {
-  //   if (process.server) {
-  //     console.log('server', req.headers)
-  //     const user = getUserFromCookie(req)
-  //     console.log(user)
-  //     //   console.log('b', getUserFromCookie(req))
-  //     if (!user) {
-  //       console.log('redirecting server')
-  //       redirect('/review/auth')
-  //     }
-  //   } else {
-  //     var user = fireAuth.currentUser
-  //     console.log(user)
-  //     if (!user) {
-  //       redirect('/review/auth')
-  //     }
-  //     //   console.log($nuxt.$router)
-  //   }
-  // },
+  asyncData({ req, redirect }) {
+    console.log("Called")
+    if (process.server) {
+      console.log('server', req.headers)
+      const user = getUserFromCookie(req)
+      console.log(user)
+      //   console.log('b', getUserFromCookie(req))
+      if (!user) {
+        console.log('redirecting server')
+        redirect('/home')
+      }
+    } else {
+      var user = fireAuth.currentUser
+      console.log(user)
+      if (!user) {
+        redirect('/home')
+      }
+      //   console.log($nuxt.$router)
+    }
+  },
+  
 };
 </script>
 

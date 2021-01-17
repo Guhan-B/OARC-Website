@@ -327,7 +327,7 @@ export default {
             otherType: "",
             authorOrg: "",
             dept: "",
-            alottedPoints: [],
+            allottedPoints: [],
             points: -1,
           },
         ],

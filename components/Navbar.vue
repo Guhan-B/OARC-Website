@@ -52,7 +52,7 @@ export default {
         fireAuth
         .signOut()
         .then(() => {
-          this.$router.replace({ name: 'home' })
+          this.$router.replace({ name: 'Home' })
         })
     }
   }
