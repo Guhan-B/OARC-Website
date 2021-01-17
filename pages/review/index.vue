@@ -80,7 +80,6 @@ export default {
     };
   },
   asyncData({ req, redirect }) {
-    console.log("Called")
     if (process.server) {
       console.log('server', req.headers)
       const user = getUserFromCookie(req)
@@ -88,13 +87,13 @@ export default {
       //   console.log('b', getUserFromCookie(req))
       if (!user) {
         console.log('redirecting server')
-        redirect('/home')
+        redirect('/')
       }
     } else {
       var user = fireAuth.currentUser
       console.log(user)
       if (!user) {
-        redirect('/home')
+        redirect('/')
       }
       //   console.log($nuxt.$router)
     }
