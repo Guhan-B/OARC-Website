@@ -72,7 +72,7 @@ const createStore = () => {
         }
         else if(state.email == "bkguhan2001@gmail.com"){
             filterdOers = state.oers.filter(oer => {
-                return oer.department === "Physics";
+                return oer.department === "Computer Technology";
               });
               return filterdOers;
         }
