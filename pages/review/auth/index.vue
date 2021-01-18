@@ -18,12 +18,32 @@
 
 <script>
 import {fireAuth} from "~/plugins/firebase.js";
+import { getUserFromCookie, getUserFromSession } from '@/helpers';
+
 export default {
   data() {
     return {
       email: '',
       password: '',
       error: ''
+    }
+  },
+  asyncData({ req, redirect }) {
+    console.log("Called")
+    if (process.server) {
+      console.log('server', req.headers)
+      const user = getUserFromCookie(req)
+      console.log(user)
+      if (user) {
+        console.log('redirecting server')
+        redirect('/review')
+      }
+    } else {
+      var user = fireAuth.currentUser
+      console.log(user)
+      if (user) {
+        redirect('/review')
+      }
     }
   },
   methods: {
@@ -44,7 +64,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .container {
   flex: 1;
   display: flex;

@@ -9,7 +9,7 @@
         <ul class="nav-links">
           <li><nuxt-link exact to="/">Home</nuxt-link></li>
           <li><nuxt-link exact to="/submission">Submit OER</nuxt-link></li>
-          <li v-if="loggedIn" @click="logout">Logout</li>
+          <li class="auth" v-if="loggedIn" @click="logout">Logout</li>
         </ul>
       </div>
     </div>
@@ -52,7 +52,7 @@ export default {
         fireAuth
         .signOut()
         .then(() => {
-          this.$router.replace({ name: 'Home' })
+          this.$router.replace("/");
         })
     }
   }
@@ -109,7 +109,7 @@ li {
     height: 100%;
 }
 
-.nav-links li a{
+.nav-links li a,.auth{
     text-decoration: none;
     color: white;
     font-weight: 700;
@@ -117,6 +117,7 @@ li {
     box-sizing: border-box;
     padding: 0 1rem;
     font-size: 1.05rem;
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 650px) {

@@ -42,40 +42,38 @@
 
 <script>
 import criterias from "~/assets/data/criterias.json";
-import {fireAuth} from "~/plugins/firebase.js";
-import { getUserFromCookie, getUserFromSession } from '@/helpers'
+import { fireAuth } from "~/plugins/firebase.js";
+import { getUserFromCookie, getUserFromSession } from "@/helpers";
 export default {
-
   data() {
     return {
       allotedPoints: this.$store.getters.allotedPointsByIdIndex({
         id: this.$route.params.id,
         index: this.$route.params.index,
-      })
+      }),
     };
   },
   asyncData({ req, redirect }) {
-    console.log("Called")
+    console.log("Called");
     if (process.server) {
-      console.log('server', req.headers)
-      const user = getUserFromCookie(req)
-      console.log(user)
+      console.log("server", req.headers);
+      const user = getUserFromCookie(req);
+      console.log(user);
       //   console.log('b', getUserFromCookie(req))
       if (!user) {
-        console.log('redirecting server')
-        redirect('/home')
+        console.log("redirecting server");
+        redirect("/home");
       }
     } else {
-      var user = fireAuth.currentUser
-      console.log(user)
+      var user = fireAuth.currentUser;
+      console.log(user);
       if (!user) {
-        redirect('/home')
+        redirect("/home");
       }
       //   console.log($nuxt.$router)
     }
   },
-  
-    
+
   methods: {
     saveEval() {
       console.log(this.allotedPoints);
@@ -123,7 +121,7 @@ tbody tr:nth-of-type(even) {
 }
 
 .btn {
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 2rem;
   font-weight: bold;
   font-size: 1.1rem;
   cursor: pointer;
@@ -170,4 +168,5 @@ td {
   align-items: center;
   justify-content: flex-end;
 }
+
 </style>

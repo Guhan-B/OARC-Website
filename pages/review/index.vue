@@ -88,13 +88,13 @@ export default {
       //   console.log('b', getUserFromCookie(req))
       if (!user) {
         console.log('redirecting server')
-        redirect('/home')
+        redirect('/review/auth')
       }
     } else {
       var user = fireAuth.currentUser
       console.log(user)
       if (!user) {
-        redirect('/home')
+        redirect('/review/auth')
       }
       //   console.log($nuxt.$router)
     }
