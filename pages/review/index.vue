@@ -76,25 +76,32 @@ import { getUserFromCookie, getUserFromSession } from '@/helpers';
 export default {
   data() {
     return {
-      oers: this.$store.getters.oers,
+      oers: this.$store.getters.oersByDept,
     };
   },
-  asyncData({ req, redirect }) {
+  asyncData({ req, redirect,store }) {
     console.log("Called")
     if (process.server) {
       console.log('server', req.headers)
       const user = getUserFromCookie(req)
-      console.log(user)
+      // console.log(user.email);
+      // store.dispatch('setEmail',{email:user.email})
       //   console.log('b', getUserFromCookie(req))
       if (!user) {
         console.log('redirecting server')
         redirect('/review/auth')
+      }else{
+        store.dispatch('setEmail',{email:user.email})
       }
     } else {
       var user = fireAuth.currentUser
       console.log(user)
+  
       if (!user) {
         redirect('/review/auth')
+      }
+      else{
+        store.dispatch('setEmail',{email:user.email})
       }
       //   console.log($nuxt.$router)
     }

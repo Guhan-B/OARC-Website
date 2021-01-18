@@ -53,6 +53,7 @@ export default {
         .signOut()
         .then(() => {
           this.$router.replace("/");
+          this.$store.dispatch("setEmail",{email:""})
         })
     }
   }
