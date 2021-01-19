@@ -10,10 +10,10 @@
             for research methods and research ethics
           </p>
           <div class="links">
-            <nuxt-link class="link" exact to="/rules"
-              >Rules</nuxt-link
+            <nuxt-link class="btn btn-solid" exact to="/rules">Rules</nuxt-link>
+            <nuxt-link class="btn btn-outline" to="/aboutoer"
+              >About OER</nuxt-link
             >
-            <nuxt-link class="link" to="/aboutoer">About OER</nuxt-link>
           </div>
         </div>
         <div class="image">
@@ -28,7 +28,6 @@
       <div class="container">
         <div class="left">
           <div class="about">
-            <h2>WeCollect - Open Educational Resources</h2>
             <div>
               <blockquote>
                 இலகு சீருடை நாற்றிசை நாடுகள் யாவுஞ் சென்று புதுமை கொணர்ந்து
@@ -77,8 +76,12 @@
                 their career can participate in this initiative.</strong
               >
             </p>
-            <p><strong>Please note, any
-                prohibited content will disqualify your candidature.</strong></p>
+            <p>
+              <strong
+                >Please note, any prohibited content will disqualify your
+                candidature.</strong
+              >
+            </p>
           </div>
           <div class="about">
             <h2>Some Points to be noted for the competition</h2>
@@ -124,7 +127,12 @@
             </ul>
             <div class="rules-links">
               <nuxt-link to="/rules" class="btn btn-solid">View More</nuxt-link>
-              <a target="_blank" href="https://docs.google.com/spreadsheets/d/1WJiYoe-BzCiQcyuqG4oh8BAAp_PoBTIuzUVGNHBFWo4/edit?usp=sharing" class="btn btn-outline">Download</a>
+              <a
+                target="_blank"
+                href="https://docs.google.com/spreadsheets/d/1WJiYoe-BzCiQcyuqG4oh8BAAp_PoBTIuzUVGNHBFWo4/edit?usp=sharing"
+                class="btn btn-outline"
+                >Download</a
+              >
             </div>
           </div>
         </div>
@@ -136,7 +144,7 @@
                 <img src="@/assets/svg/submit.svg" alt="" />
               </div>
               <div class="date-text">
-                <h3>Submission Starts</h3>
+                <h4>Submission Starts</h4>
                 <p>27th January 2020</p>
               </div>
             </div>
@@ -145,7 +153,7 @@
                 <img src="@/assets/svg/submit.svg" alt="" />
               </div>
               <div class="date-text">
-                <h3>Submission Ends</h3>
+                <h4>Submission Ends</h4>
                 <p>27th January 2020</p>
               </div>
             </div>
@@ -154,7 +162,7 @@
                 <img src="@/assets/svg/success.svg" alt="" />
               </div>
               <div class="date-text">
-                <h3>Results</h3>
+                <h4>Results</h4>
                 <p>27th January 2020</p>
               </div>
             </div>
@@ -171,24 +179,39 @@
           <div class="schedule">
             <h3 class="title">Winners Get</h3>
             <div class="prize">
-              <h4>Certificate</h4>
-              <p>
-                Certificate Signed by the Vice Chancellor of Thiruvalluvar
-                University
-              </p>
+              <div class="icon">
+                <img src="@/assets/svg/medal.svg" alt="" />
+              </div>
+              <div class="text">
+                <h4>Certificate</h4>
+                <p>
+                  Certificate Signed by the Vice Chancellor of Thiruvalluvar
+                  University
+                </p>
+              </div>
             </div>
             <div class="prize">
-              <h4>Mentorship</h4>
-              <p>
-                Mentoring and networking with international expert researchers
-              </p>
+              <div class="icon">
+                <img src="@/assets/svg/mentorship.svg" alt="" />
+              </div>
+              <div class="text">
+                <h4>Mentorship</h4>
+                <p>
+                  Mentoring and networking with international expert researchers
+                </p>
+              </div>
             </div>
             <div class="prize">
-              <h4>Research Collaboration</h4>
-              <p>
-                Potential research collaboration and MoU with international
-                research communities
-              </p>
+              <div class="icon">
+                <img src="@/assets/svg/seo.svg" alt="" />
+              </div>
+              <div class="text">
+                <h4>Research Collaboration</h4>
+                <p>
+                  Potential research collaboration and MoU with international
+                  research communities
+                </p>
+              </div>
             </div>
           </div>
           <div class="schedule">
@@ -197,19 +220,29 @@
               <img src="@/assets/img/rory.jpg" alt="" />
               <h4>Dr. Rory McGreal</h4>
               <p>
-                Professor Rory McGreal is the UNESCO/International Council for
-                Open and Distance Education Chair in Open Educational Resources.
+                UNESCO/International Council for Open and Distance Education
+                Chair in Open Educational Resources.
               </p>
-              <a class="btn btn-solid" target="_blank" href="http://cde.athabascau.ca/ourpeople/faculty/rmcgreal.php">Learn More</a>
+              <a
+                class="btn btn-solid"
+                target="_blank"
+                href="http://cde.athabascau.ca/ourpeople/faculty/rmcgreal.php"
+                >Learn More</a
+              >
             </div>
             <div class="mentor">
               <img src="@/assets/img/vivekumar.jpg" alt="" />
               <h4>Dr. Vivekanandan Suresh Kumar</h4>
               <p>
-                Dr Vive is the Associate Dean, Research and Innovation, Faculty
-                of Science and Technology at Athabasca University.
+                Associate Dean, Research and Innovation, Faculty of Science and
+                Technology, Athabasca University. Canada.
               </p>
-              <a class="btn btn-solid" target="_blank" href="https://vivek.athabascau.ca/">Learn More</a>
+              <a
+                class="btn btn-solid"
+                target="_blank"
+                href="https://vivek.athabascau.ca/"
+                >Learn More</a
+              >
             </div>
           </div>
         </div>
@@ -240,7 +273,7 @@ img {
   text-align: center;
 }
 
-.rules-links{
+.rules-links {
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -264,10 +297,10 @@ img {
 .mentor p {
   margin-top: 0.5rem;
   color: #555;
-  text-align: justify;
+  text-align: center;
 }
 
-.link{
+.link {
   font-weight: bold;
   margin-right: 1rem;
   font-size: 1.15rem;
@@ -275,19 +308,6 @@ img {
   text-decoration: none;
   background: rgba(0, 0, 0, 0.25);
   padding: 0.65rem 1rem;
-}
-
-.prize {
-  margin: 1rem 0;
-}
-
-.prize h4 {
-  margin-bottom: 0.25rem;
-  color: #333;
-}
-
-.prize p {
-  color: #555;
 }
 
 .details .container {
@@ -374,6 +394,35 @@ a {
   margin: 2rem auto;
 }
 
+.schedule .prize {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 0.5rem 0;
+}
+
+.schedule .prize .icon {
+  height: 50px;
+  width: 50px;
+  overflow: hidden;
+  /* margin-right: 1.5rem; */
+  border-radius: 25px;
+  padding: 10px;
+  background: whitesmoke;
+  margin-bottom: 0.75rem;
+}
+
+.prize .text{
+  margin-bottom: 0.5rem;
+}
+
+.prize .text h4 {
+  font-size: 1.05rem;
+  margin-bottom: 4px;
+  color: #508787;
+}
+
 .schedule .date {
   display: flex;
   align-items: center;
@@ -390,13 +439,14 @@ a {
   background: whitesmoke;
 }
 
-.date-text h3 {
+.date-text h4 {
   font-size: 1.05rem;
-  font-weight: 500;
   margin-bottom: 4px;
+  color: #508787;
 }
 
-.date-text p {
+.date-text p,
+.prize p {
   color: #555;
   font-size: 0.9rem;
 }
@@ -453,13 +503,14 @@ a {
 }
 
 .btn {
-  padding: 0.5rem 1rem;
+  padding: 0.45rem 0.85rem;
   font-weight: bold;
   font-size: 1.1rem;
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
   margin-right: 1rem;
+  border-radius: 5px;
 }
 
 .btn-solid {
@@ -491,53 +542,53 @@ a {
   right: 20px;
 }
 
-.sponser-image{
+.sponser-image {
   width: 80%;
   margin: auto;
 }
 
-.sponser{
+.sponser {
   display: none;
 }
 
 @media only screen and (max-width: 1160px) {
-  .container{
+  .container {
     width: 90%;
   }
 }
 
 @media only screen and (max-width: 950px) {
-  .container{
+  .container {
     width: 95%;
   }
 
-  .showcase .container{
+  .showcase .container {
     justify-content: center;
   }
 }
 
 @media only screen and (max-width: 800px) {
-  .details .container{
+  .details .container {
     flex-direction: column;
     text-align: center;
   }
-  .image{
+  .image {
     display: none;
   }
-  .sponser{
+  .sponser {
     display: block;
   }
-  .left{
+  .left {
     margin: 0;
   }
-  .text-content{
+  .text-content {
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  .text-content p{
+  .text-content p {
     text-align: center;
   }
 }
