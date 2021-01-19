@@ -33,7 +33,7 @@
             />
 
             <button type="button" class="btn btn-solid" @click="verifyEmail">
-              verifyEmail
+              Verify Your Email
             </button>
           </div>
           <AppTextInput
@@ -58,7 +58,7 @@
               <option value="Post Doctoral Student">
                 Post Doctoral Student
               </option>
-              <option value="Faculty Member">Faculty Memeber</option>
+              <option value="Faculty Member">Faculty Member</option>
             </select>
           </div>
         </div>
@@ -129,28 +129,6 @@
             v-model="oer.otherType"
           />
 
-          <div class="two-input">
-            <AppTextInput
-              type="text"
-              name="material-url"
-              label="Author First Name"
-              v-model="oer.authorFname"
-            />
-            <AppTextInput
-              type="text"
-              name="material-url"
-              label="Author Last Name"
-              v-model="oer.authorLname"
-            />
-          </div>
-
-          <AppTextInput
-            type="text"
-            name="material-url"
-            label="Organization"
-            v-model="oer.authorOrg"
-          />
-
           <div class="input-select-group">
             <label for="unit">Department</label>
             <select required id="department" v-model="oer.dept">
@@ -163,13 +141,19 @@
             </select>
           </div>
 
-          <div class="input-select-group"  v-if="oer.dept!==''">
+          <div class="input-select-group" v-if="oer.dept !== ''">
             <label for="unit">Unit</label>
             <select required id="unit" v-model="oer.unit">
               <option value="" selected disabled>
                 Please Select A Unit to View Outcomes
               </option>
-              <option v-for="unit in units(oer.dept)" :key="unit.id" :value="unit.id">{{unit.unit}}</option>
+              <option
+                v-for="unit in units(oer.dept)"
+                :key="unit.id"
+                :value="unit.id"
+              >
+                {{ unit.unit }}
+              </option>
             </select>
           </div>
 
@@ -195,6 +179,28 @@
             name="description"
             label="Description"
             v-model="oer.desc"
+          />
+
+          <div class="two-input">
+            <AppTextInput
+              type="text"
+              name="material-url"
+              label="Author First Name"
+              v-model="oer.authorFname"
+            />
+            <AppTextInput
+              type="text"
+              name="material-url"
+              label="Author Last Name"
+              v-model="oer.authorLname"
+            />
+          </div>
+
+          <AppTextInput
+            type="text"
+            name="material-url"
+            label="Organization"
+            v-model="oer.authorOrg"
           />
 
           <hr />
@@ -369,25 +375,22 @@ export default {
       });
     },
     async verifyEmail() {
-      if(fireAuth.currentUser){
-        console.log("Loggin out")
+      if (fireAuth.currentUser) {
+        console.log("Loggin out");
         await fireAuth.signOut();
         this.verifyEmail();
+      } else {
+        await fireAuth.signInAnonymously().then(() => {
+          if (fireAuth.currentUser.emailVerified === false) {
+            fireAuth.currentUser.updateEmail(this.formData.email).then(() => {
+              fireAuth.currentUser.sendEmailVerification();
+              console.log("GG");
+            });
+          } else {
+            console.log("no GG");
+          }
+        });
       }
-      else{
-      await fireAuth.signInAnonymously().then(() => {
-        if (fireAuth.currentUser.emailVerified === false) {
-          fireAuth.currentUser.updateEmail(this.formData.email).then(() => {
-            fireAuth.currentUser.sendEmailVerification();
-            console.log("GG");
-          });
-        } else {
-          console.log("no GG");
-        }
-        
-      });
-      }
-
     },
     addOer() {
       this.formData.number += 1;
@@ -415,10 +418,9 @@ export default {
       }
     },
     units(dept) {
-      if(dept === "") {
+      if (dept === "") {
         return null;
-      }
-      else{
+      } else {
         return unitsJson[dept];
       }
     },
@@ -431,9 +433,7 @@ export default {
     },
   },
 
-  computed: {
-    
-  },
+  computed: {},
 };
 </script>
 
@@ -601,7 +601,7 @@ hr {
   justify-content: space-between;
 }
 
-.submission{
+.submission {
   width: 100%;
 }
 

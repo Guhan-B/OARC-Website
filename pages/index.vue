@@ -52,7 +52,7 @@
               resources are not exploited by the needy for several reasons -
               lack of a catalog and the difficulty of finding what is needed are
               the most-often cited barriers. Our initiative aims to create a
-              repository of all such Open Educational Resources (OERs) related
+              repository of all such <nuxt-link to="/aboutoer">Open Educational Resources (OERs)</nuxt-link> related
               to Research Methods relevant for researchers from multiple
               disciplines and multidisciplinary, interdisciplinary and
               transdisciplinary researchers to alleviate the barrier.
@@ -61,9 +61,9 @@
               This is a competition open to all the members of Thiruvalluvar
               University, especially to researchers - inclusive of research
               supervisors, teaching staff members passionate about Research
-              Methods or a doctoral student or an MPhil student. You can submit
+              Methods or a doctoral student or an MPhil student. You can <nuxt-link to="/submission">submit</nuxt-link>
               any number of resources. Each submission will be assessed by
-              experts based on the rubrics. If you submit more than one
+              experts based on the rubrics. If you <nuxt-link to="/submission">submit</nuxt-link> more than one
               resource, your score will be the sum of all the scores of your
               submissions. Resources in English or Tamil are only eligible for
               this competition. Other languages are out of scope at this point
@@ -86,10 +86,10 @@
           <div class="about">
             <h2>Some Points to be noted for the competition</h2>
             <p>
-              For the competition, please do NOT submit the entire OER
-              repository. Instead, submit specific content from any such OER
+              For the competition, please do NOT <nuxt-link to="/submission">submit</nuxt-link> the entire <nuxt-link to="/aboutoer">OER</nuxt-link>
+              repository. Instead, <nuxt-link to="/submission">submit</nuxt-link> specific content from any such <nuxt-link to="/aboutoer">OER</nuxt-link>
               repository relevant for the identified learning outcomes. For
-              example, you can submit
+              example, you can <nuxt-link to="/submission">submit</nuxt-link>
               <strong>
                 "Qualitative case study methodology: Study design and
                 implementation for novice researchers."
@@ -107,7 +107,7 @@
               >) repository as such.
             </p>
             <p>
-              When you submit the OER, please specify the type of content
+              When you <nuxt-link to="/submission">submit</nuxt-link> the <nuxt-link to="/aboutoer">OER</nuxt-link>, please specify the type of content
               (reading material, quiz, assignment question etc. ) along with the
               author details. If you are the author, please provide your full
               name, organization and contact details. For the example given
@@ -119,19 +119,17 @@
           <div class="about">
             <h2>Rubrics for winning</h2>
             <ul>
-              <h4><li>Number of OER submitted</li></h4>
+              <h4><li>Number of <nuxt-link to="/aboutoer">OER</nuxt-link> submitted</li></h4>
               <h4><li>Complexity of the topic</li></h4>
-              <h4><li>Uniqueness of the OER</li></h4>
+              <h4><li>Uniqueness of the <nuxt-link to="/aboutoer">OER</nuxt-link></li></h4>
               <h4><li>Clarity of the content</li></h4>
-              <h4><li>Votes and reviews recieved</li></h4>
+              <h4><li>Expert review based on the <nuxt-link to="/rules">detailed rubrics</nuxt-link></li></h4>
             </ul>
             <div class="rules-links">
-              <nuxt-link to="/rules" class="btn btn-solid">View More</nuxt-link>
-              <a
-                target="_blank"
-                href="https://docs.google.com/spreadsheets/d/1WJiYoe-BzCiQcyuqG4oh8BAAp_PoBTIuzUVGNHBFWo4/edit?usp=sharing"
-                class="btn btn-outline"
-                >Download</a
+              <nuxt-link
+                to="/rules/print"
+                class="btn btn-solid"
+                >Download Rubrics</nuxt-link
               >
             </div>
           </div>
@@ -154,7 +152,7 @@
               </div>
               <div class="date-text">
                 <h4>Submission Ends</h4>
-                <p>27th January 2020</p>
+                <p>27th February 2020</p>
               </div>
             </div>
             <div class="date">
@@ -163,7 +161,7 @@
               </div>
               <div class="date-text">
                 <h4>Results</h4>
-                <p>27th January 2020</p>
+                <p>27th March 2020</p>
               </div>
             </div>
           </div>

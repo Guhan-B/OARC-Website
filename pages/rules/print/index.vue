@@ -1,8 +1,5 @@
 <template>
   <div class="evaluation">
-    <div class="eval-header">
-      <nuxt-link class="btn btn-solid" to="/rules/print">Print</nuxt-link>
-    </div>
     <table id="print">
       <thead>
         <tr>
@@ -34,6 +31,7 @@
 import criterias from "~/assets/data/criterias.json";
 
 export default {
+  layout: 'print',
   computed: {
     getCriterias() {
       return criterias;
@@ -44,6 +42,10 @@ export default {
       window.print();
     },
   },
+  mounted() {
+    window.print();
+    this.$router.back();
+  }
 };
 </script>
 
@@ -69,13 +71,12 @@ tbody tr:nth-of-type(even) {
 }
 
 .btn {
-  padding: 0.45rem 0.85rem;
+  padding: 0.5rem 2rem;
   font-weight: bold;
   font-size: 1.1rem;
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
-  border-radius: 5px;
 }
 
 .btn-solid {
@@ -99,6 +100,17 @@ table,
 th,
 td {
   border: 1px solid #ccc;
+}
+
+.input-col div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.input-col div input {
+  margin-bottom: 0.5rem;
 }
 
 .eval-header {
