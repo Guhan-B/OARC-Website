@@ -32,5 +32,6 @@ export default {
     font-size: 1rem;
     margin: 0 0.5rem;
     cursor: pointer;
+    border-radius: 5px;
 }
 </style>

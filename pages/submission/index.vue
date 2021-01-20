@@ -37,13 +37,13 @@
           </div>
           <div class="email-group">
             <AppTextInput
-              type="email"
-              name="email"
+              type="text"
+              name="otp"
               label="Enter OTP"
               v-model="enteredOTP"
             />
-            <button :disabled={emailVerified} type="button" class="btn btn-solid" @click="verifyOTP">
-              {{emailVerified?"OTP Verified":"Verfiy OTP"}}
+            <button :disabled="emailVerified" type="button" class="btn btn-solid" @click="verifyOTP">
+              {{emailVerified ?"OTP Verified":"Verfiy OTP"}}
             </button>
           </div>
           <AppTextInput
@@ -323,7 +323,7 @@ export default {
       enteredOTP: "",
       allowSubmit: [],
       emailVerified: false,
-      OTP:emailToken(),
+      OTP:"",
       showModal: false,
       modalTitle: "",
       modalMessage: "",
@@ -358,7 +358,9 @@ export default {
   },
   methods: {
     verifyOTP(){
-      if(this.enteredOTP === this.OTP){
+      console.log("verified");
+      if(this.enteredOTP == this.OTP){
+        console.log("verified");
         this.emailVerified = true;
       }
     },
@@ -400,6 +402,7 @@ export default {
       });
     },
     async verifyEmail() {
+      this.OTP = emailToken();
       const templateParams = {
           otp:this.OTP,
           email:this.formData.email
@@ -493,6 +496,7 @@ hr {
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
+  border-radius: 5px;
 }
 
 .btn-solid {
