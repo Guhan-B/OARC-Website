@@ -1,12 +1,5 @@
 <template>
   <div class="submission">
-    <Modal
-      v-show="showModal"
-      :title="modalTitle"
-      :message="modalMessage"
-      :type="modalType"
-      :callback="closeModal"
-    />
     <h2 class="form-title">Please fill out this form to add your submission</h2>
     <div class="container">
       <form class="form" @submit.prevent="saveWork">
@@ -30,8 +23,9 @@
               name="email"
               label="Email"
               v-model="formData.email"
+              @input="emailChanging"
             />
-            <button type="button" class="btn btn-solid" @click="verifyEmail">
+            <button v-if="!emailVerified" type="button" class="btn btn-solid" @click="verifyEmail">
               Verify Your Email
             </button>
           </div>
@@ -42,16 +36,23 @@
               label="Enter OTP"
               v-model="enteredOTP"
             />
-            <button :disabled="emailVerified" type="button" class="btn btn-solid" @click="verifyOTP">
-              {{emailVerified ?"OTP Verified":"Verfiy OTP"}}
+            <button
+              :disabled="emailVerified"
+              type="button"
+              class="btn btn-solid"
+              @click="verifyOTP"
+            >
+              {{ emailVerified ? "OTP Verified" : "Verfiy OTP" }}
             </button>
           </div>
-          <AppTextInput
+          <div style="grid-column: span 2">
+            <AppTextInput
             type="text"
             name="department"
             label="Department"
             v-model="formData.department"
           />
+          </div>
           <AppTextInput
             type="text"
             name="university"
@@ -133,7 +134,7 @@
 
           <AppTextInput
             v-if="oer.type === '0'"
-            type="textarea"
+            type="text"
             name="others"
             label="Others"
             v-model="oer.otherType"
@@ -191,6 +192,14 @@
             v-model="oer.desc"
           />
 
+          <AppTextInput
+            type="textarea"
+            name="description"
+            label="Note"
+            v-model="oer.note"
+            :req="false"
+          />
+
           <div class="two-input">
             <AppTextInput
               type="text"
@@ -209,7 +218,7 @@
           <AppTextInput
             type="text"
             name="material-url"
-            label="Organization"
+            label="Author Affiliation"
             v-model="oer.authorOrg"
           />
 
@@ -294,9 +303,11 @@
             v-if="allowSubmit.length === 5"
           />
           <button type="button" class="btn btn-solid" @click="addOer">
-            Add OER
+            Add Another OER
           </button>
-          <ButtonOutline type="reset" title="Reset" />
+          <button type="reset" class="btn btn-outline" @click="resetForm">
+            Reset
+          </button>
         </div>
       </form>
     </div>
@@ -323,12 +334,49 @@ export default {
       enteredOTP: "",
       allowSubmit: [],
       emailVerified: false,
-      OTP:"",
-      showModal: false,
-      modalTitle: "",
-      modalMessage: "",
-      modalType: "",
+      OTP: "",
       formData: {
+        firstName: "",
+        lastName: "",
+        department: "",
+        status: "",
+        university: "",
+        email: "",
+        oers: [
+          {
+            title: "",
+            url: "",
+            desc: "",
+            outcomes: [],
+            unit: "",
+            type: "",
+            authorFname: "",
+            authorLname: "",
+            otherType: "",
+            authorOrg: "",
+            dept: "",
+            note: "",
+            allottedPoints: [],
+            points: -1,
+          },
+        ],
+        number: 1,
+      },
+    };
+  },
+  methods: {
+    emailChanging() {
+      this.emailVerified = false;
+      this.OTP = "";
+      this.enteredOTP= "";
+    },
+    resetForm() {
+      console.log("resetting");
+      this.enteredOTP= "";
+      this.allowSubmit= [];
+      this.emailVerified= false;
+      this.OTP= "";
+      this.formData = {
         firstName: "",
         lastName: "",
         department: "",
@@ -350,17 +398,14 @@ export default {
             dept: "",
             allottedPoints: [],
             points: -1,
+            note: "",
           },
         ],
         number: 1,
-      },
-    };
-  },
-  methods: {
-    verifyOTP(){
-      console.log("verified");
-      if(this.enteredOTP == this.OTP){
-        console.log("verified");
+      };
+    },
+    verifyOTP() {
+      if (this.enteredOTP == this.OTP) {
         this.emailVerified = true;
       }
     },
@@ -372,6 +417,7 @@ export default {
           .then((docRef) => {
             console.log("Work added: ", docRef.id);
             alert("Form has been submitted");
+            this.$router.push("/");
           })
           .catch((error) => {
             console.error("Error adding Work: ", error);
@@ -379,7 +425,6 @@ export default {
           });
       } else {
         alert("Email Not Verified");
-        this.$router.push("/");
       }
     },
     async getData() {
@@ -397,15 +442,24 @@ export default {
     async verifyEmail() {
       this.OTP = emailToken();
       const templateParams = {
-          otp:this.OTP,
-          email:this.formData.email
-        };
-     emailjs.send('service_tmqhgad','template_eheknue', templateParams, 'user_3CJJxWpNBrgopWpRHkpDM')
-    .then((response) => {
-       console.log('SUCCESS!', response.status, response.text);
-    }, (err) => {
-       console.log('FAILED...', err);
-    });
+        otp: this.OTP,
+        email: this.formData.email,
+      };
+      emailjs
+        .send(
+          "service_tmqhgad",
+          "template_eheknue",
+          templateParams,
+          "user_3CJJxWpNBrgopWpRHkpDM"
+        )
+        .then(
+          (response) => {
+            console.log("SUCCESS!", response.status, response.text);
+          },
+          (err) => {
+            console.log("FAILED...", err);
+          }
+        );
     },
     addOer() {
       this.formData.number += 1;
@@ -415,7 +469,6 @@ export default {
         desc: "",
         outcomes: [],
         unit: "",
-        
       });
     },
     removeOer() {
@@ -490,12 +543,19 @@ hr {
   text-decoration: none;
   display: inline-block;
   border-radius: 5px;
+  margin: 0 0.25rem;
 }
 
 .btn-solid {
   border: 2px #508787 solid;
   background: #508787;
   color: white;
+}
+
+.btn-outline {
+  border: 2px #508787 solid;
+  background: #ffffff;
+  color: #508787;
 }
 
 .btn-red {

@@ -3,11 +3,10 @@
     <div class="showcase">
       <div class="container">
         <div class="text-content">
-          <h1>WeCollect</h1>
           <p>
             Collecting useful and awesome <strong>O</strong>pen
             <strong>E</strong>ducational <strong>R</strong>esources (OER) <br />
-            for research methods and research ethics
+            for research methods
           </p>
           <div class="links">
             <nuxt-link class="btn btn-solid" exact to="/rules">Rules</nuxt-link>
@@ -63,7 +62,7 @@
               supervisors, teaching staff members passionate about Research
               Methods or a doctoral student or an MPhil student. You can <nuxt-link to="/submission">submit</nuxt-link>
               any number of resources. Each submission will be assessed by
-              experts based on the rubrics. If you <nuxt-link to="/submission">submit</nuxt-link> more than one
+              experts based on the <nuxt-link to="/rules">rubrics</nuxt-link>>. If you <nuxt-link to="/submission">submit</nuxt-link> more than one
               resource, your score will be the sum of all the scores of your
               submissions. Resources in English or Tamil are only eligible for
               this competition. Other languages are out of scope at this point
@@ -86,7 +85,7 @@
           <div class="about">
             <h2>Some Points to be noted for the competition</h2>
             <p>
-              For the competition, please do NOT <nuxt-link to="/submission">submit</nuxt-link> the entire <nuxt-link to="/aboutoer">OER</nuxt-link>
+              For the competition, please do NOT submit the entire <nuxt-link to="/aboutoer">OER</nuxt-link>
               repository. Instead, <nuxt-link to="/submission">submit</nuxt-link> specific content from any such <nuxt-link to="/aboutoer">OER</nuxt-link>
               repository relevant for the identified learning outcomes. For
               example, you can <nuxt-link to="/submission">submit</nuxt-link>
@@ -110,7 +109,7 @@
               When you <nuxt-link to="/submission">submit</nuxt-link> the <nuxt-link to="/aboutoer">OER</nuxt-link>, please specify the type of content
               (reading material, quiz, assignment question etc. ) along with the
               author details. If you are the author, please provide your full
-              name, organization and contact details. For the example given
+              name, organization. For the example given
               above, the type of content would be "reading material" and the
               author name would be “Pamela Baxter, McMaster University and Susan
               Jack, McMaster University”.
@@ -119,9 +118,9 @@
           <div class="about">
             <h2>Rubrics for winning</h2>
             <ul>
-              <h4><li>Number of <nuxt-link to="/aboutoer">OER</nuxt-link> submitted</li></h4>
+              <h4><li>Number of OER submitted</li></h4>
               <h4><li>Complexity of the topic</li></h4>
-              <h4><li>Uniqueness of the <nuxt-link to="/aboutoer">OER</nuxt-link></li></h4>
+              <h4><li>Uniqueness of the OER</li></h4>
               <h4><li>Clarity of the content</li></h4>
               <h4><li>Expert review based on the <nuxt-link to="/rules">detailed rubrics</nuxt-link></li></h4>
             </ul>
@@ -143,7 +142,7 @@
               </div>
               <div class="date-text">
                 <h4>Submission Starts</h4>
-                <p>27th January 2020</p>
+                <p>27th January 2021</p>
               </div>
             </div>
             <div class="date">
@@ -152,7 +151,7 @@
               </div>
               <div class="date-text">
                 <h4>Submission Ends</h4>
-                <p>27th February 2020</p>
+                <p>27th February 2021</p>
               </div>
             </div>
             <div class="date">
@@ -161,7 +160,7 @@
               </div>
               <div class="date-text">
                 <h4>Results</h4>
-                <p>27th March 2020</p>
+                <p>27th March 2021</p>
               </div>
             </div>
           </div>
@@ -219,7 +218,7 @@
               <h4>Dr. Rory McGreal</h4>
               <p>
                 UNESCO/International Council for Open and Distance Education
-                Chair in Open Educational Resources.
+                Chair in Open Educational Resources
               </p>
               <a
                 class="btn btn-solid"
@@ -233,7 +232,7 @@
               <h4>Dr. Vivekanandan Suresh Kumar</h4>
               <p>
                 Associate Dean, Research and Innovation, Faculty of Science and
-                Technology, Athabasca University. Canada.
+                Technology, Athabasca University, Canada
               </p>
               <a
                 class="btn btn-solid"
@@ -496,8 +495,8 @@ a {
 .showcase .text-content p {
   margin-top: 0.5rem;
   margin-bottom: 2rem;
-  font-size: 1.15rem;
-  color: #ffffffdd;
+  font-size: 1.5rem;
+  color: #ffffff;
 }
 
 .btn {
