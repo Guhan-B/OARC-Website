@@ -31,9 +31,19 @@
               label="Email"
               v-model="formData.email"
             />
-
             <button type="button" class="btn btn-solid" @click="verifyEmail">
               Verify Your Email
+            </button>
+          </div>
+          <div class="email-group">
+            <AppTextInput
+              type="email"
+              name="email"
+              label="Enter OTP"
+              v-model="enteredOTP"
+            />
+            <button :disabled={emailVerified} type="button" class="btn btn-solid" @click="verifyOTP">
+              {{emailVerified?"OTP Verified":"Verfiy OTP"}}
             </button>
           </div>
           <AppTextInput
@@ -300,7 +310,9 @@ import ButtonOutline from "@/components/ButtonOutline";
 import Modal from "@/components/Modal";
 import outcomesJson from "@/assets/data/outcome.json";
 import unitsJson from "@/assets/data/units.json";
-import { fireDb, fireAuth } from "~/plugins/firebase.js";
+import { fireDb } from "~/plugins/firebase.js";
+import { emailToken } from "@/Mailer/index.js";
+import emailjs from "emailjs-com";
 
 export default {
   components: {
@@ -308,7 +320,10 @@ export default {
   },
   data() {
     return {
+      enteredOTP: "",
       allowSubmit: [],
+      emailVerified: false,
+      OTP:emailToken(),
       showModal: false,
       modalTitle: "",
       modalMessage: "",
@@ -342,25 +357,35 @@ export default {
     };
   },
   methods: {
+    verifyOTP(){
+      if(this.enteredOTP === this.OTP){
+        this.emailVerified = true;
+      }
+    },
     async saveWork() {
-      await fireDb
-        .collection("Work")
-        .add(this.formData)
-        .then((docRef) => {
-          console.log("Work added: ", docRef.id);
-          this.modalTitle = "Success";
-          this.modalMessage = "Form has been submitted";
-          this.modalType = "success";
-          this.showModal = true;
-        })
-        .catch((error) => {
-          console.error("Error adding Work: ", error);
-          alert("Unable to save submission try again later");
-          this.modalTitle = "Error";
-          this.modalMessage = "Unable to submit the form. Try again";
-          this.modalType = "error";
-          this.showModal = true;
-        });
+      if (this.emailVerified == true) {
+        await fireDb
+          .collection("Work")
+          .add(this.formData)
+          .then((docRef) => {
+            console.log("Work added: ", docRef.id);
+            this.modalTitle = "Success";
+            this.modalMessage = "Form has been submitted";
+            this.modalType = "success";
+            this.showModal = true;
+            fireAuth.currentUser.delete();
+          })
+          .catch((error) => {
+            console.error("Error adding Work: ", error);
+            alert("Unable to save submission try again later");
+            this.modalTitle = "Error";
+            this.modalMessage = "Unable to submit the form. Try again";
+            this.modalType = "error";
+            this.showModal = true;
+          });
+      } else {
+        alert("Email Not Verified");
+      }
     },
     async getData() {
       const Ref = fireDb.collection("Work");
@@ -375,22 +400,16 @@ export default {
       });
     },
     async verifyEmail() {
-      if (fireAuth.currentUser) {
-        console.log("Loggin out");
-        await fireAuth.signOut();
-        this.verifyEmail();
-      } else {
-        await fireAuth.signInAnonymously().then(() => {
-          if (fireAuth.currentUser.emailVerified === false) {
-            fireAuth.currentUser.updateEmail(this.formData.email).then(() => {
-              fireAuth.currentUser.sendEmailVerification();
-              console.log("GG");
-            });
-          } else {
-            console.log("no GG");
-          }
-        });
-      }
+      const templateParams = {
+          otp:this.OTP,
+          email:this.formData.email
+        };
+     emailjs.send('service_tmqhgad','template_eheknue', templateParams, 'user_3CJJxWpNBrgopWpRHkpDM')
+    .then((response) => {
+       console.log('SUCCESS!', response.status, response.text);
+    }, (err) => {
+       console.log('FAILED...', err);
+    });
     },
     addOer() {
       this.formData.number += 1;
@@ -400,6 +419,7 @@ export default {
         desc: "",
         outcomes: [],
         unit: "",
+        
       });
     },
     removeOer() {

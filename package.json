@@ -9,13 +9,18 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@nuxtjs/axios": "^5.12.5",
     "@nuxtjs/firebase": "^7.1.2",
     "cookieparser": "^0.1.0",
     "core-js": "^3.6.5",
+    "crypto": "^1.0.1",
+    "emailjs-com": "^2.6.4",
     "firebase": "^8.2.0",
     "js-cookie": "^2.2.1",
     "jwt-decode": "^3.1.2",
+    "nodemailer": "^6.4.17",
     "nuxt": "^2.14.6",
+    "nuxt-mail": "^1.0.2",
     "vue-scrollto": "^2.20.0"
   },
   "devDependencies": {}
