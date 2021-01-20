@@ -365,28 +365,21 @@ export default {
       }
     },
     async saveWork() {
-      if (this.emailVerified == true) {
+      if (this.emailVerified === true) {
         await fireDb
           .collection("Work")
           .add(this.formData)
           .then((docRef) => {
             console.log("Work added: ", docRef.id);
-            this.modalTitle = "Success";
-            this.modalMessage = "Form has been submitted";
-            this.modalType = "success";
-            this.showModal = true;
-            fireAuth.currentUser.delete();
+            alert("Form has been submitted");
           })
           .catch((error) => {
             console.error("Error adding Work: ", error);
             alert("Unable to save submission try again later");
-            this.modalTitle = "Error";
-            this.modalMessage = "Unable to submit the form. Try again";
-            this.modalType = "error";
-            this.showModal = true;
           });
       } else {
         alert("Email Not Verified");
+        this.$router.push("/");
       }
     },
     async getData() {
