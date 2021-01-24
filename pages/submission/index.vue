@@ -25,9 +25,16 @@
               v-model="formData.email"
               @input="emailChanging"
             />
-            <button v-if="!emailVerified" type="button" class="btn btn-solid" @click="verifyEmail">
+            <button
+              v-if="!emailVerified"
+              type="button"
+              class="btn btn-solid"
+              @click="verifyEmail"
+            >
               Verify Your Email
             </button>
+            <input type="file" id="photo" />
+            <button @click="uploadImage">Upload Image</button>
           </div>
           <div class="email-group">
             <AppTextInput
@@ -47,11 +54,11 @@
           </div>
           <div style="grid-column: span 2">
             <AppTextInput
-            type="text"
-            name="department"
-            label="Department"
-            v-model="formData.department"
-          />
+              type="text"
+              name="department"
+              label="Department"
+              v-model="formData.department"
+            />
           </div>
           <AppTextInput
             type="text"
@@ -321,13 +328,16 @@ import ButtonOutline from "@/components/ButtonOutline";
 import Modal from "@/components/Modal";
 import outcomesJson from "@/assets/data/outcome.json";
 import unitsJson from "@/assets/data/units.json";
-import { fireDb } from "~/plugins/firebase.js";
+import { fireDb ,fStorage } from "~/plugins/firebase.js";
 import { emailToken } from "@/Mailer/index.js";
 import emailjs from "emailjs-com";
 
 export default {
   components: {
     AppTextInput,
+  },
+  mounted() {
+    this.getData();
   },
   data() {
     return {
@@ -342,6 +352,7 @@ export default {
         status: "",
         university: "",
         email: "",
+        imageUrl:"",
         oers: [
           {
             title: "",
@@ -361,6 +372,7 @@ export default {
           },
         ],
         number: 1,
+        user:0,
       },
     };
   },
@@ -368,14 +380,14 @@ export default {
     emailChanging() {
       this.emailVerified = false;
       this.OTP = "";
-      this.enteredOTP= "";
+      this.enteredOTP = "";
     },
     resetForm() {
       console.log("resetting");
-      this.enteredOTP= "";
-      this.allowSubmit= [];
-      this.emailVerified= false;
-      this.OTP= "";
+      this.enteredOTP = "";
+      this.allowSubmit = [];
+      this.emailVerified = false;
+      this.OTP = "";
       this.formData = {
         firstName: "",
         lastName: "",
@@ -409,6 +421,27 @@ export default {
         this.emailVerified = true;
       }
     },
+    async getData() {
+      const Ref = fireDb.collection("Reviewer").doc("UserID");
+      const doc = await Ref.get();
+      if (!doc.exists) {
+        console.log("No such document!");
+      } else {
+        const no = doc.data().AppNo;
+        if(no%10==0 || no%10==3 || no%10==6 || no%10==9){
+          this.formData.user=no%10;
+          console.log(this.formData.user);
+        }
+        else if(no%10==1 || no%10==4 || no%10==7){
+          this.formData.user=no%10;
+          console.log(this.formData.user);
+        }
+          else if(no%10==2 || no%10==5 || no%10==8){
+          this.formData.user=no%10;
+          console.log(this.formData.user);
+        }
+      }
+    },
     async saveWork() {
       if (this.emailVerified === true) {
         await fireDb
@@ -426,18 +459,6 @@ export default {
       } else {
         alert("Email Not Verified");
       }
-    },
-    async getData() {
-      const Ref = fireDb.collection("Work");
-      const snapshot = await Ref.get();
-      if (snapshot.empty) {
-        console.log("No matching documents.");
-        return;
-      }
-
-      snapshot.forEach((doc) => {
-        console.log(doc.id, "=>", doc.data());
-      });
     },
     async verifyEmail() {
       this.OTP = emailToken();
@@ -500,6 +521,23 @@ export default {
       this.showModal = false;
       this.$router.push("/");
     },
+    uploadImage() {
+      const ref = fStorage.ref();
+      const file = document.querySelector("#photo").files[0];
+      const name = +new Date() + "-" + file.name;
+      const metadata = {
+        contentType: file.type
+      };
+      const task = ref.child(name).put(file, metadata);
+      task
+        .then(snapshot => snapshot.ref.getDownloadURL())
+        .then(url => {
+          console.log(url);
+          this.formData.imageUrl=url;
+          console.log(this.formData.imageUrl);
+        })
+        .catch(console.error);
+    }
   },
 
   computed: {},
