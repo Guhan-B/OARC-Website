@@ -8,6 +8,8 @@
       <div class="nav">
         <ul class="nav-links">
           <li><nuxt-link exact to="/">Home</nuxt-link></li>
+          <li><nuxt-link exact to="/aboutoer">About OER</nuxt-link></li>
+          <li><nuxt-link exact to="/downloads">Downloads</nuxt-link></li>
           <li><nuxt-link exact to="/submission">Submit OER</nuxt-link></li>
           <li class="auth" v-if="loggedIn" @click="logout">Logout</li>
         </ul>

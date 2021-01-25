@@ -6,10 +6,10 @@
           <p>
             Collecting useful and awesome <strong>O</strong>pen
             <strong>E</strong>ducational <strong>R</strong>esources (OER) <br />
-            for research methods
+            for Research Methods and Research Ethics
           </p>
           <div class="links">
-            <nuxt-link class="btn btn-solid" exact to="/rules">Rules</nuxt-link>
+            <nuxt-link class="btn btn-solid" exact to="/rules">Rubrics</nuxt-link>
             <nuxt-link class="btn btn-outline" to="/aboutoer"
               >About OER</nuxt-link
             >
@@ -62,7 +62,7 @@
               supervisors, teaching staff members passionate about Research
               Methods or a doctoral student or an MPhil student. You can <nuxt-link to="/submission">submit</nuxt-link>
               any number of resources. Each submission will be assessed by
-              experts based on the <nuxt-link to="/rules">rubrics</nuxt-link>>. If you <nuxt-link to="/submission">submit</nuxt-link> more than one
+              experts based on the <nuxt-link to="/rules">rubrics</nuxt-link>. If you <nuxt-link to="/submission">submit</nuxt-link> more than one
               resource, your score will be the sum of all the scores of your
               submissions. Resources in English or Tamil are only eligible for
               this competition. Other languages are out of scope at this point

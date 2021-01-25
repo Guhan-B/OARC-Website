@@ -33,8 +33,6 @@
             >
               Verify Your Email
             </button>
-            <input type="file" id="photo" />
-            <button @click="uploadImage">Upload Image</button>
           </div>
           <div class="email-group">
             <AppTextInput
@@ -81,10 +79,19 @@
           </div>
         </div>
 
+        <div class="file-grp">
+          <input class="file" type="file" id="photo" />
+          <button type="button" class="btn btn-solid" @click.prevent="uploadImage">
+            Upload Image
+          </button>
+        </div>
+
         <div class="f-t-g">
           <h2 class="form-group-title">Open Educational Resource(OER)</h2>
           <div class="oer-control"></div>
         </div>
+
+        
 
         <div
           class="oer-group form-group grid-cols-1"
@@ -148,25 +155,24 @@
           />
 
           <div class="input-select-group">
-            <label for="unit">Department</label>
-            <select required id="department" v-model="oer.dept">
+            <label for="unit">Subject</label>
+            <select required id="department" v-model="oer.subject">
               <option value="" selected disabled>
-                Please Select A Department to View Units
+                Please Select A Subject to View Units
               </option>
-              <option value="english">English</option>
-              <option value="maths">Maths</option>
-              <option value="tamil">Tamil</option>
+              <option value="english">Research Methods for Science</option>
+              <option value="maths">Research Publication Ethics</option>
             </select>
           </div>
 
-          <div class="input-select-group" v-if="oer.dept !== ''">
+          <div class="input-select-group" v-if="oer.subject !== ''">
             <label for="unit">Unit</label>
             <select required id="unit" v-model="oer.unit">
               <option value="" selected disabled>
                 Please Select A Unit to View Outcomes
               </option>
               <option
-                v-for="unit in units(oer.dept)"
+                v-for="unit in units(oer.subject)"
                 :key="unit.id"
                 :value="unit.id"
               >
@@ -195,14 +201,14 @@
           <AppTextInput
             type="textarea"
             name="description"
-            label="Description"
+            label="Description - Please provide a summary (within 250 words) on what is covered in the OER"
             v-model="oer.desc"
           />
 
           <AppTextInput
             type="textarea"
-            name="description"
-            label="Note"
+            name="note"
+            label="Optional notes to the reviewer or the organizing committee (max 250 words)"
             v-model="oer.note"
             :req="false"
           />
@@ -211,13 +217,13 @@
             <AppTextInput
               type="text"
               name="material-url"
-              label="Author First Name"
+              label="First Author First Name"
               v-model="oer.authorFname"
             />
             <AppTextInput
               type="text"
               name="material-url"
-              label="Author Last Name"
+              label="First Author Last Name"
               v-model="oer.authorLname"
             />
           </div>
@@ -225,7 +231,7 @@
           <AppTextInput
             type="text"
             name="material-url"
-            label="Author Affiliation"
+            label="First Author Affiliation"
             v-model="oer.authorOrg"
           />
 
@@ -257,7 +263,7 @@
                 v-model="allowSubmit"
               />
               <label for="dec2"
-                >Does <strong>NOT</strong> contain any religious and political
+                >Does <strong>NOT</strong> contain any religious / political
                 content</label
               >
             </div>
@@ -307,7 +313,7 @@
           <ButtonPrimary
             type="submit"
             title="Submit"
-            v-if="allowSubmit.length === 5"
+            v-if="allowSubmit.length === 5 && hasUploaded === true && emailVerified === true"
           />
           <button type="button" class="btn btn-solid" @click="addOer">
             Add Another OER
@@ -328,7 +334,7 @@ import ButtonOutline from "@/components/ButtonOutline";
 import Modal from "@/components/Modal";
 import outcomesJson from "@/assets/data/outcome.json";
 import unitsJson from "@/assets/data/units.json";
-import { fireDb ,fStorage } from "~/plugins/firebase.js";
+import { fireDb, fStorage } from "~/plugins/firebase.js";
 import { emailToken } from "@/Mailer/index.js";
 import emailjs from "emailjs-com";
 
@@ -345,6 +351,7 @@ export default {
       allowSubmit: [],
       emailVerified: false,
       OTP: "",
+      hasUploaded: false,
       formData: {
         firstName: "",
         lastName: "",
@@ -352,7 +359,7 @@ export default {
         status: "",
         university: "",
         email: "",
-        imageUrl:"",
+        imageUrl: "",
         oers: [
           {
             title: "",
@@ -365,14 +372,14 @@ export default {
             authorLname: "",
             otherType: "",
             authorOrg: "",
-            dept: "",
+            subject: "",
             note: "",
             allottedPoints: [],
             points: -1,
           },
         ],
         number: 1,
-        user:0,
+        user: 0,
       },
     };
   },
@@ -428,16 +435,14 @@ export default {
         console.log("No such document!");
       } else {
         const no = doc.data().AppNo;
-        if(no%10==0 || no%10==3 || no%10==6 || no%10==9){
-          this.formData.user=no%10;
+        if (no % 10 == 0 || no % 10 == 3 || no % 10 == 6 || no % 10 == 9) {
+          this.formData.user = no % 10;
           console.log(this.formData.user);
-        }
-        else if(no%10==1 || no%10==4 || no%10==7){
-          this.formData.user=no%10;
+        } else if (no % 10 == 1 || no % 10 == 4 || no % 10 == 7) {
+          this.formData.user = no % 10;
           console.log(this.formData.user);
-        }
-          else if(no%10==2 || no%10==5 || no%10==8){
-          this.formData.user=no%10;
+        } else if (no % 10 == 2 || no % 10 == 5 || no % 10 == 8) {
+          this.formData.user = no % 10;
           console.log(this.formData.user);
         }
       }
@@ -526,18 +531,20 @@ export default {
       const file = document.querySelector("#photo").files[0];
       const name = +new Date() + "-" + file.name;
       const metadata = {
-        contentType: file.type
+        contentType: file.type,
       };
       const task = ref.child(name).put(file, metadata);
       task
-        .then(snapshot => snapshot.ref.getDownloadURL())
-        .then(url => {
+        .then((snapshot) => snapshot.ref.getDownloadURL())
+        .then((url) => {
           console.log(url);
-          this.formData.imageUrl=url;
+          this.formData.imageUrl = url;
           console.log(this.formData.imageUrl);
+          this.hasUploaded = true;
+          alert("Image has been uploaded");
         })
         .catch(console.error);
-    }
+    },
   },
 
   computed: {},
@@ -571,6 +578,13 @@ hr {
 .oer-inputs {
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+
+.file-grp {
+  margin: 0.75rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .btn {
