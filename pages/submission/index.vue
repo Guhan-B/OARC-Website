@@ -80,18 +80,23 @@
         </div>
 
         <div class="file-grp">
-          <input class="file" type="file" id="photo" />
-          <button type="button" class="btn btn-solid" @click.prevent="uploadImage">
-            Upload Image
-          </button>
+          <label for="photo">Select a bonafide certificate</label>
+          <div>
+            <input class="file" type="file" id="photo" />
+            <button
+              type="button"
+              class="btn btn-solid"
+              @click.prevent="uploadImage"
+            >
+              Upload Image
+            </button>
+          </div>
         </div>
 
         <div class="f-t-g">
           <h2 class="form-group-title">Open Educational Resource(OER)</h2>
           <div class="oer-control"></div>
         </div>
-
-        
 
         <div
           class="oer-group form-group grid-cols-1"
@@ -313,7 +318,11 @@
           <ButtonPrimary
             type="submit"
             title="Submit"
-            v-if="allowSubmit.length === 5 && hasUploaded === true && emailVerified === true"
+            v-if="
+              allowSubmit.length === 5 &&
+              hasUploaded === true &&
+              emailVerified === true
+            "
           />
           <button type="button" class="btn btn-solid" @click="addOer">
             Add Another OER
@@ -732,6 +741,18 @@ hr {
 
 .submission {
   width: 100%;
+}
+
+.file-grp {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.file-grp label{
+  margin-bottom: 1rem;
+  color: #333;
+  font-size: 1.15rem;
 }
 
 @media only screen and (max-width: 1050px) {

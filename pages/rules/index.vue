@@ -48,11 +48,15 @@ export default {
 </script>
 
 <style>
+*{
+  /* outline: 1px solid yellow; */
+}
 .evaluation {
   flex: 1;
   width: 90%;
   margin: auto;
   padding: 2rem 0;
+  overflow: auto;
 }
 .crt-col {
   width: 200px;

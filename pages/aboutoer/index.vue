@@ -97,42 +97,29 @@
               >.
             </p>
           </div>
-          <div class="about">
+          <div class="about repo">
             <h2>Some Example OER repositories</h2>
             <ul>
               <li>
-                <a href="https://www.library.umass.edu/oer/oer-repositories/"
-                  >https://www.library.umass.edu/oer/oer-repositories/</a
-                >
+                https://www.library.umass.edu/oer/oer-repositories/
               </li>
               <li>
-                <a href="https://pitt.libguides.com/openeducation/biglist"
-                  >https://pitt.libguides.com/openeducation/biglist</a
-                >
+                https://pitt.libguides.com/openeducation/biglist
               </li>
               <li>
-                <a href="https://osf.io/">https://osf.io/</a>
+                https://osf.io/
               </li>
               <li>
-                <a
-                  href="https://open.bccampus.ca/browse-our-collection/find-open-textbooks/"
-                  >https://open.bccampus.ca/browse-our-collection/find-open-textbooks/</a
-                >
+                https://open.bccampus.ca/browse-our-collection/find-open-textbooks/
               </li>
               <li>
-                <a href="https://www.oerknowledgecloud.org/"
-                  >https://www.oerknowledgecloud.org/</a
-                >
+                https://www.oerknowledgecloud.org/
               </li>
               <li>
-                <a href="https://unesdoc.unesco.org/home"
-                  >https://unesdoc.unesco.org/home</a
-                >
+                https://unesdoc.unesco.org/home
               </li>
               <li>
-                <a href="https://open.umn.edu/opentextbooks/"
-                  >https://open.umn.edu/opentextbooks/</a
-                >
+                https://open.umn.edu/opentextbooks/
               </li>
             </ul>
           </div>
@@ -163,6 +150,39 @@
               </li>
             </ul>
           </div>
+          <div class="about">
+            <h2>Some Points to be noted for the competition</h2>
+            <p>
+              For the competition, please do NOT submit the entire <nuxt-link to="/aboutoer">OER</nuxt-link>
+              repository. Instead, <nuxt-link to="/submission">submit</nuxt-link> specific content from any such <nuxt-link to="/aboutoer">OER</nuxt-link>
+              repository relevant for the identified learning outcomes. For
+              example, you can <nuxt-link to="/submission">submit</nuxt-link>
+              <strong>
+                "Qualitative case study methodology: Study design and
+                implementation for novice researchers."
+              </strong>
+              "The Qualitative Report, 13 (4)" by Baxter, P. & Jack, S. with the
+              URL
+              <strong
+                ><a href="http://www.nova.edu/ssss/QR/QR13-4/baxter.pdf"
+                  >http://www.nova.edu/ssss/QR/QR13-4/baxter.pdf</a
+                ></strong
+              >
+              but <strong>NOT</strong> the entire journal or The Quality Report
+              / TQR (<a href="https://nsuworks.nova.edu/tqr/"
+                >https://nsuworks.nova.edu/tqr/</a
+              >) repository as such.
+            </p>
+            <p>
+              When you <nuxt-link to="/submission">submit</nuxt-link> the <nuxt-link to="/aboutoer">OER</nuxt-link>, please specify the type of content
+              (reading material, quiz, assignment question etc. ) along with the
+              author details. If you are the author, please provide your full
+              name, organization. For the example given
+              above, the type of content would be "reading material" and the
+              author name would be “Pamela Baxter, McMaster University and Susan
+              Jack, McMaster University”.
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -187,6 +207,10 @@
 
 a {
   color: #508787;
+}
+
+.repo ul li a{
+  text-decoration: none;
 }
 
 .about {

@@ -38,7 +38,7 @@
             <p>
               The legendary poet Bharathi wants us to explore the globe, bring
               all latest knowledge to strengthen the country. We all know the
-              famous expression by Isaac Newton “If I have seen further it is by
+              famous expression by Sir Isaac Newton “If I have seen further it is by
               standing on the shoulders of Giants”.
             </p>
             <p>
@@ -48,7 +48,7 @@
               presentable knowledge that is freely available, curated, and ready
               to be consumed on almost all topics in the world. We do not even
               have to travel to different countries!! However, these rich
-              resources are not exploited by the needy for several reasons -
+              resources are not leveraged by the needy for several reasons -
               lack of a catalog and the difficulty of finding what is needed are
               the most-often cited barriers. Our initiative aims to create a
               repository of all such <nuxt-link to="/aboutoer">Open Educational Resources (OERs)</nuxt-link> related
@@ -57,10 +57,7 @@
               transdisciplinary researchers to alleviate the barrier.
             </p>
             <p>
-              This is a competition open to all the members of Thiruvalluvar
-              University, especially to researchers - inclusive of research
-              supervisors, teaching staff members passionate about Research
-              Methods or a doctoral student or an MPhil student. You can <nuxt-link to="/submission">submit</nuxt-link>
+              This is a competition open to all the members of Science departments from Thiruvalluvar University, especially to researchers who are  passionate about Research Methods - inclusive of research supervisors or teaching staff members or doctoral students or an MPhil students. You can <nuxt-link to="/submission">submit</nuxt-link>
               any number of resources. Each submission will be assessed by
               experts based on the <nuxt-link to="/rules">rubrics</nuxt-link>. If you <nuxt-link to="/submission">submit</nuxt-link> more than one
               resource, your score will be the sum of all the scores of your
@@ -70,9 +67,7 @@
             </p>
             <p style="background-color: #508787; color: #ffffff; padding: 1rem">
               <strong
-                >Any candidate of MPhil or PhD or Post Doctoral student from any
-                department and Any faculty members who are in early stages of
-                their career can participate in this initiative.</strong
+                >Any MPhil or PhD or Post Doctoral student or faculty members  from any Science department can participate in this initiative.</strong
               >
             </p>
             <p>
@@ -376,9 +371,11 @@ a {
   padding: 2rem 2rem;
   margin-bottom: 2rem;
   border-top: #508787 5px solid;
+  /* text-align: center; */
 }
 
 .schedule .title {
+  display: block;
   text-align: center;
   margin-bottom: 1rem;
   color: #555;
@@ -558,7 +555,17 @@ a {
   .container {
     width: 95%;
   }
-
+  .about {
+    text-align: left;
+  }
+  .date{
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  .date .icon{
+    margin: 1rem 0;
+  }
   .showcase .container {
     justify-content: center;
   }
