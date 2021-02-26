@@ -2,7 +2,6 @@
   <div>
       <h2>Downloads</h2>
     <div class="container">
-      <a href="">Rubrics</a>
       <a href="">Research Methods for Science Syllabus</a>
       <a href="">Research Publication Ethics Syllabus</a>
     </div>

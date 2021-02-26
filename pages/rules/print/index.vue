@@ -49,12 +49,12 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .evaluation {
   flex: 1;
-  width: 90%;
+  width: 100%;
   margin: auto;
-  padding: 2rem 0;
+  /* padding: 2rem 0; */
 }
 .crt-col {
   width: 200px;

@@ -21,8 +21,9 @@
             class="input-col"
             v-for="(pt, pindex) in crt.points"
             :key="pindex"
+            v-html="pt.for"
           >
-            {{ pt.for }}
+            
           </td>
         </tr>
       </tbody>
@@ -109,5 +110,8 @@ td {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+}
+.input-col pre{
+  /* white-space: pre; */
 }
 </style>

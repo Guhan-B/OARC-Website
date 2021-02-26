@@ -161,12 +161,14 @@
 
           <div class="input-select-group">
             <label for="unit">Subject</label>
-            <select required id="department" v-model="oer.subject">
+            <select required id="department" v-model="oer.subject" @change="() => {
+                oer.unit = ''
+              }">
               <option value="" selected disabled>
                 Please Select A Subject to View Units
               </option>
-              <option value="english">Research Methods for Science</option>
-              <option value="maths">Research Publication Ethics</option>
+              <option value="methods">Research Methods for Science</option>
+              <option value="ethics">Research Publication Ethics</option>
             </select>
           </div>
 

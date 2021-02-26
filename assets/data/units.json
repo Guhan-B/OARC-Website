@@ -1,68 +1,50 @@
 {
-    "english":[
+    "methods":[
         {
             "id": "1",
-            "unit": "english units"
+            "unit": "Introduction to Research"
         },
         {
             "id": "2",
-            "unit": "english units"
+            "unit": "Experimental Research"
         },
         {
             "id": "3",
-            "unit": "english units"
+            "unit": "Sampling Methods"
         },
         {
             "id": "4",
-            "unit": "english units"
+            "unit": "Data Collection and Inference"
         },
         {
             "id": "5",
-            "unit": "english units"
+            "unit": "Research writing"
         }
     ],
-    "maths":[
+    "ethics":[
         {
-            "id": "1",
-            "unit": "maths units"
+            "id": "6",
+            "unit": "Philosophy and Ethics"
         },
         {
-            "id": "2",
-            "unit": "maths units"
+            "id": "7",
+            "unit": "Scientific Conduct"
         },
         {
-            "id": "3",
-            "unit": "maths units"
+            "id": "8",
+            "unit": "Publication Ethics"
         },
         {
-            "id": "4",
-            "unit": "maths units"
+            "id": "9",
+            "unit": "Open Access Publishing"
         },
         {
-            "id": "5",
-            "unit": "maths units"
-        }
-    ],
-    "tamil":[
-        {
-            "id": "1",
-            "unit": "tamil units"
+            "id": "10",
+            "unit": "Publication Misconduct"
         },
         {
-            "id": "2",
-            "unit": "tamil units"
-        },
-        {
-            "id": "3",
-            "unit": "tamil units"
-        },
-        {
-            "id": "4",
-            "unit": "tamil units"
-        },
-        {
-            "id": "5",
-            "unit": "tamil units"
+            "id": "11",
+            "unit": "Databases and Research Metrics"
         }
     ]
 }

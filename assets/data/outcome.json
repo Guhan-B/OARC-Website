@@ -2,307 +2,275 @@
     "1": [
         {
             "id": "1",
-            "value": "Propose determination of objectives, hypothesis and statement of research issue"
+            "value": "Learner is able to Articulate the purpose of  carrying out research and its importance.  "
         },
         {
             "id": "2",
-            "value": "Illustrate the factors determine the research problem addressed"
+            "value": "Learner is able to Outline the development of  research origins with suitable examples. "
         },
         {
             "id": "3",
-            "value": "Construct the nature of the problem"
+            "value": "Learner is able to specify the nature of the problem"
         },
         {
             "id": "4",
-            "value": "Distinguish critical appraisal of literature to identify gaps in knowledge to refine research topic"
+            "value": "Learner is able to Compare and identify the gaps in knowledge to refine research topic"
         },
         {
             "id": "5",
-            "value": "Interpret cause effective research problem, research design, adequate data analysis, relevant methodologies, reliability and validity of data and interpretation of results"
+            "value": "Learner is able to locate the  effective research problem by identifying the qualities of good research"
         },
         {
             "id": "6",
-            "value": "Employ Literature survey using Google, Scifinder Scholar and Literature from other Libraries"
+            "value": "Learner is able to Collect research articles on research problem using Google, Scifinder Scholar and Literature from other Libraries"
         },
         {
             "id": "7",
-            "value": "Analyze the data, interpreting data, Evaluating the research output"
+            "value": "Learner is able to Structure research article/thesis by citing the referred sources "
         },
         {
             "id": "8",
-            "value": "Construct specific, measurable attainable, time bound, unequivocal, logical research thrust area"
+            "value": "Learner is able to Construct specific, measurable attainable, time bound, unequivocal, logical research thrust area."
         },
         {
             "id": "9",
-            "value": "Understand the funding agencies, evaluate the related research organisation according to the thrust areas"
+            "value": "Learner is able to Select  the suitable funding agencies that supports the thrust areas of research."
         }
     ],
     "2": [
         {
             "id": "1",
-            "value": "summarize the moral principle of the research"
+            "value": "Learner is able to design an experimental structure to answer the research problem"
         },
         {
             "id": "2",
-            "value": "Outline the role of academic honesty and integrity in reseach ethics"
+            "value": "Learner is able to collect quantitative data required for the research problem"
         },
         {
             "id": "3",
-            "value": "Show ethics in research plan"
+            "value": "Learner is able to collect qualitative data required for the research problem"
         },
         {
             "id": "4",
-            "value": "Examplify the conflict of interest"
+            "value": "Learner is able to Summarize features of pragmatic research as research paradigm, approach, philosophy and research methodology. "
         },
         {
             "id": "5",
-            "value": "Intrepret data analysis methods"
+            "value": "Learner is able to Summarize effective use of computer in different phases of research "
         },
         {
             "id": "6",
-            "value": "Assess the important of ethics for conducting the research"
+            "value": "Learner is able to Describe data mining techniques to extract meaningful insights from large datasets to answer research questions"
         },
         {
             "id": "7",
-            "value": "Find ethical misconduct in research"
+            "value": "Learner is able to Analyze social network data on the research problem"
         },
         {
             "id": "8",
-            "value": "Distinguish between supervision and consultantion"
-        },
-        {
-            "id": "9",
-            "value": "Estimate the role of ethics in research findings"
-        },
-        {
-            "id": "10",
-            "value": "Summarize the ethics in data sharing"
+            "value": "Learner is able to Summarize different meta-analysis techniques to combine results of multiple related studies"
         }
     ],
     "3": [
         {
             "id": "1",
-            "value": "Record the structured research problem and its solution"
+            "value": "Learner is able to articulate the difference between Sample and Census, Sampling error and Non-sampling errors"
         },
         {
             "id": "2",
-            "value": "Predict the unstructured inquiry mode of research"
+            "value": "Learner is able to Differentiate probability and non-probability sampling & Learner is able Describe the factors/determinants for deciding the sampling techniques "
         },
         {
             "id": "3",
-            "value": "Summarize the combination different approaches in research"
+            "value": "Learner is able to Carry out a pilot study is to examine the feasibility of an approach that is intended to be used in a larger scale study"
         },
         {
             "id": "4",
-            "value": "Exemplify the bioinformatics concept in research"
-        },
-        {
-            "id": "5",
-            "value": "Illustrate the data bases to generate the new information of research"
-        },
-        {
-            "id": "6",
-            "value": "Design on the network mapping to create impact for the humanity on the research problem"
-        },
-        {
-            "id": "7",
-            "value": "Generate statistical importance on proving hypothesis"
+            "value": "Learner is able to Determine the sample size  for estimating population mean and population proportion for specific sample error and confidence level"
         }
     ],
-    "5": [
+    "4": [
         {
             "id":"1",
-            "value":"Explain the contants of the report"
+            "value":"Learner is able to Organize the information from a variety of sources Learner is able to Identify strategies for analysis of Data"
         },
         {
             "id":"2",
-            "value":"Articulate the Significance report writing"
+            "value":"Learner is able to Recognize different types of research data"
         },
         {
             "id":"3",
-            "value":"Explain the difficult of  writing"
+            "value":"Learner is able to Perform various statistical analysis"
         },
         {
             "id":"4",
-            "value":"Articulate the Significance , Inthaprasction and presentationof Research data"
-        },
-        {
-            "id":"5",
-            "value":"Explain various standad formats of Thesis and Papers"
-        },
-        {
-            "id":"6",
-            "value":"Demonstrate the ways of presemting Tables and Figures "
-        },
-        {
-            "id":"7",
-            "value":"Explain the collection and arranging  Tables , Figures…… Etc."
-        },
-        {
-            "id":"8",
-            "value":"Explain the teqniques of effective and Communication"
+            "value":"Learner is able to Implement the method of least squares to approximate the data"
         }
     ],
-    "4":[
+    "5":[
         {
             "id":"1",
-            "value":"To understand about -Census Method"
+            "value":"Learner is able to Explain the contents of the report"
         },
         {
             "id":"2",
-            "value":"Concept of : Laws of Statistical Regularities"
+            "value":"Learner is able to Differentiate the types of report"
         },
         {
             "id":"3",
-            "value":"Laws Inertia of Large Numbers"
+            "value":"Learner is able to Articulate the Significance report writing"
         },
         {
             "id":"4",
-            "value":"Essential of Sampling"
+            "value":"Learner is able to Organize the data into a presentable  results "
         },
         {
             "id":"5",
-            "value":"Explain : Non-Probablity Sampling"
+            "value":"Learner is able to Assemble the ways of presenting Tables and Figures "
         },
         {
             "id":"6",
-            "value":"Judgement Sampling"
+            "value":"Learner is able to Summarize and Practice various guidance for effective documentation such as UGC guidance for research publications"
         },
         {
             "id":"7",
-            "value":"Quota Sampling"
+            "value":"Learner is able to Outline the results and defend the research work"
+        }
+    ],
+    "6":[
+        {
+            "id":"1",
+            "value":"Learner is able to Summarise nature, scope, concepts and branches of philosophy"
         },
         {
-            "id":"8",
-            "value":"Convenient Sampling"
+            "id":"2",
+            "value":"Learner is able to Define “Ethics"
         },
         {
-            "id":"9",
-            "value":"Discuss about Probability Sampling"
+            "id":"3",
+            "value":"Learner is able to Describe Moral Philosophy"
         },
         {
-            "id":"10",
-            "value":"Simple random Sampling "
+            "id":"4",
+            "value":"Learner is able to Summarise nature of moral judgments and reactions"
         },
         {
-            "id":"11",
-            "value":"Systematic Samplig"
+            "id":"5",
+            "value":"Learner is able to Summarise Ethics wrt Science and Research"
         },
         {
-            "id":"12",
-            "value":"Stratified Random Sampling"
+            "id":"6",
+            "value":"Learner is able to Summarise the concept of intellectual honesty and Learner is able to Recognize why research integrity is critical for self, science/research and humanity in general"
         },
         {
-            "id":"14",
-            "value":"Meaning of Data"
+            "id":"7",
+            "value":"Learner is able to Outline the results and defend the research work"
+        }
+    ],
+    "7":[
+        {
+            "id":"1",
+            "value":"Learner is able to Summarise Ethics wrt Science and Research"
         },
         {
-            "id":"15",
-            "value":"Explain various measurements of Data"
+            "id":"2",
+            "value":"Learner is able to Summarise the concept of intellectual honesty and Learner is able to Recognize why research integrity is critical for self, science/research and humanity in general"
         },
         {
-            "id":"16",
-            "value":"Importance of Reliability of Data"
+            "id":"3",
+            "value":"Learner is able to Evaluate behaviours to identify misconducts such as Falsification / Fabrication / Plagiarism"
         },
         {
-            "id":"17",
-            "value":"Interpretation of Validity of Data"
+            "id":"4",
+            "value":"Learner is able to Recognize redundant publications such as duplicate and overlapping publication, Salami slicing"
         },
         {
-            "id":"18",
-            "value":"Types of Data"
+            "id":"5",
+            "value":"Learner is able to Evaluate reports to identify misrepresentation of data or selective reporting"
+        }
+    ],
+    "8":[
+        {
+            "id":"1",
+            "value":"Learner is able to Articulate what is publication ethics and the importance of Publication Ethics"
         },
         {
-            "id":"19",
-            "value":"Primary Data"
+            "id":"2",
+            "value":"Learner is able to Summarise standards and best practices such as COPE, WAME Seek applicable best practices and standards"
         },
         {
-            "id":"20",
-            "value":"Defintion and Sources"
+            "id":"3",
+            "value":"Learner is able to Classify different types of Conflicts of Interest in planning, designing, conducting, publishing and evaluating research"
         },
         {
-            "id":"21",
-            "value":"Secondary Data"
+            "id":"4",
+            "value":"Learner is able to Evaluate behaviours to identify misconducts, identify problems that lead to misconducts and vice versa"
         },
         {
-            "id":"22",
-            "value":"Definition and Sources"
+            "id":"5",
+            "value":"Learner is able to List the types of misconducts"
         },
         {
-            "id":"23",
-            "value":"Descrptive Statistics"
+            "id":"6",
+            "value":"Learner is able to describe consequences of violating publication ethics Learner is able to differentiate between authorship and contributorship"
         },
         {
-            "id":"13",
-            "value":"Measurements of Central Tendency"
+            "id":"7",
+            "value":"Learner is able to Differentiate between predatory  and authentic journals Learner is able to Describe consequences of predatory journals and publishers"
+        }
+    ],
+    "9":[
+        {
+            "id":"1",
+            "value":"Learner is able to Use open access publications"
         },
         {
-            "id":"13",
-            "value":"Measurements of Dispersion"
+            "id":"2",
+            "value":"Learner is able to Identify predatory journals and publishers using SHERPA/RoMEO"
         },
         {
-            "id":"13",
-            "value":"Inferential Data"
+            "id":"3",
+            "value":"Learner is able to Use the database of SPPU i.e. UGC-CARE List"
         },
         {
-            "id":"13",
-            "value":"Types of Hypothesis"
+            "id":"4",
+            "value":"Learner is able to Use journal suggestion and finder tools such as JANE, Elsevier journal finder, Springer journal suggester etc. Find out new journal suggester Learner is able to Shortlist the journals as per the discipline and other relevant factors Learner is able to Choose the target journal"
+        }
+    ],
+    "10":[
+        {
+            "id":"1",
+            "value":"Learner is able to Evaluate the academic misconducts related to FFP and authorship/contributorship"
         },
         {
-            "id":"13",
-            "value":"Procedure for Testing of Hypothesis"
+            "id":"2",
+            "value":"Learner is able to Evaluate the conflict of interests in research"
         },
         {
-            "id":"13",
-            "value":"Discuss Chi-Square Test Statistics"
+            "id":"3",
+            "value":"Learner is able to Evaluate case studies from across the world and India for Academic Disintegrity"
         },
         {
-            "id":"13",
-            "value":"Test of independence"
+            "id":"4",
+            "value":"Learner is able to Identify ethical and legal tools for academic writing"
         },
         {
-            "id":"13",
-            "value":"Goodness of Chi-square test"
+            "id":"5",
+            "value":"Learner is able to Use software tools to check for similarities / plagiarism and Learner is able to Revise their articles to reduce similarities to acceptable limits"
+        }
+    ],
+    "11":[
+        {
+            "id":"1",
+            "value":"Learner is able to List various citation and indexing databases and associated metrics"
         },
         {
-            "id":"13",
-            "value":"What is search Engine?"
+            "id":"2",
+            "value":"Learner is able to Shortlist journals based on different metrics such as SNIP, SJR etc."
         },
         {
-            "id":"13",
-            "value":"To understant the different types of Search Engines"
-        },
-        {
-            "id":"13",
-            "value":"To know the various sources of Library and Internet utility"
-        },
-        {
-            "id":"13",
-            "value":"What are the Types of RV?"
-        },
-        {
-            "id":"13",
-            "value":"Definition of Distribution Function and Density function"
-        },
-        {
-            "id":"13",
-            "value":"Binomial Distribution"
-        },
-        {
-            "id":"13",
-            "value":"Defintion, Properties, Fitting of BD"
-        },
-        {
-            "id":"13",
-            "value":"Poisson Distribution - Defintion, Properties, Fitting of PD"
-        },
-        {
-            "id":"13",
-            "value":" Defintion, Properties, Fitting of Normal Distribution"
-        },
-        {
-            "id":"13",
-            "value":"Explain Priciple of least Square with example "
+            "id":"3",
+            "value":"Learner is able to Apply author level metrics"
         }
     ]
 }
