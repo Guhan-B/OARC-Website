@@ -137,7 +137,7 @@
               </div>
               <div class="date-text">
                 <h4>Submission Starts</h4>
-                <p>27th January 2021</p>
+                <p>2nd March 2021</p>
               </div>
             </div>
             <div class="date">
@@ -146,7 +146,7 @@
               </div>
               <div class="date-text">
                 <h4>Submission Ends</h4>
-                <p>27th February 2021</p>
+                <p>31st March 2021</p>
               </div>
             </div>
             <div class="date">
@@ -155,7 +155,7 @@
               </div>
               <div class="date-text">
                 <h4>Results</h4>
-                <p>27th March 2021</p>
+                <p>23rd April 2021</p>
               </div>
             </div>
           </div>
