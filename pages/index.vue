@@ -67,7 +67,7 @@
             </p>
             <p style="background-color: #508787; color: #ffffff; padding: 1rem">
               <strong
-                >Any MPhil or PhD or Post Doctoral student or faculty members  from any Science department can participate in this initiative.</strong
+                >Any PhD or Post Doctoral student or faculty members  from any Science department can participate in this initiative.</strong
               >
             </p>
             <p>
@@ -111,7 +111,7 @@
             </p>
           </div>
           <div class="about">
-            <h2>Rubrics for winning</h2>
+            <h2>Rubrics for Winning</h2>
             <ul>
               <h4><li>Number of OER submitted</li></h4>
               <h4><li>Complexity of the topic</li></h4>
@@ -245,7 +245,7 @@
         For any clarification, please contact
       </h2>
       <h2 style="margin-bottom: 0.5rem; text-decoration: underline">
-        sample@gmail.com
+        oercoreteam@googlegroups.com
       </h2>
     </div>
   </main>

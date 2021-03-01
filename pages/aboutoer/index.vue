@@ -7,14 +7,15 @@
             <h2>Some Information on OER</h2>
             <p>
               OER stands for "Open Educational Resources" and is associated with
-              an educational movement that began about 20 years ago and has
-              become a global educational movement. The open provision of
-              educational resources, enabled by Information and Communication
-              Technologies (ICT), for consultation, use and adaptation by the
-              community of users for non-commercial purposes. OER are digitised
-              materials offered freely and openly for educators, students and
-              self learners to use and reuse for teaching, learning and
-              research.
+              an educational movement that began about 20 years ago. Now it has
+              become a global educational movement. that began about 20 years
+              ago and has become a global educational movement. The open
+              provision of educational resources, enabled by Information and
+              Communication Technologies (ICT), for consultation, use and
+              adaptation by the community of users for non-commercial purposes.
+              OER are digitised materials offered freely and openly for
+              educators, students and self learners to use and reuse for
+              teaching, learning and research.
             </p>
             <p>
               The resource should be either in the public domain or released
@@ -100,27 +101,15 @@
           <div class="about repo">
             <h2>Some Example OER repositories</h2>
             <ul>
-              <li>
-                https://www.library.umass.edu/oer/oer-repositories/
-              </li>
-              <li>
-                https://pitt.libguides.com/openeducation/biglist
-              </li>
-              <li>
-                https://osf.io/
-              </li>
+              <li>https://www.library.umass.edu/oer/oer-repositories/</li>
+              <li>https://pitt.libguides.com/openeducation/biglist</li>
+              <li>https://osf.io/</li>
               <li>
                 https://open.bccampus.ca/browse-our-collection/find-open-textbooks/
               </li>
-              <li>
-                https://www.oerknowledgecloud.org/
-              </li>
-              <li>
-                https://unesdoc.unesco.org/home
-              </li>
-              <li>
-                https://open.umn.edu/opentextbooks/
-              </li>
+              <li>https://www.oerknowledgecloud.org/</li>
+              <li>https://unesdoc.unesco.org/home</li>
+              <li>https://open.umn.edu/opentextbooks/</li>
             </ul>
           </div>
           <div class="about">
@@ -153,10 +142,12 @@
           <div class="about">
             <h2>Some Points to be noted for the competition</h2>
             <p>
-              For the competition, please do NOT submit the entire <nuxt-link to="/aboutoer">OER</nuxt-link>
-              repository. Instead, <nuxt-link to="/submission">submit</nuxt-link> specific content from any such <nuxt-link to="/aboutoer">OER</nuxt-link>
-              repository relevant for the identified learning outcomes. For
-              example, you can <nuxt-link to="/submission">submit</nuxt-link>
+              For the competition, please do NOT submit the entire
+              <nuxt-link to="/aboutoer">OER</nuxt-link> repository. Instead,
+              <nuxt-link to="/submission">submit</nuxt-link> specific content
+              from any such <nuxt-link to="/aboutoer">OER</nuxt-link> repository
+              relevant for the identified learning outcomes. For example, you
+              can <nuxt-link to="/submission">submit</nuxt-link>
               <strong>
                 "Qualitative case study methodology: Study design and
                 implementation for novice researchers."
@@ -174,13 +165,14 @@
               >) repository as such.
             </p>
             <p>
-              When you <nuxt-link to="/submission">submit</nuxt-link> the <nuxt-link to="/aboutoer">OER</nuxt-link>, please specify the type of content
-              (reading material, quiz, assignment question etc. ) along with the
-              author details. If you are the author, please provide your full
-              name, organization. For the example given
-              above, the type of content would be "reading material" and the
-              author name would be “Pamela Baxter, McMaster University and Susan
-              Jack, McMaster University”.
+              When you <nuxt-link to="/submission">submit</nuxt-link> the
+              <nuxt-link to="/aboutoer">OER</nuxt-link>, please specify the type
+              of content (reading material, quiz, assignment question etc. )
+              along with the author details. If you are the author, please
+              provide your full name, organization. For the example given above,
+              the type of content would be "reading material" and the author
+              name would be “Pamela Baxter, McMaster University and Susan Jack,
+              McMaster University”.
             </p>
           </div>
         </div>
@@ -209,7 +201,7 @@ a {
   color: #508787;
 }
 
-.repo ul li a{
+.repo ul li a {
   text-decoration: none;
 }
 

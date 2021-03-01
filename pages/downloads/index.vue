@@ -2,8 +2,9 @@
   <div>
       <h2>Downloads</h2>
     <div class="container">
-      <a href="">Research Methods for Science Syllabus</a>
-      <a href="">Research Publication Ethics Syllabus</a>
+      <a target="_blank" href="https://drive.google.com/file/d/1gJHgqD2fq02v5BhKOsEvjN9Oqyugq0Oe/view?usp=sharing">Research Methods for Science Syllabus</a>
+      <a target="_blank" href="https://drive.google.com/file/d/1whnY89cNqQN-Y5Qnme7_osCMJR9OoPZn/view?usp=sharing">Research Publication Ethics Syllabus</a>
+      <nuxt-link class="btn btn-solid" to="/rules/print">Download Rubrics</nuxt-link>
     </div>
   </div>
 </template>

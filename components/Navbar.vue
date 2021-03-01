@@ -3,7 +3,7 @@
     <div class="nav-container">
       <div class="title">
         <img src="https://upload.wikimedia.org/wikipedia/en/0/0c/TUemblem.png" alt="">
-        <div>WeCollect</div>
+        <div>Organic Agile Research Culture</div>
       </div>
       <div class="nav">
         <ul class="nav-links">

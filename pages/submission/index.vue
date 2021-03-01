@@ -69,7 +69,6 @@
             <label for="designation">Designation</label>
             <select required id="designation" v-model="formData.status">
               <option value="" selected disabled>Please Select a Value</option>
-              <option value="M.Phil Student">M.Phil Student</option>
               <option value="PhD Student">Ph.D Student</option>
               <option value="Post Doctoral Student">
                 Post Doctoral Student
@@ -80,7 +79,7 @@
         </div>
 
         <div class="file-grp">
-          <label for="photo">Select a bonafide certificate</label>
+          <label for="photo">Select a bonafide certificate (Please upload your bonafide certificate. Submit button will appear on the screen only if you do not upload.)</label>
           <div>
             <input class="file" type="file" id="photo" />
             <button
@@ -320,11 +319,7 @@
           <ButtonPrimary
             type="submit"
             title="Submit"
-            v-if="
-              allowSubmit.length === 5 &&
-              hasUploaded === true &&
-              emailVerified === true
-            "
+            :disabled="allowSubmit.length === 5 && hasUploaded === true && emailVerified === true"
           />
           <button type="button" class="btn btn-solid" @click="addOer">
             Add Another OER

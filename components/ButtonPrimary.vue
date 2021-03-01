@@ -1,6 +1,6 @@
 <template>
     <div class="button-primary">
-        <button :disabled="disabled" :type="type">{{title}}</button>
+        <button :disabled="!disabled" :type="type">{{title}}</button>
     </div>
 </template>
 
@@ -17,6 +17,7 @@ export default {
         },
         disabled: {
             type: Boolean,
+            default: true
         }
     }
 }
@@ -33,5 +34,9 @@ export default {
     margin: 0 0.5rem;
     cursor: pointer;
     border-radius: 5px;
+}
+
+button:disabled{
+    opacity: 0.5;
 }
 </style>
