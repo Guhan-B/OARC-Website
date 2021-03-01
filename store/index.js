@@ -64,18 +64,39 @@ const createStore = () => {
       },
       oersByDept: state => {
         let filterdOers = [];
-        if (state.email == "vishal.vijay016@gmail.com") {
+        if (state.email == "gsvelu@gmail.com") {
           filterdOers = state.oers.filter(oer => {
-            return oer.user === 1 || oer.user === 2;
+            return oer.user % 12 === 1 
           });
           return filterdOers;
         }
-        else if(state.email == "bkguhan2001@gmail.com"){
+        else if(state.email == "jagan.madhavan@gmail.com"){
             filterdOers = state.oers.filter(oer => {
-                return oer.user===3;
+                return oer.user%12 === 2;
               });
               return filterdOers;
         }
+        else if(state.email == "rajasekargood@gmail.com"){
+          filterdOers = state.oers.filter(oer => {
+              return oer.user%12 === 3;
+            });
+            return filterdOers;
+      }
+      else if(state.email == "thirumalaid@gmail.com"){
+        filterdOers = state.oers.filter(oer => {
+            return oer.user%12 === 4;
+          });
+          return filterdOers;
+    }
+    else if(state.email == "kishore130@gmail.com"){
+      filterdOers = state.oers.filter(oer => {
+          return oer.user%12 === 5;
+        });
+        return filterdOers;
+  }
+  else{
+    return state.oers;
+  }
       }
     },
     actions: {

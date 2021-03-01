@@ -455,9 +455,7 @@ export default {
           .collection("Work")
           .add(this.formData)
           .then((docRef) => {
-            const Ref = fireDb.collection("Reviewer").doc("UserID");
-            const doc = await Ref.get();
-            const no = doc.data().AppNo+1;
+            const no = this.formData.user + 1;
             fireDb.collection("Reviewer").doc("UserID").update({AppNo:no});
             alert("Form has been submitted");
             this.$router.push("/");
