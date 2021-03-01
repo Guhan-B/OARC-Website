@@ -18,8 +18,8 @@
             class="input-col"
             v-for="(pt, pindex) in crt.points"
             :key="pindex"
+            :v-html="pt.for"
           >
-            {{ pt.for }}
           </td>
         </tr>
       </tbody>

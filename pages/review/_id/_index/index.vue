@@ -31,7 +31,7 @@
                 :value="pt.point"
                 v-model="allotedPoints[cindex]"
               />
-              <label :for="pt.for + cindex">{{ pt.for }}</label>
+              <label :for="pt.for + cindex" v-html="pt.for"></label>
             </div>
           </td>
         </tr>
@@ -41,7 +41,7 @@
 </template>
 
 <script>
-import criterias from "~/assets/data/criterias.json";
+import criterias from "~/assets/data/criterias-review.json";
 import { fireAuth } from "~/plugins/firebase.js";
 import { getUserFromCookie, getUserFromSession } from "@/helpers";
 export default {
@@ -80,6 +80,7 @@ export default {
       let count = 0;
       this.allotedPoints.forEach(item => count++)
       if (count !== criterias.length) {
+        alert("please fill all criterias!");
         return;
       }
       totalPoints = this.allotedPoints.reduce((a, b) => a + b);
@@ -101,7 +102,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .evaluation {
   flex: 1;
   width: 90%;

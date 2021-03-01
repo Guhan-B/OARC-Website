@@ -1,0 +1,152 @@
+[
+    {
+        "name": "Complexity of the topic covered by the OER / Depth of knowledge covered",
+        "points": [
+            {
+                "point": 0,
+                "for": "Not Relevant"
+            },
+            {
+                "point": 5,
+                "for": "Basic introduction or Blooms level 1 & 2"
+            },
+            {
+                "point": 10,
+                "for": "Intermediate level or Blooms level 3 & 4"
+            },
+            {
+                "point": 15,
+                "for": "Advanced or Blooms level 5 & 6"
+            },
+            {
+                "point": -5,
+                "for": "Not open content/Ethical Violation"
+            }
+        ]
+    },
+    {
+        "name": "Comprehensiveness / Coverage of the learning outcome",
+        "points": [
+            {
+                "point": 0,
+                "for": "1. Objectives of the OER is not defined or poorly defined <br>2. Does not meet the defined objectives"
+            },
+            {
+                "point": 5,
+                "for": "1. Objectives of the OER is well defined <br> 2. Meets the defined objectives partially"
+            },
+            {
+                "point": 10,
+                "for": "1. Objectives of the OER is well defined <br> 2. Meets the defined objectives fully"
+            },
+            {
+                "point": 15,
+                "for": "1. Objectives of the OER is well defined <br> 2. Meets the defined objectives fully \n 3. Has links to all the associated supplemental material needed"
+            },
+            {
+                "point": -5,
+                "for": "NA"
+            }
+        ]
+    },
+    {
+        "name": "Content Accuracy",
+        "points": [
+            {
+                "point": 0,
+                "for": "NA"
+            },
+            {
+                "point": 5,
+                "for": "Content provided does not have any grammatical / factual / conceptual / procedural errors"
+            },
+            {
+                "point": 10,
+                "for": "NA"
+            },
+            {
+                "point": 15,
+                "for": "NA"
+            },
+            {
+                "point": -5,
+                "for": "Has factual or conceptual or procedural errors errors"
+            }
+        ]
+    },
+    {
+        "name": "Consistency",
+        "points": [
+            {
+                "point": 0,
+                "for": "NA"
+            },
+            {
+                "point": 5,
+                "for": "1. Information across the OER is consistent <br> 2. All technical terms are introduced and used consistently <br> 3. New concepts are identified and presented in consistent manner and smoothly <br> 4. Only one out of the remaining three criteria for 15 points scale is met "
+            },
+            {
+                "point": 10,
+                "for": "1. Information across the OER is consistent <br> 2. All technical terms are introduced and used consistently <br> 3. New concepts are identified and presented in consistent manner and smoothly <br> 4. Two out of the remaining three criteria for 15 points scale is met"
+            },
+            {
+                "point": 15,
+                "for": "1. Information across the OER is consistent <br> 2. All technical terms are introduced and used consistently <br> 3. New concepts are identified and presented in consistent manner and smoothly <br> 4. Layout is consistent <br> 5. Tables, figures, glossary, appendix and other supporting material has consistent information and presented consistently <br> 6. All sections are consistently using similar presentation style, vocabulary and sentence patterns"
+            },
+            {
+                "point": -5,
+                "for": "Has inconsistent messages in the different parts of the material"
+            }
+        ]
+    },
+    {
+        "name": "Ease of use / Accessibility and interactiveness",
+        "points": [
+            {
+                "point": 0,
+                "for": "Lacks good look and feel"
+            },
+            {
+                "point": 5,
+                "for": "Available offline user friendly look and feel"
+            },
+            {
+                "point": 10,
+                "for": "Available offline, printable, annotatable Motivating look and feel"
+            },
+            {
+                "point": 15,
+                "for": "Available offline, printable, annotatable and usable by differently abled learners as well "
+            },
+            {
+                "point": -5,
+                "for": "Offensive look and feel"
+            }
+        ]
+    },
+    {
+        "name": "Reputation of source organizations / repository",
+        "points": [
+            {
+                "point": 0,
+                "for": "NA"
+            },
+            {
+                "point": 5,
+                "for": "Repository has stringent peer review process and/or the author is considered as an expert in the field"
+            },
+            {
+                "point": 10,
+                "for": "NA"
+            },
+            {
+                "point": 15,
+                "for": "NA"
+            },
+            {
+                "point": -5,
+                "for": "predatory journal or predatory publisher or blacklisted by UGC or author is known to be fraudulent"
+            }
+        ]
+    }
+]
