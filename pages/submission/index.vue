@@ -456,7 +456,7 @@ export default {
           .add(this.formData)
           .then((docRef) => {
             const no = this.formData.user + 1;
-            fireDb.collection("Reviewer").doc("UserID").update({AppNo:no});
+            fireDb.collection("Reviewer").doc("UserID").update({AppNo:no}).then("Success");
             alert("Form has been submitted");
             this.$router.push("/");
           })
