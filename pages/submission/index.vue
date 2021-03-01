@@ -380,7 +380,7 @@ export default {
             authorOrg: "",
             subject: "",
             note: "",
-            allottedPoints: [],
+            allotedPoints: [],
             points: -1,
           },
         ],

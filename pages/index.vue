@@ -4,7 +4,7 @@
       <div class="container">
         <div class="text-content">
           <p>
-            Collecting useful and awesome <strong>O</strong>pen
+            Collecting useful and awesome <br/> <strong>O</strong>pen
             <strong>E</strong>ducational <strong>R</strong>esources (OER) <br />
             for Research Methods and Research Ethics
           </p>

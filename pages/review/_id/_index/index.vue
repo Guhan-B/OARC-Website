@@ -76,11 +76,13 @@ export default {
 
   methods: {
     saveEval() {
-      console.log(this.allotedPoints);
       let totalPoints = 0;
-      if (this.allotedPoints.length > 0) {
-        totalPoints = this.allotedPoints.reduce((a, b) => a + b);
+      let count = 0;
+      this.allotedPoints.forEach(item => count++)
+      if (count !== criterias.length) {
+        return;
       }
+      totalPoints = this.allotedPoints.reduce((a, b) => a + b);
       console.log(totalPoints);
       this.$store.dispatch("updateEvaluation", {
         id: this.$route.params.id,
@@ -168,5 +170,4 @@ td {
   align-items: center;
   justify-content: flex-end;
 }
-
 </style>

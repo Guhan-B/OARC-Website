@@ -3,7 +3,7 @@
     <Navbar id="top" />
     <Nuxt />
     <footer>
-      <p>Copyrights &copy; 2020 , WeCollect</p>
+      <p>Copyrights &copy; 2021 , OARC</p>
     </footer>
   </div>
 </template>

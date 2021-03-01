@@ -9,6 +9,7 @@
           <th>Department</th>
           <th>Designation</th>
           <th>Number of OER</th>
+          <th>Bonofied</th>
           <th>View OERs</th>
         </tr>
       </thead>
@@ -19,6 +20,7 @@
           <td>{{ oer.university }}</td>
           <td>{{ oer.department }}</td>
           <td>{{ oer.status }}</td>
+          <td><a class="btn" target="_blank" :href="oer.imageUrl">View Bonofied</a></td>
           <td>{{ oer.number }}</td>
           <td>
             <nuxt-link class="btn" :to="'/review/' + oer.id">View</nuxt-link>
