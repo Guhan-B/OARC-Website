@@ -446,16 +446,7 @@ export default {
         console.log("No such document!");
       } else {
         const no = doc.data().AppNo;
-        if (no % 10 == 0 || no % 10 == 3 || no % 10 == 6 || no % 10 == 9) {
-          this.formData.user = no % 10;
-          console.log(this.formData.user);
-        } else if (no % 10 == 1 || no % 10 == 4 || no % 10 == 7) {
-          this.formData.user = no % 10;
-          console.log(this.formData.user);
-        } else if (no % 10 == 2 || no % 10 == 5 || no % 10 == 8) {
-          this.formData.user = no % 10;
-          console.log(this.formData.user);
-        }
+        this.formData.user=no;
       }
     },
     async saveWork() {
@@ -464,7 +455,10 @@ export default {
           .collection("Work")
           .add(this.formData)
           .then((docRef) => {
-            console.log("Work added: ", docRef.id);
+            const Ref = fireDb.collection("Reviewer").doc("UserID");
+            const doc = await Ref.get();
+            const no = doc.data().AppNo+1;
+            fireDb.collection("Reviewer").doc("UserID").update({AppNo:no});
             alert("Form has been submitted");
             this.$router.push("/");
           })
