@@ -66,13 +66,13 @@ const createStore = () => {
         let filterdOers = [];
         if (state.email == "vishal.vijay016@gmail.com") {
           filterdOers = state.oers.filter(oer => {
-            return oer.user === 1 || oer.user === 2;
+            return oer.user % 12 === 1 
           });
           return filterdOers;
         }
         else if(state.email == "bkguhan2001@gmail.com"){
             filterdOers = state.oers.filter(oer => {
-                return oer.user===3;
+                return oer.user % 12 === 2;
               });
               return filterdOers;
         }
